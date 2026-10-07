@@ -548,7 +548,11 @@ ifneq ($(APP_MAKE),)
 endif
 	@echo "### Building application for SRAM execution with GCC compiler..."
 	CDEFS=$(CDEFS) $(MAKE) -f $(XHEEP_MAKE) $(MAKECMDGOALS) LINKER=$(LINKER) LINK_FOLDER=$(LINK_FOLDER) ARCH=$(ARCH) COMPILER_PREFIX=$(COMPILER_PREFIX) RISCV=$(RISCV) $(FUSESOC_FLAGS) $(FUSESOC_ARGS)
-	find sw/build/ -maxdepth 1 -type f -name "main.*" -exec cp '{}' $(BUILD_DIR)/sw/app/ \;
+	mkdir -p sw/app 
+	cp hw/vendor/x-heep/sw/build/main.* sw/app/
+	mkdir -p $(BUILD_DIR)/sw/app 
+	cp hw/vendor/x-heep/sw/build/main.* $(BUILD_DIR)/sw/app/
+	find sw/build/ -maxdepth 1 -type f -name "main.*" -exec cp '{}' sw/app/ \;
 
 ## @section FPGA
 
