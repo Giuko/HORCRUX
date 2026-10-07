@@ -10,8 +10,9 @@ description: Integration framework of horcrux in MCU
 filesets:
   horcrux:
     depend:
-    - openhwgroup.org:ip:cv32e40x
-    - esl_epfl:ip:cv32e40px
+    # From hw/vendor/x-heep/hw/vendor/openhwgroup_cv32e20/cve2_top.core:5
+    - openhwgroup:cve2:cve2_top:0.1
+    # No esl_epfl dependency
     files:
     - hw/rtl/horcrux/include/horcrux_pkg.sv
     - hw/rtl/horcrux/commit_stage.sv
@@ -49,8 +50,9 @@ filesets:
     - x-heep::packages
     - x-heep:ip:pad_control
     files:
-    - hw/rtl/cv32e40px_core_v_xif_pkg.sv
-    - hw/rtl/cv32e40px_if_xif.sv
+    # At the moment missing files.
+    - hw/rtl/cv32e20_core_v_xif_pkg.sv
+    - hw/rtl/cv32e20_if_xif.sv
     - hw/vendor/esl_epfl_x_heep/hw/system/x_heep_system.sv
     - hw/vendor/esl_epfl_x_heep/hw/system/pad_ring.sv
     file_type: systemVerilogSource
@@ -69,8 +71,9 @@ filesets:
     depend:
     - x-heep::packages
     - x-heep:ip:pad_control
-    - openhwgroup.org:ip:cv32e40x
-    - esl_epfl:ip:cv32e40px
+    # From hw/vendor/x-heep/hw/vendor/openhwgroup_cv32e20/cve2_top.core:5
+    - openhwgroup:cve2:cve2_top:0.1
+    # No esl_epfl dependency
     - openhwgroup.org:systems:core-v-mini-mcu
     files:
     - scripts/synthesis/synthesis/last_output/report/netlist.v
@@ -291,8 +294,6 @@ targets:
         - tool_modelsim? (pre_build_remote_bitbang)
         - tool_modelsim? (pre_patch_modelsim_Makefile) # this is required by Questa 2020 on
     parameters:
-    - use_cv32e40p_corev_pulp? (COREV_PULP=1)
-    - "!use_cv32e40p_corev_pulp? (COREV_PULP=0)"
     - use_jtag_dpi? (JTAG_DPI=1)
     - "!use_jtag_dpi? (JTAG_DPI=0)"
     tools:
@@ -373,8 +374,6 @@ targets:
         - tool_modelsim? (pre_build_remote_bitbang)
         - tool_modelsim? (pre_patch_modelsim_Makefile) # this is required by Questa 2020 on
     parameters:
-    - use_cv32e40p_corev_pulp? (COREV_PULP=1)
-    - "!use_cv32e40p_corev_pulp? (COREV_PULP=0)"
     - use_jtag_dpi? (JTAG_DPI=1)
     - "!use_jtag_dpi? (JTAG_DPI=0)"
     - UNIT_DELAY=0
