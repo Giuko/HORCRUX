@@ -51,8 +51,8 @@ filesets:
     - x-heep:ip:pad_control
     files:
     # At the moment missing files.
-    - hw/rtl/cv32e20_core_v_xif_pkg.sv
-    - hw/rtl/cv32e20_if_xif.sv
+    - hw/rtl/cv2_core_v_xif_pkg.sv
+    - hw/rtl/cv2_if_xif.sv
     - hw/vendor/esl_epfl_x_heep/hw/system/x_heep_system.sv
     - hw/vendor/esl_epfl_x_heep/hw/system/pad_ring.sv
     file_type: systemVerilogSource
