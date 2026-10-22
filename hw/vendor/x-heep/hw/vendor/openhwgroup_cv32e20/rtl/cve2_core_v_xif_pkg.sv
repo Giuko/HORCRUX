@@ -12,7 +12,7 @@
 // Contributor (porting to cv32e20): Giuseppe Maganuco <s345962@studenti.polito.it>
 // Contributor: Moritz Imfeld <moimfeld@student.ethz.ch>
 
-package cv2_core_v_xif_pkg;
+package cve2_core_v_xif_pkg;
 
   // cv-x-if parameters
   parameter int X_NUM_RS = 3;

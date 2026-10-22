@@ -1,9 +1,9 @@
 Archive member included to satisfy reference by file (symbol)
 
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
-                              /tmp/ccWstJFj.o (atexit)
+                              /tmp/ccYcG1pH.o (atexit)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-exit.o)
-                              /tmp/ccWstJFj.o (exit)
+                              /tmp/ccYcG1pH.o (exit)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-exit.o) (__stdio_exit_handler)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fwalk.o)
@@ -21,11 +21,11 @@ Archive member included to satisfy reference by file (symbol)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-readr.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o) (_read_r)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-init.o)
-                              /tmp/ccWstJFj.o (__libc_init_array)
+                              /tmp/ccYcG1pH.o (__libc_init_array)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fini.o)
-                              /tmp/ccWstJFj.o (__libc_fini_array)
+                              /tmp/ccYcG1pH.o (__libc_fini_array)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memset.o)
-                              /tmp/ccWstJFj.o (memset)
+                              /tmp/ccYcG1pH.o (memset)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__atexit.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o) (__register_exitproc)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__call_atexit.o)
@@ -41,7 +41,7 @@ Archive member included to satisfy reference by file (symbol)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-sbrkr.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o) (_sbrk_r)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a(libm_a-w_log.o)
-                              /tmp/ccbVPKya.o (symbol from plugin) (log)
+                              /tmp/cc05LIZd.o (symbol from plugin) (log)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a(libm_a-s_nan.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a(libm_a-w_log.o) (nan)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a(libm_a-e_log.o)
@@ -67,7 +67,7 @@ Archive member included to satisfy reference by file (symbol)
 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_clz.o)
                               /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_clzsi2.o) (__clz_tab)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-malloc.o)
-                              /tmp/cc5Je6Q3.ltrans0.ltrans.o (malloc)
+                              /tmp/ccFs0YVg.ltrans0.ltrans.o (malloc)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o)
                               CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj (printf)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putchar.o)
@@ -83,9 +83,9 @@ Archive member included to satisfy reference by file (symbol)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-errno.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a(libm_a-w_log.o) (__errno)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcpy-asm.o)
-                              /tmp/cc5Je6Q3.ltrans0.ltrans.o (memcpy)
+                              /tmp/ccFs0YVg.ltrans0.ltrans.o (memcpy)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-strlen.o)
-                              /tmp/cc5Je6Q3.ltrans0.ltrans.o (strlen)
+                              /tmp/ccFs0YVg.ltrans0.ltrans.o (strlen)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o) (_vfprintf_r)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
@@ -109,263 +109,263 @@ Archive member included to satisfy reference by file (symbol)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-msizer.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-reallocr.o) (_malloc_usable_size_r)
 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
-                              /tmp/cc5Je6Q3.ltrans0.ltrans.o (__bswapsi2)
+                              /tmp/ccFs0YVg.ltrans0.ltrans.o (__bswapsi2)
 
 Discarded input sections
 
- .text          0x00000000        0x0 /tmp/ccWstJFj.o
- .data          0x00000000        0x0 /tmp/ccWstJFj.o
- .bss           0x00000000        0x0 /tmp/ccWstJFj.o
- .text          0x00000000        0x0 /tmp/ccBrKQUo.o
- .data          0x00000000        0x0 /tmp/ccBrKQUo.o
- .bss           0x00000000        0x0 /tmp/ccBrKQUo.o
- .text          0x00000000        0x0 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .data          0x00000000        0x0 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .bss           0x00000000        0x0 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .text          0x00000000        0x0 /tmp/ccYcG1pH.o
+ .data          0x00000000        0x0 /tmp/ccYcG1pH.o
+ .bss           0x00000000        0x0 /tmp/ccYcG1pH.o
+ .text          0x00000000        0x0 /tmp/ccb1I2lJ.o
+ .data          0x00000000        0x0 /tmp/ccb1I2lJ.o
+ .bss           0x00000000        0x0 /tmp/ccb1I2lJ.o
+ .text          0x00000000        0x0 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .data          0x00000000        0x0 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .bss           0x00000000        0x0 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.dma_is_ready
-                0x00000000       0x3c /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x3c /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.dma_intr_handler_window_done
-                0x00000000       0x22 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x22 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.dma_window_ratio_warning_threshold
-                0x00000000       0x14 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x14 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_timer_2
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_timer_3
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_ext_peripheral
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_gpio_0
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_gpio_1
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_gpio_2
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_gpio_3
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_gpio_4
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_gpio_5
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_gpio_6
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_gpio_7
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.gpio_handler_irq_dummy
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.handler_irq_i2c
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.handler_irq_i2s
-                0x00000000       0x1e /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x1e /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.handler_irq_im2col_spc
-                0x00000000       0x20 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x20 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.handler_irq_dummy
-                0x00000000       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.handler_irq_uart
-                0x00000000       0x1e /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x1e /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_spi
-                0x00000000       0x70 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x70 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.spi_intr_handler_error_host
-                0x00000000       0x22 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x22 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.spi_intr_handler_event_host
-                0x00000000       0x24 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x24 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_spi_flash
-                0x00000000       0x68 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x68 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.spi_intr_handler_error_flash
-                0x00000000       0x1e /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x1e /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.spi_intr_handler_event_flash
-                0x00000000       0x20 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x20 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.unlikely.abort
-                0x00000000        0xe /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000        0xe /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.spi_intr_handler_event_host2
-                0x00000000       0x26 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x26 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.spi_intr_handler_error_host2
-                0x00000000       0x24 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .text._Znwj    0x00000000        0x8 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .text._ZdlPv   0x00000000        0x8 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .text._Znaj    0x00000000        0x8 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .text._ZdaPv   0x00000000        0x8 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000       0x24 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .text._Znwj    0x00000000        0x8 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .text._ZdlPv   0x00000000        0x8 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .text._Znaj    0x00000000        0x8 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .text._ZdaPv   0x00000000        0x8 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .sbss.dma_sdk_intr_flag
-                0x00000000        0x1 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000        0x1 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .srodata.im2col_spc_base_addr
-                0x00000000        0x4 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .comment       0x00000000       0x32 /tmp/cchDTUXW.debug.temp.o
+                0x00000000        0x4 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .comment       0x00000000       0x32 /tmp/ccILpAN4.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cchDTUXW.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccb1cDCk.debug.temp.o
+                0x00000000        0x0 /tmp/ccILpAN4.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccuDU4Ro.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccb1cDCk.debug.temp.o
- .debug_info    0x00000000       0xf2 /tmp/ccPpYGJc.debug.temp.o
- .debug_abbrev  0x00000000       0xa4 /tmp/ccPpYGJc.debug.temp.o
- .debug_line    0x00000000       0x4c /tmp/ccPpYGJc.debug.temp.o
- .debug_str     0x00000000      0x17b /tmp/ccPpYGJc.debug.temp.o
+                0x00000000        0x0 /tmp/ccuDU4Ro.debug.temp.o
+ .debug_info    0x00000000       0xf2 /tmp/ccH2v7uq.debug.temp.o
+ .debug_abbrev  0x00000000       0xa4 /tmp/ccH2v7uq.debug.temp.o
+ .debug_line    0x00000000       0x4c /tmp/ccH2v7uq.debug.temp.o
+ .debug_str     0x00000000      0x17b /tmp/ccH2v7uq.debug.temp.o
  .debug_line_str
-                0x00000000      0x167 /tmp/ccPpYGJc.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccPpYGJc.debug.temp.o
+                0x00000000      0x167 /tmp/ccH2v7uq.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccH2v7uq.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccPpYGJc.debug.temp.o
- .debug_info    0x00000000      0x28b /tmp/ccgb4rqW.debug.temp.o
- .debug_abbrev  0x00000000      0x115 /tmp/ccgb4rqW.debug.temp.o
- .debug_line    0x00000000       0x56 /tmp/ccgb4rqW.debug.temp.o
- .debug_str     0x00000000      0x2a9 /tmp/ccgb4rqW.debug.temp.o
+                0x00000000        0x0 /tmp/ccH2v7uq.debug.temp.o
+ .debug_info    0x00000000      0x28b /tmp/ccaFG88Q.debug.temp.o
+ .debug_abbrev  0x00000000      0x115 /tmp/ccaFG88Q.debug.temp.o
+ .debug_line    0x00000000       0x56 /tmp/ccaFG88Q.debug.temp.o
+ .debug_str     0x00000000      0x2a9 /tmp/ccaFG88Q.debug.temp.o
  .debug_line_str
-                0x00000000      0x173 /tmp/ccgb4rqW.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccgb4rqW.debug.temp.o
+                0x00000000      0x173 /tmp/ccaFG88Q.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccaFG88Q.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccgb4rqW.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc8F0cae.debug.temp.o
+                0x00000000        0x0 /tmp/ccaFG88Q.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccdDrjZA.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc8F0cae.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccwPPaP7.debug.temp.o
+                0x00000000        0x0 /tmp/ccdDrjZA.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc52eAXQ.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccwPPaP7.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccYdfe6Q.debug.temp.o
+                0x00000000        0x0 /tmp/cc52eAXQ.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccHjNlcU.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccYdfe6Q.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc0lFeGo.debug.temp.o
+                0x00000000        0x0 /tmp/ccHjNlcU.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccEx8E8B.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc0lFeGo.debug.temp.o
- .debug_info    0x00000000      0x381 /tmp/ccp1zXbS.debug.temp.o
- .debug_abbrev  0x00000000      0x151 /tmp/ccp1zXbS.debug.temp.o
- .debug_line    0x00000000       0x56 /tmp/ccp1zXbS.debug.temp.o
- .debug_str     0x00000000      0x475 /tmp/ccp1zXbS.debug.temp.o
+                0x00000000        0x0 /tmp/ccEx8E8B.debug.temp.o
+ .debug_info    0x00000000      0x381 /tmp/cc2qaEN1.debug.temp.o
+ .debug_abbrev  0x00000000      0x151 /tmp/cc2qaEN1.debug.temp.o
+ .debug_line    0x00000000       0x56 /tmp/cc2qaEN1.debug.temp.o
+ .debug_str     0x00000000      0x475 /tmp/cc2qaEN1.debug.temp.o
  .debug_line_str
-                0x00000000      0x178 /tmp/ccp1zXbS.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccp1zXbS.debug.temp.o
+                0x00000000      0x178 /tmp/cc2qaEN1.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc2qaEN1.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccp1zXbS.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccVRlWbd.debug.temp.o
+                0x00000000        0x0 /tmp/cc2qaEN1.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc9r2gJM.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccVRlWbd.debug.temp.o
- .debug_info    0x00000000      0x1ea /tmp/ccs2wtRY.debug.temp.o
- .debug_abbrev  0x00000000       0xcd /tmp/ccs2wtRY.debug.temp.o
- .debug_line    0x00000000       0x5a /tmp/ccs2wtRY.debug.temp.o
- .debug_str     0x00000000      0x26d /tmp/ccs2wtRY.debug.temp.o
+                0x00000000        0x0 /tmp/cc9r2gJM.debug.temp.o
+ .debug_info    0x00000000      0x1ea /tmp/ccIeWzo2.debug.temp.o
+ .debug_abbrev  0x00000000       0xcd /tmp/ccIeWzo2.debug.temp.o
+ .debug_line    0x00000000       0x5a /tmp/ccIeWzo2.debug.temp.o
+ .debug_str     0x00000000      0x26d /tmp/ccIeWzo2.debug.temp.o
  .debug_line_str
-                0x00000000      0x1de /tmp/ccs2wtRY.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccs2wtRY.debug.temp.o
+                0x00000000      0x1de /tmp/ccIeWzo2.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccIeWzo2.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccs2wtRY.debug.temp.o
- .debug_info    0x00000000      0x913 /tmp/ccgWoIGc.debug.temp.o
- .debug_abbrev  0x00000000      0x1ac /tmp/ccgWoIGc.debug.temp.o
- .debug_line    0x00000000       0x5f /tmp/ccgWoIGc.debug.temp.o
- .debug_str     0x00000000      0x78a /tmp/ccgWoIGc.debug.temp.o
+                0x00000000        0x0 /tmp/ccIeWzo2.debug.temp.o
+ .debug_info    0x00000000      0x913 /tmp/ccZUOup9.debug.temp.o
+ .debug_abbrev  0x00000000      0x1ac /tmp/ccZUOup9.debug.temp.o
+ .debug_line    0x00000000       0x5f /tmp/ccZUOup9.debug.temp.o
+ .debug_str     0x00000000      0x78a /tmp/ccZUOup9.debug.temp.o
  .debug_line_str
-                0x00000000      0x1f3 /tmp/ccgWoIGc.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccgWoIGc.debug.temp.o
+                0x00000000      0x1f3 /tmp/ccZUOup9.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccZUOup9.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccgWoIGc.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccwZuWwj.debug.temp.o
+                0x00000000        0x0 /tmp/ccZUOup9.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccjSN0th.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccwZuWwj.debug.temp.o
- .debug_info    0x00000000      0x8bb /tmp/ccMgN7Fp.debug.temp.o
- .debug_abbrev  0x00000000      0x19a /tmp/ccMgN7Fp.debug.temp.o
- .debug_line    0x00000000       0x5f /tmp/ccMgN7Fp.debug.temp.o
- .debug_str     0x00000000      0x77b /tmp/ccMgN7Fp.debug.temp.o
+                0x00000000        0x0 /tmp/ccjSN0th.debug.temp.o
+ .debug_info    0x00000000      0x8bb /tmp/ccvVSq6k.debug.temp.o
+ .debug_abbrev  0x00000000      0x19a /tmp/ccvVSq6k.debug.temp.o
+ .debug_line    0x00000000       0x5f /tmp/ccvVSq6k.debug.temp.o
+ .debug_str     0x00000000      0x77b /tmp/ccvVSq6k.debug.temp.o
  .debug_line_str
-                0x00000000      0x1da /tmp/ccMgN7Fp.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccMgN7Fp.debug.temp.o
+                0x00000000      0x1da /tmp/ccvVSq6k.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccvVSq6k.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccMgN7Fp.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccAAnhRt.debug.temp.o
+                0x00000000        0x0 /tmp/ccvVSq6k.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccexzcIv.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccAAnhRt.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc7vV2s6.debug.temp.o
+                0x00000000        0x0 /tmp/ccexzcIv.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccMrniq7.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc7vV2s6.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cchoPLkQ.debug.temp.o
+                0x00000000        0x0 /tmp/ccMrniq7.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccFGxlJT.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cchoPLkQ.debug.temp.o
- .debug_info    0x00000000       0xd1 /tmp/ccsscEpQ.debug.temp.o
- .debug_abbrev  0x00000000       0xb3 /tmp/ccsscEpQ.debug.temp.o
- .debug_line    0x00000000       0x43 /tmp/ccsscEpQ.debug.temp.o
- .debug_str     0x00000000      0x1b7 /tmp/ccsscEpQ.debug.temp.o
+                0x00000000        0x0 /tmp/ccFGxlJT.debug.temp.o
+ .debug_info    0x00000000       0xd1 /tmp/ccVyGjHx.debug.temp.o
+ .debug_abbrev  0x00000000       0xb3 /tmp/ccVyGjHx.debug.temp.o
+ .debug_line    0x00000000       0x43 /tmp/ccVyGjHx.debug.temp.o
+ .debug_str     0x00000000      0x1b7 /tmp/ccVyGjHx.debug.temp.o
  .debug_line_str
-                0x00000000      0x12f /tmp/ccsscEpQ.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccsscEpQ.debug.temp.o
+                0x00000000      0x12f /tmp/ccVyGjHx.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccVyGjHx.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccsscEpQ.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccoDhpDZ.debug.temp.o
+                0x00000000        0x0 /tmp/ccVyGjHx.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccjNNXTO.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccoDhpDZ.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccy7FwAR.debug.temp.o
+                0x00000000        0x0 /tmp/ccjNNXTO.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cckTu69n.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccy7FwAR.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc0Xsu7r.debug.temp.o
+                0x00000000        0x0 /tmp/cckTu69n.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc1zNvZB.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc0Xsu7r.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccPbVgpy.debug.temp.o
+                0x00000000        0x0 /tmp/cc1zNvZB.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccedSQ7n.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccPbVgpy.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccfyyZJ9.debug.temp.o
+                0x00000000        0x0 /tmp/ccedSQ7n.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccj3k5lw.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccfyyZJ9.debug.temp.o
- .debug_info    0x00000000      0x930 /tmp/cc0MGehi.debug.temp.o
- .debug_abbrev  0x00000000      0x227 /tmp/cc0MGehi.debug.temp.o
- .debug_line    0x00000000       0x5f /tmp/cc0MGehi.debug.temp.o
- .debug_str     0x00000000      0x894 /tmp/cc0MGehi.debug.temp.o
+                0x00000000        0x0 /tmp/ccj3k5lw.debug.temp.o
+ .debug_info    0x00000000      0x930 /tmp/ccwTMevV.debug.temp.o
+ .debug_abbrev  0x00000000      0x227 /tmp/ccwTMevV.debug.temp.o
+ .debug_line    0x00000000       0x5f /tmp/ccwTMevV.debug.temp.o
+ .debug_str     0x00000000      0x894 /tmp/ccwTMevV.debug.temp.o
  .debug_line_str
-                0x00000000      0x1f0 /tmp/cc0MGehi.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc0MGehi.debug.temp.o
+                0x00000000      0x1f0 /tmp/ccwTMevV.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccwTMevV.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc0MGehi.debug.temp.o
- .debug_info    0x00000000      0x4f5 /tmp/ccZWxagj.debug.temp.o
- .debug_abbrev  0x00000000      0x1bb /tmp/ccZWxagj.debug.temp.o
- .debug_line    0x00000000       0x63 /tmp/ccZWxagj.debug.temp.o
- .debug_str     0x00000000      0x5fd /tmp/ccZWxagj.debug.temp.o
+                0x00000000        0x0 /tmp/ccwTMevV.debug.temp.o
+ .debug_info    0x00000000      0x4f5 /tmp/ccLXLyM6.debug.temp.o
+ .debug_abbrev  0x00000000      0x1bb /tmp/ccLXLyM6.debug.temp.o
+ .debug_line    0x00000000       0x63 /tmp/ccLXLyM6.debug.temp.o
+ .debug_str     0x00000000      0x5fd /tmp/ccLXLyM6.debug.temp.o
  .debug_line_str
-                0x00000000      0x216 /tmp/ccZWxagj.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccZWxagj.debug.temp.o
+                0x00000000      0x216 /tmp/ccLXLyM6.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccLXLyM6.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccZWxagj.debug.temp.o
- .debug_info    0x00000000      0x1e5 /tmp/ccAZZz9U.debug.temp.o
- .debug_abbrev  0x00000000       0xe0 /tmp/ccAZZz9U.debug.temp.o
- .debug_line    0x00000000       0x4c /tmp/ccAZZz9U.debug.temp.o
- .debug_str     0x00000000      0x37a /tmp/ccAZZz9U.debug.temp.o
+                0x00000000        0x0 /tmp/ccLXLyM6.debug.temp.o
+ .debug_info    0x00000000      0x1e5 /tmp/cc98LQ6n.debug.temp.o
+ .debug_abbrev  0x00000000       0xe0 /tmp/cc98LQ6n.debug.temp.o
+ .debug_line    0x00000000       0x4c /tmp/cc98LQ6n.debug.temp.o
+ .debug_str     0x00000000      0x37a /tmp/cc98LQ6n.debug.temp.o
  .debug_line_str
-                0x00000000      0x16e /tmp/ccAZZz9U.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccAZZz9U.debug.temp.o
+                0x00000000      0x16e /tmp/cc98LQ6n.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc98LQ6n.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccAZZz9U.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cczIc5bI.debug.temp.o
+                0x00000000        0x0 /tmp/cc98LQ6n.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccmJM1Gy.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cczIc5bI.debug.temp.o
- .debug_info    0x00000000       0x9e /tmp/cckajp8d.debug.temp.o
- .debug_abbrev  0x00000000       0x9b /tmp/cckajp8d.debug.temp.o
- .debug_line    0x00000000       0x3a /tmp/cckajp8d.debug.temp.o
- .debug_str     0x00000000      0x135 /tmp/cckajp8d.debug.temp.o
+                0x00000000        0x0 /tmp/ccmJM1Gy.debug.temp.o
+ .debug_info    0x00000000       0x9e /tmp/ccjKTOla.debug.temp.o
+ .debug_abbrev  0x00000000       0x9b /tmp/ccjKTOla.debug.temp.o
+ .debug_line    0x00000000       0x3a /tmp/ccjKTOla.debug.temp.o
+ .debug_str     0x00000000      0x135 /tmp/ccjKTOla.debug.temp.o
  .debug_line_str
-                0x00000000       0xdd /tmp/cckajp8d.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cckajp8d.debug.temp.o
+                0x00000000       0xdd /tmp/ccjKTOla.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccjKTOla.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cckajp8d.debug.temp.o
- .data          0x00000000        0x0 /tmp/ccWycZIO.o
- .bss           0x00000000        0x0 /tmp/ccWycZIO.o
- .text          0x00000000       0xe2 /tmp/ccLEToGE.o
- .data          0x00000000        0x0 /tmp/ccLEToGE.o
- .bss           0x00000000        0x0 /tmp/ccLEToGE.o
- .debug_line    0x00000000      0x194 /tmp/ccLEToGE.o
+                0x00000000        0x0 /tmp/ccjKTOla.debug.temp.o
+ .data          0x00000000        0x0 /tmp/cc41KCel.o
+ .bss           0x00000000        0x0 /tmp/cc41KCel.o
+ .text          0x00000000       0xe2 /tmp/cc9naES5.o
+ .data          0x00000000        0x0 /tmp/cc9naES5.o
+ .bss           0x00000000        0x0 /tmp/cc9naES5.o
+ .debug_line    0x00000000      0x194 /tmp/cc9naES5.o
  .debug_line_str
-                0x00000000       0xa8 /tmp/ccLEToGE.o
- .debug_info    0x00000000       0x25 /tmp/ccLEToGE.o
- .debug_abbrev  0x00000000       0x14 /tmp/ccLEToGE.o
+                0x00000000       0xa8 /tmp/cc9naES5.o
+ .debug_info    0x00000000       0x25 /tmp/cc9naES5.o
+ .debug_abbrev  0x00000000       0x14 /tmp/cc9naES5.o
  .debug_aranges
-                0x00000000       0x20 /tmp/ccLEToGE.o
- .debug_str     0x00000000       0xb7 /tmp/ccLEToGE.o
+                0x00000000       0x20 /tmp/cc9naES5.o
+ .debug_str     0x00000000       0xb7 /tmp/cc9naES5.o
  .riscv.attributes
-                0x00000000       0x53 /tmp/ccLEToGE.o
- .text          0x00000000       0xf4 /tmp/ccXJYWtR.o
- .data          0x00000000        0x0 /tmp/ccXJYWtR.o
- .bss           0x00000000        0x0 /tmp/ccXJYWtR.o
- .debug_line    0x00000000      0x1ac /tmp/ccXJYWtR.o
+                0x00000000       0x53 /tmp/cc9naES5.o
+ .text          0x00000000       0xf4 /tmp/ccJvdTjt.o
+ .data          0x00000000        0x0 /tmp/ccJvdTjt.o
+ .bss           0x00000000        0x0 /tmp/ccJvdTjt.o
+ .debug_line    0x00000000      0x1ac /tmp/ccJvdTjt.o
  .debug_line_str
-                0x00000000       0xa6 /tmp/ccXJYWtR.o
- .debug_info    0x00000000       0x25 /tmp/ccXJYWtR.o
- .debug_abbrev  0x00000000       0x14 /tmp/ccXJYWtR.o
+                0x00000000       0xa6 /tmp/ccJvdTjt.o
+ .debug_info    0x00000000       0x25 /tmp/ccJvdTjt.o
+ .debug_abbrev  0x00000000       0x14 /tmp/ccJvdTjt.o
  .debug_aranges
-                0x00000000       0x20 /tmp/ccXJYWtR.o
- .debug_str     0x00000000       0xb5 /tmp/ccXJYWtR.o
+                0x00000000       0x20 /tmp/ccJvdTjt.o
+ .debug_str     0x00000000       0xb5 /tmp/ccJvdTjt.o
  .riscv.attributes
-                0x00000000       0x53 /tmp/ccXJYWtR.o
+                0x00000000       0x53 /tmp/ccJvdTjt.o
  .text          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
  .data          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
  .bss           0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
@@ -811,68 +811,68 @@ FLASH_left       0x40100000         0x00f00000         xr
 
 Linker script and memory map
 
-LOAD /tmp/ccWstJFj.o
-LOAD /tmp/ccBrKQUo.o
-LOAD /tmp/cc9wSMMn.o
-LOAD /tmp/cc5Je6Q3.ltrans0.ltrans.o
-LOAD /tmp/cchDTUXW.debug.temp.o
-LOAD /tmp/ccb1cDCk.debug.temp.o
-LOAD /tmp/ccPpYGJc.debug.temp.o
-LOAD /tmp/ccgb4rqW.debug.temp.o
-LOAD /tmp/cc8F0cae.debug.temp.o
-LOAD /tmp/ccwPPaP7.debug.temp.o
-LOAD /tmp/ccYdfe6Q.debug.temp.o
-LOAD /tmp/cc0lFeGo.debug.temp.o
-LOAD /tmp/ccp1zXbS.debug.temp.o
-LOAD /tmp/ccVRlWbd.debug.temp.o
-LOAD /tmp/ccs2wtRY.debug.temp.o
-LOAD /tmp/ccgWoIGc.debug.temp.o
-LOAD /tmp/ccwZuWwj.debug.temp.o
-LOAD /tmp/ccMgN7Fp.debug.temp.o
-LOAD /tmp/ccAAnhRt.debug.temp.o
-LOAD /tmp/cc7vV2s6.debug.temp.o
-LOAD /tmp/cchoPLkQ.debug.temp.o
-LOAD /tmp/ccsscEpQ.debug.temp.o
-LOAD /tmp/ccoDhpDZ.debug.temp.o
-LOAD /tmp/ccy7FwAR.debug.temp.o
-LOAD /tmp/cc0Xsu7r.debug.temp.o
-LOAD /tmp/ccPbVgpy.debug.temp.o
-LOAD /tmp/ccfyyZJ9.debug.temp.o
-LOAD /tmp/cc0MGehi.debug.temp.o
-LOAD /tmp/ccZWxagj.debug.temp.o
-LOAD /tmp/ccAZZz9U.debug.temp.o
-LOAD /tmp/cczIc5bI.debug.temp.o
-LOAD /tmp/cckajp8d.debug.temp.o
-LOAD /tmp/cc0aKiKq.o
-LOAD /tmp/ccHsDXrr.o
-LOAD /tmp/ccSfJMcF.o
-LOAD /tmp/cccvSoAs.o
-LOAD /tmp/ccnGBD3Q.o
-LOAD /tmp/ccNnT1uE.o
-LOAD /tmp/ccTWZimy.o
-LOAD /tmp/cckIb08D.o
-LOAD /tmp/ccbVPKya.o
-LOAD /tmp/ccwTUH4H.o
-LOAD /tmp/cckSSJrm.o
-LOAD /tmp/ccgPNWSZ.o
-LOAD /tmp/ccJUIqKq.o
-LOAD /tmp/cctRFsEC.o
-LOAD /tmp/ccqy8wVo.o
-LOAD /tmp/ccnrP6mN.o
-LOAD /tmp/ccQEyuKN.o
-LOAD /tmp/cc7NAz6F.o
-LOAD /tmp/cc5Mg6zH.o
-LOAD /tmp/ccGLXt4v.o
-LOAD /tmp/ccm8FFUu.o
-LOAD /tmp/ccHL9zrf.o
-LOAD /tmp/cc3ID68e.o
-LOAD /tmp/ccyVtM81.o
-LOAD /tmp/cc89ULG5.o
-LOAD /tmp/ccWycZIO.o
-LOAD /tmp/ccLEToGE.o
-LOAD /tmp/ccXJYWtR.o
-LOAD /tmp/ccQAFh7h.o
-LOAD /tmp/ccLHhArJ.o
+LOAD /tmp/ccYcG1pH.o
+LOAD /tmp/ccb1I2lJ.o
+LOAD /tmp/ccwuiR3S.o
+LOAD /tmp/ccFs0YVg.ltrans0.ltrans.o
+LOAD /tmp/ccILpAN4.debug.temp.o
+LOAD /tmp/ccuDU4Ro.debug.temp.o
+LOAD /tmp/ccH2v7uq.debug.temp.o
+LOAD /tmp/ccaFG88Q.debug.temp.o
+LOAD /tmp/ccdDrjZA.debug.temp.o
+LOAD /tmp/cc52eAXQ.debug.temp.o
+LOAD /tmp/ccHjNlcU.debug.temp.o
+LOAD /tmp/ccEx8E8B.debug.temp.o
+LOAD /tmp/cc2qaEN1.debug.temp.o
+LOAD /tmp/cc9r2gJM.debug.temp.o
+LOAD /tmp/ccIeWzo2.debug.temp.o
+LOAD /tmp/ccZUOup9.debug.temp.o
+LOAD /tmp/ccjSN0th.debug.temp.o
+LOAD /tmp/ccvVSq6k.debug.temp.o
+LOAD /tmp/ccexzcIv.debug.temp.o
+LOAD /tmp/ccMrniq7.debug.temp.o
+LOAD /tmp/ccFGxlJT.debug.temp.o
+LOAD /tmp/ccVyGjHx.debug.temp.o
+LOAD /tmp/ccjNNXTO.debug.temp.o
+LOAD /tmp/cckTu69n.debug.temp.o
+LOAD /tmp/cc1zNvZB.debug.temp.o
+LOAD /tmp/ccedSQ7n.debug.temp.o
+LOAD /tmp/ccj3k5lw.debug.temp.o
+LOAD /tmp/ccwTMevV.debug.temp.o
+LOAD /tmp/ccLXLyM6.debug.temp.o
+LOAD /tmp/cc98LQ6n.debug.temp.o
+LOAD /tmp/ccmJM1Gy.debug.temp.o
+LOAD /tmp/ccjKTOla.debug.temp.o
+LOAD /tmp/ccWwigjU.o
+LOAD /tmp/ccAIWejB.o
+LOAD /tmp/ccq4FlYr.o
+LOAD /tmp/ccYtRwSJ.o
+LOAD /tmp/ccozc8Q5.o
+LOAD /tmp/cck85ZPb.o
+LOAD /tmp/ccPkhMg0.o
+LOAD /tmp/ccOLGvZN.o
+LOAD /tmp/cc05LIZd.o
+LOAD /tmp/ccf6KMGC.o
+LOAD /tmp/ccWFavth.o
+LOAD /tmp/ccfQgJ2z.o
+LOAD /tmp/ccbtIuhp.o
+LOAD /tmp/ccmtWjFI.o
+LOAD /tmp/ccn6HKiM.o
+LOAD /tmp/cc2FBeMx.o
+LOAD /tmp/ccDnKZxS.o
+LOAD /tmp/ccOZgE9G.o
+LOAD /tmp/cczgDrZ9.o
+LOAD /tmp/ccyeHAkg.o
+LOAD /tmp/ccLRzFGk.o
+LOAD /tmp/ccDrsHqR.o
+LOAD /tmp/ccYjrkdG.o
+LOAD /tmp/cc0ecADr.o
+LOAD /tmp/ccrA1iLd.o
+LOAD /tmp/cc41KCel.o
+LOAD /tmp/cc9naES5.o
+LOAD /tmp/ccJvdTjt.o
+LOAD /tmp/cczCITeG.o
+LOAD /tmp/ccg7WQjE.o
 LOAD /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a
 LOAD /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a
 LOAD /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a
@@ -886,7 +886,7 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
                 0x00000000                        PROVIDE (__vector_start = .)
                 0x40000000                        _lma_text_start = LOADADDR (.vectors)
  *(.vectors)
- .vectors       0x00000000       0x80 /tmp/ccBrKQUo.o
+ .vectors       0x00000000       0x80 /tmp/ccb1I2lJ.o
                 0x00000080                        __VECTORS_AT = .
 
 .fill           0x00000080      0x100 load address 0x40000080
@@ -898,13 +898,13 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
 .init           0x00000180      0x2a8 load address 0x40000180
  *(SORT_NONE(.init))
  *(.text.start)
- .text.start    0x00000180       0xac /tmp/ccWstJFj.o
+ .text.start    0x00000180       0xac /tmp/ccYcG1pH.o
                 0x00000180                _start
                 0x00000226                _init
                 0x0000022a                _fini
  *(.text.w25q128jw_init_crt0)
  .text.w25q128jw_init_crt0
-                0x0000022c        0xa /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x0000022c        0xa /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x0000022c                w25q128jw_init_crt0
  *(.text.w25q128jw_sanity_checks)
  *(.text.spi_write_word*)
@@ -917,13 +917,13 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
  *(.text.memcpy)
  *(.text.w25q128jw_read_standard)
  .text.w25q128jw_read_standard
-                0x00000236      0x1b8 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000236      0x1b8 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00000236                w25q128jw_read_standard
  *(.text.w25q128jw_read_standard.*)
  *(.xheep_init_data_crt0)
  *fill*         0x000003ee        0x2 
  .xheep_init_data_crt0
-                0x000003f0        0x4 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x000003f0        0x4 /tmp/ccFs0YVg.ltrans0.ltrans.o
  *_bswapsi2*(.text)
  .text          0x000003f4       0x34 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
                 0x000003f4                __bswapsi2
@@ -932,7 +932,7 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
                 0x00000430                        . = ALIGN (0x4)
                 0x00000430                        __text_start = .
  *(.text)
- .text          0x00000430      0x172 /tmp/ccWycZIO.o
+ .text          0x00000430      0x172 /tmp/cc41KCel.o
                 0x00000430                keccak_coproc_S
                 0x0000054e                keccak_hw_init
                 0x00000554                keccak_hw_absorb_xor
@@ -943,143 +943,143 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
  .text          0x000005b2       0x16 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcpy-asm.o)
                 0x000005b2                memcpy
  *(.text*)
- .text.vecs     0x000005c8        0x4 /tmp/ccBrKQUo.o
+ .text.vecs     0x000005c8        0x4 /tmp/ccb1I2lJ.o
                 0x000005c8                __no_irq_handler
  .text.fic_irq_dma_window
-                0x000005cc       0x54 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x000005cc       0x54 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_dma_done
-                0x00000620       0x6c /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000620       0x6c /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.dma_intr_handler_trans_done
-                0x0000068c       0x18 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x0000068c       0x18 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.fic_irq_timer_1
-                0x000006a4       0x12 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .text._write   0x000006b6       0x68 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x000006a4       0x12 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .text._write   0x000006b6       0x68 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.spi_empty_rx
-                0x0000071e       0x44 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x0000071e       0x44 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.spi_event_handler
-                0x00000762      0x164 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000762      0x164 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.spi_error_handler.isra.0
-                0x000008c6       0xf6 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x000008c6       0xf6 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.spi_get_events.isra.0
-                0x000009bc       0x56 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x000009bc       0x56 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.keccak_absorb_once_hw
-                0x00000a12      0x11a /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000a12      0x11a /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.keccak_hw_store_bytes
-                0x00000b2c       0x92 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000b2c       0x92 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text._writestr
-                0x00000bbe       0x1c /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000bbe       0x1c /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.print_exc_msg
-                0x00000bda       0x40 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000bda       0x40 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .text.pqcrystals_kyber_fips202_ref_shake128
-                0x00000c1a       0x90 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000c1a       0x90 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00000c1a                pqcrystals_kyber_fips202_ref_shake128
  .text.pqcrystals_kyber_fips202_ref_shake256
-                0x00000caa       0x94 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000caa       0x94 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00000caa                pqcrystals_kyber_fips202_ref_shake256
  .text.pqcrystals_kyber_fips202_ref_sha3_256
-                0x00000d3e       0x52 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000d3e       0x52 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00000d3e                pqcrystals_kyber_fips202_ref_sha3_256
  .text.pqcrystals_kyber_fips202_ref_sha3_512
-                0x00000d90       0x52 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000d90       0x52 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00000d90                pqcrystals_kyber_fips202_ref_sha3_512
  *fill*         0x00000de2        0x2 
  .text.handler_irq_fast_spi
-                0x00000de4      0x16e /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000de4      0x16e /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00000de4                handler_irq_fast_spi
  *fill*         0x00000f52        0x2 
  .text.handler_irq_fast_spi_flash
-                0x00000f54      0x16c /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000f54      0x16c /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00000f54                handler_irq_fast_spi_flash
  *fill*         0x000010c0        0x0 
  .text.handler_irq_external
-                0x000010c0      0x13a /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x000010c0      0x13a /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x000010c0                handler_irq_external
  *fill*         0x000011fa        0x2 
  .text.handler_irq_fast_timer_1
-                0x000011fc      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x000011fc      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x000011fc                handler_irq_fast_timer_1
  *fill*         0x00001322        0x2 
  .text.handler_irq_fast_timer_2
-                0x00001324      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00001324      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00001324                handler_irq_fast_timer_2
  *fill*         0x0000144a        0x2 
  .text.handler_irq_fast_timer_3
-                0x0000144c      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x0000144c      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x0000144c                handler_irq_fast_timer_3
  *fill*         0x00001572        0x2 
  .text.handler_irq_fast_external_peripheral
-                0x00001574      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00001574      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00001574                handler_irq_fast_external_peripheral
  *fill*         0x0000169a        0x2 
  .text.handler_irq_fast_gpio_0
-                0x0000169c      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x0000169c      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x0000169c                handler_irq_fast_gpio_0
  *fill*         0x000017c2        0x2 
  .text.handler_irq_fast_gpio_1
-                0x000017c4      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x000017c4      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x000017c4                handler_irq_fast_gpio_1
  *fill*         0x000018ea        0x2 
  .text.handler_irq_fast_gpio_2
-                0x000018ec      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x000018ec      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x000018ec                handler_irq_fast_gpio_2
  *fill*         0x00001a12        0x2 
  .text.handler_irq_fast_gpio_3
-                0x00001a14      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00001a14      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00001a14                handler_irq_fast_gpio_3
  *fill*         0x00001b3a        0x2 
  .text.handler_irq_fast_gpio_4
-                0x00001b3c      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00001b3c      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00001b3c                handler_irq_fast_gpio_4
  *fill*         0x00001c62        0x2 
  .text.handler_irq_fast_gpio_5
-                0x00001c64      0x12a /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00001c64      0x12a /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00001c64                handler_irq_fast_gpio_5
  *fill*         0x00001d8e        0x2 
  .text.handler_irq_fast_gpio_6
-                0x00001d90      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00001d90      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00001d90                handler_irq_fast_gpio_6
  *fill*         0x00001eb6        0x2 
  .text.handler_irq_fast_gpio_7
-                0x00001eb8      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00001eb8      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00001eb8                handler_irq_fast_gpio_7
  *fill*         0x00001fde        0x2 
  .text.handler_irq_fast_dma_done
-                0x00001fe0      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00001fe0      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00001fe0                handler_irq_fast_dma_done
  *fill*         0x00002106        0x2 
  .text.handler_irq_fast_dma_window
-                0x00002108      0x126 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00002108      0x126 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00002108                handler_irq_fast_dma_window
  *fill*         0x0000222e        0x2 
  .text.handler_exception
-                0x00002230       0xda /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00002230       0xda /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00002230                handler_exception
  *fill*         0x0000230a        0x2 
  .text.handler_irq_software
-                0x0000230c       0x98 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x0000230c       0x98 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x0000230c                handler_irq_software
  *fill*         0x000023a4        0x0 
  .text.handler_irq_timer
-                0x000023a4       0x98 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x000023a4       0x98 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x000023a4                handler_irq_timer
- .text.init     0x0000243c        0x4 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .text.init     0x0000243c        0x4 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x0000243c                init
- .text._close   0x00002440        0x4 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .text._close   0x00002440        0x4 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00002440                _close
- .text._exit    0x00002444       0x10 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .text._exit    0x00002444       0x10 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00002444                _exit
- .text._fstat   0x00002454        0x8 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .text._fstat   0x00002454        0x8 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00002454                _fstat
- .text._isatty  0x0000245c        0x8 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .text._isatty  0x0000245c        0x8 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x0000245c                _isatty
- .text._lseek   0x00002464        0x4 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .text._lseek   0x00002464        0x4 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00002464                _lseek
- .text._read    0x00002468        0x4 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .text._read    0x00002468        0x4 /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00002468                _read
  .text._write_r
-                0x0000246c        0xa /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x0000246c        0xa /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x0000246c                _write_r
- .text._sbrk    0x00002476       0x2e /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .text._sbrk    0x00002476       0x2e /tmp/ccFs0YVg.ltrans0.ltrans.o
                 0x00002476                _sbrk
  .text.atexit   0x000024a4        0xa /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
                 0x000024a4                atexit
@@ -1208,16 +1208,16 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
  *(.rodata)
  *(.rodata*)
  .rodata.print_exc_msg.str1.4
-                0x00003aaa       0x10 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00003aaa       0x10 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .rodata.handler_exception.str1.4
-                0x00003aaa      0x102 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00003aaa      0x102 /tmp/ccFs0YVg.ltrans0.ltrans.o
  *fill*         0x00003aaa        0x2 
  .rodata.handler_exception
-                0x00003aac       0x30 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00003aac       0x30 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .rodata.handler_irq_software.str1.4
-                0x00003adc       0x19 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00003adc       0x19 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .rodata.handler_irq_timer.str1.4
-                0x00003adc       0x16 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00003adc       0x16 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .rodata._vfprintf_r.str1.4
                 0x00003adc       0x13 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
  .rodata._printf_i.str1.4
@@ -1235,19 +1235,19 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
 
 .rela.dyn       0x00003f60        0x0 load address 0x40003f60
  .rela.text.start
-                0x00003f60        0x0 /tmp/ccWstJFj.o
+                0x00003f60        0x0 /tmp/ccYcG1pH.o
  .rela.text.__libc_init_array
-                0x00003f60        0x0 /tmp/ccWstJFj.o
+                0x00003f60        0x0 /tmp/ccYcG1pH.o
  .rela.text.__libc_fini_array
-                0x00003f60        0x0 /tmp/ccWstJFj.o
+                0x00003f60        0x0 /tmp/ccYcG1pH.o
  .rela.text.__register_exitproc
-                0x00003f60        0x0 /tmp/ccWstJFj.o
+                0x00003f60        0x0 /tmp/ccYcG1pH.o
  .rela.text._sbrk
-                0x00003f60        0x0 /tmp/ccWstJFj.o
+                0x00003f60        0x0 /tmp/ccYcG1pH.o
  .rela.sdata.brk
-                0x00003f60        0x0 /tmp/ccWstJFj.o
+                0x00003f60        0x0 /tmp/ccYcG1pH.o
  .rela.text._vfprintf_r
-                0x00003f60        0x0 /tmp/ccWstJFj.o
+                0x00003f60        0x0 /tmp/ccYcG1pH.o
 
 .data           0x0000e800      0x138 load address 0x4000e800
                 0x0000e800                        __data_start = .
@@ -1260,7 +1260,7 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
  *(.data)
  *(.data*)
  .data.peripherals
-                0x0000e800       0xd8 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x0000e800       0xd8 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .data.__sglue  0x0000e8d8        0xc /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
                 0x0000e8d8                __sglue
  .data._impure_data
@@ -1269,7 +1269,7 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
                 0x0000e930                        __SDATA_BEGIN__ = .
  *(.sdata)
  *(.sdata*)
- .sdata.brk     0x0000e930        0x4 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .sdata.brk     0x0000e930        0x4 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .sdata._impure_ptr
                 0x0000e934        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-impure.o)
                 0x0000e934                _impure_ptr
@@ -1288,7 +1288,7 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
  *(.bss)
  *(.bss*)
  .bss.dma_subsys_per
-                0x0000ea38       0x30 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x0000ea38       0x30 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .bss.__sf      0x0000ea68      0x138 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
                 0x0000ea68                __sf
  .bss.__atexit0
@@ -1345,13 +1345,13 @@ OUTPUT(main.elf elf32-littleriscv)
 .riscv.attributes
                 0x00000000       0x5a
  .riscv.attributes
-                0x00000000       0x53 /tmp/ccWstJFj.o
+                0x00000000       0x53 /tmp/ccYcG1pH.o
  .riscv.attributes
-                0x00000053       0x4a /tmp/ccBrKQUo.o
+                0x00000053       0x4a /tmp/ccb1I2lJ.o
  .riscv.attributes
-                0x0000009d       0x55 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x0000009d       0x55 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .riscv.attributes
-                0x000000f2       0x4f /tmp/ccWycZIO.o
+                0x000000f2       0x4f /tmp/cc41KCel.o
  .riscv.attributes
                 0x00000141       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
  .riscv.attributes
@@ -1428,7 +1428,7 @@ OUTPUT(main.elf elf32-littleriscv)
                 0x00000883       0x55 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .comment        0x00000000       0x31
- .comment       0x00000000       0x32 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .comment       0x00000000       0x32 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .comment       0x00000000       0x31 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
                                  0x32 (size before relaxing)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-exit.o)
@@ -1469,7 +1469,7 @@ OUTPUT(main.elf elf32-littleriscv)
 .note.GNU-stack
                 0x00000000        0x0
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000        0x0 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .note.GNU-stack
                 0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
  .note.GNU-stack
@@ -1542,206 +1542,206 @@ OUTPUT(main.elf elf32-littleriscv)
                 0x00000000        0x0 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_line     0x00000000     0x4a12
- .debug_line    0x00000000      0x140 /tmp/ccWstJFj.o
- .debug_line    0x00000140      0x115 /tmp/ccBrKQUo.o
- .debug_line    0x00000255     0x3534 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .debug_line    0x00003789       0x51 /tmp/cchDTUXW.debug.temp.o
- .debug_line    0x000037da       0x89 /tmp/ccb1cDCk.debug.temp.o
- .debug_line    0x00003863       0x56 /tmp/cc8F0cae.debug.temp.o
- .debug_line    0x000038b9       0x56 /tmp/ccwPPaP7.debug.temp.o
- .debug_line    0x0000390f       0x56 /tmp/ccYdfe6Q.debug.temp.o
- .debug_line    0x00003965       0x5f /tmp/cc0lFeGo.debug.temp.o
- .debug_line    0x000039c4       0x68 /tmp/ccVRlWbd.debug.temp.o
- .debug_line    0x00003a2c       0x9a /tmp/ccwZuWwj.debug.temp.o
- .debug_line    0x00003ac6       0x5a /tmp/ccAAnhRt.debug.temp.o
- .debug_line    0x00003b20       0x56 /tmp/cc7vV2s6.debug.temp.o
- .debug_line    0x00003b76       0x68 /tmp/cchoPLkQ.debug.temp.o
- .debug_line    0x00003bde       0x4d /tmp/ccoDhpDZ.debug.temp.o
- .debug_line    0x00003c2b       0x3a /tmp/ccy7FwAR.debug.temp.o
- .debug_line    0x00003c65       0xb0 /tmp/cc0Xsu7r.debug.temp.o
- .debug_line    0x00003d15       0x5f /tmp/ccPbVgpy.debug.temp.o
- .debug_line    0x00003d74       0x68 /tmp/ccfyyZJ9.debug.temp.o
- .debug_line    0x00003ddc       0x63 /tmp/cczIc5bI.debug.temp.o
- .debug_line    0x00003e3f      0x368 /tmp/ccWycZIO.o
+ .debug_line    0x00000000      0x140 /tmp/ccYcG1pH.o
+ .debug_line    0x00000140      0x115 /tmp/ccb1I2lJ.o
+ .debug_line    0x00000255     0x3534 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .debug_line    0x00003789       0x51 /tmp/ccILpAN4.debug.temp.o
+ .debug_line    0x000037da       0x89 /tmp/ccuDU4Ro.debug.temp.o
+ .debug_line    0x00003863       0x56 /tmp/ccdDrjZA.debug.temp.o
+ .debug_line    0x000038b9       0x56 /tmp/cc52eAXQ.debug.temp.o
+ .debug_line    0x0000390f       0x56 /tmp/ccHjNlcU.debug.temp.o
+ .debug_line    0x00003965       0x5f /tmp/ccEx8E8B.debug.temp.o
+ .debug_line    0x000039c4       0x68 /tmp/cc9r2gJM.debug.temp.o
+ .debug_line    0x00003a2c       0x9a /tmp/ccjSN0th.debug.temp.o
+ .debug_line    0x00003ac6       0x5a /tmp/ccexzcIv.debug.temp.o
+ .debug_line    0x00003b20       0x56 /tmp/ccMrniq7.debug.temp.o
+ .debug_line    0x00003b76       0x68 /tmp/ccFGxlJT.debug.temp.o
+ .debug_line    0x00003bde       0x4d /tmp/ccjNNXTO.debug.temp.o
+ .debug_line    0x00003c2b       0x3a /tmp/cckTu69n.debug.temp.o
+ .debug_line    0x00003c65       0xb0 /tmp/cc1zNvZB.debug.temp.o
+ .debug_line    0x00003d15       0x5f /tmp/ccedSQ7n.debug.temp.o
+ .debug_line    0x00003d74       0x68 /tmp/ccj3k5lw.debug.temp.o
+ .debug_line    0x00003ddc       0x63 /tmp/ccmJM1Gy.debug.temp.o
+ .debug_line    0x00003e3f      0x368 /tmp/cc41KCel.o
  .debug_line    0x000041a7       0xa1 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
  .debug_line    0x00004248      0x7ca CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_line_str
                 0x00000000      0xe86
  .debug_line_str
-                0x00000000      0xe86 /tmp/ccWstJFj.o
+                0x00000000      0xe86 /tmp/ccYcG1pH.o
                                  0x92 (size before relaxing)
  .debug_line_str
-                0x00000e86       0x95 /tmp/ccBrKQUo.o
+                0x00000e86       0x95 /tmp/ccb1I2lJ.o
  .debug_line_str
-                0x00000e86      0x540 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000e86      0x540 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .debug_line_str
-                0x00000e86      0x18f /tmp/cchDTUXW.debug.temp.o
+                0x00000e86      0x18f /tmp/ccILpAN4.debug.temp.o
  .debug_line_str
-                0x00000e86      0x2c9 /tmp/ccb1cDCk.debug.temp.o
+                0x00000e86      0x2c9 /tmp/ccuDU4Ro.debug.temp.o
  .debug_line_str
-                0x00000e86      0x177 /tmp/cc8F0cae.debug.temp.o
+                0x00000e86      0x177 /tmp/ccdDrjZA.debug.temp.o
  .debug_line_str
-                0x00000e86      0x1ba /tmp/ccwPPaP7.debug.temp.o
+                0x00000e86      0x1ba /tmp/cc52eAXQ.debug.temp.o
  .debug_line_str
-                0x00000e86      0x17e /tmp/ccYdfe6Q.debug.temp.o
+                0x00000e86      0x17e /tmp/ccHjNlcU.debug.temp.o
  .debug_line_str
-                0x00000e86      0x1c1 /tmp/cc0lFeGo.debug.temp.o
+                0x00000e86      0x1c1 /tmp/ccEx8E8B.debug.temp.o
  .debug_line_str
-                0x00000e86      0x21f /tmp/ccVRlWbd.debug.temp.o
+                0x00000e86      0x21f /tmp/cc9r2gJM.debug.temp.o
  .debug_line_str
-                0x00000e86      0x3a4 /tmp/ccwZuWwj.debug.temp.o
+                0x00000e86      0x3a4 /tmp/ccjSN0th.debug.temp.o
  .debug_line_str
-                0x00000e86      0x1cf /tmp/ccAAnhRt.debug.temp.o
+                0x00000e86      0x1cf /tmp/ccexzcIv.debug.temp.o
  .debug_line_str
-                0x00000e86      0x196 /tmp/cc7vV2s6.debug.temp.o
+                0x00000e86      0x196 /tmp/ccMrniq7.debug.temp.o
  .debug_line_str
-                0x00000e86      0x20b /tmp/cchoPLkQ.debug.temp.o
+                0x00000e86      0x20b /tmp/ccFGxlJT.debug.temp.o
  .debug_line_str
-                0x00000e86      0x134 /tmp/ccoDhpDZ.debug.temp.o
+                0x00000e86      0x134 /tmp/ccjNNXTO.debug.temp.o
  .debug_line_str
-                0x00000e86       0xc9 /tmp/ccy7FwAR.debug.temp.o
+                0x00000e86       0xc9 /tmp/cckTu69n.debug.temp.o
  .debug_line_str
-                0x00000e86      0x331 /tmp/cc0Xsu7r.debug.temp.o
+                0x00000e86      0x331 /tmp/cc1zNvZB.debug.temp.o
  .debug_line_str
-                0x00000e86      0x1c2 /tmp/ccPbVgpy.debug.temp.o
+                0x00000e86      0x1c2 /tmp/ccedSQ7n.debug.temp.o
  .debug_line_str
-                0x00000e86      0x22b /tmp/ccfyyZJ9.debug.temp.o
+                0x00000e86      0x22b /tmp/ccj3k5lw.debug.temp.o
  .debug_line_str
-                0x00000e86      0x220 /tmp/cczIc5bI.debug.temp.o
+                0x00000e86      0x220 /tmp/ccmJM1Gy.debug.temp.o
  .debug_line_str
-                0x00000e86       0x99 /tmp/ccWycZIO.o
+                0x00000e86       0x99 /tmp/cc41KCel.o
  .debug_line_str
                 0x00000e86      0x106 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
  .debug_line_str
                 0x00000e86      0x225 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_info     0x00000000     0xd118
- .debug_info    0x00000000       0x49 /tmp/ccWstJFj.o
- .debug_info    0x00000049       0x23 /tmp/ccBrKQUo.o
- .debug_info    0x0000006c     0x2bb9 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .debug_info    0x00002c25      0x766 /tmp/cchDTUXW.debug.temp.o
+ .debug_info    0x00000000       0x49 /tmp/ccYcG1pH.o
+ .debug_info    0x00000049       0x23 /tmp/ccb1I2lJ.o
+ .debug_info    0x0000006c     0x2bb9 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .debug_info    0x00002c25      0x766 /tmp/ccILpAN4.debug.temp.o
                 0x00002c25                fips202.c.c9aa224c
- .debug_info    0x0000338b     0x1bb0 /tmp/ccb1cDCk.debug.temp.o
+ .debug_info    0x0000338b     0x1bb0 /tmp/ccuDU4Ro.debug.temp.o
                 0x0000338b                w25q.c.a2dff0dd
- .debug_info    0x00004f3b      0xb01 /tmp/cc8F0cae.debug.temp.o
+ .debug_info    0x00004f3b      0xb01 /tmp/ccdDrjZA.debug.temp.o
                 0x00004f3b                dma.c.c0cca2b9
- .debug_info    0x00005a3c      0x36c /tmp/ccwPPaP7.debug.temp.o
+ .debug_info    0x00005a3c      0x36c /tmp/cc52eAXQ.debug.temp.o
                 0x00005a3c                fast_intr_ctrl.c.7d037d2d
- .debug_info    0x00005da8      0x884 /tmp/ccYdfe6Q.debug.temp.o
+ .debug_info    0x00005da8      0x884 /tmp/ccHjNlcU.debug.temp.o
                 0x00005da8                gpio.c.64ed1e87
- .debug_info    0x0000662c      0xb81 /tmp/cc0lFeGo.debug.temp.o
+ .debug_info    0x0000662c      0xb81 /tmp/ccEx8E8B.debug.temp.o
                 0x0000662c                i2c.c.5ad6d072
- .debug_info    0x000071ad      0x4eb /tmp/ccVRlWbd.debug.temp.o
+ .debug_info    0x000071ad      0x4eb /tmp/cc9r2gJM.debug.temp.o
                 0x000071ad                im2col.c.f2734e88
- .debug_info    0x00007698      0x8e0 /tmp/ccwZuWwj.debug.temp.o
+ .debug_info    0x00007698      0x8e0 /tmp/ccjSN0th.debug.temp.o
                 0x00007698                rv_plic.c.ac6fce69
- .debug_info    0x00007f78      0x238 /tmp/ccAAnhRt.debug.temp.o
+ .debug_info    0x00007f78      0x238 /tmp/ccexzcIv.debug.temp.o
                 0x00007f78                soc_ctrl.c.90a415f0
- .debug_info    0x000081b0      0xa6a /tmp/cc7vV2s6.debug.temp.o
+ .debug_info    0x000081b0      0xa6a /tmp/ccMrniq7.debug.temp.o
                 0x000081b0                spi_host.c.5c9fd260
- .debug_info    0x00008c1a      0x519 /tmp/cchoPLkQ.debug.temp.o
+ .debug_info    0x00008c1a      0x519 /tmp/ccFGxlJT.debug.temp.o
                 0x00008c1a                uart.c.6fed57cf
- .debug_info    0x00009133      0x174 /tmp/ccoDhpDZ.debug.temp.o
+ .debug_info    0x00009133      0x174 /tmp/ccjNNXTO.debug.temp.o
                 0x00009133                handler.c.1cdb0002
- .debug_info    0x000092a7       0x32 /tmp/ccy7FwAR.debug.temp.o
+ .debug_info    0x000092a7       0x32 /tmp/cckTu69n.debug.temp.o
                 0x000092a7                init.c.13353d22
- .debug_info    0x000092d9     0x123e /tmp/cc0Xsu7r.debug.temp.o
+ .debug_info    0x000092d9     0x123e /tmp/cc1zNvZB.debug.temp.o
                 0x000092d9                syscalls.c.b6d2745e
- .debug_info    0x0000a517      0x496 /tmp/ccPbVgpy.debug.temp.o
+ .debug_info    0x0000a517      0x496 /tmp/ccedSQ7n.debug.temp.o
                 0x0000a517                dma_sdk.c.7df44329
- .debug_info    0x0000a9ad     0x1563 /tmp/ccfyyZJ9.debug.temp.o
+ .debug_info    0x0000a9ad     0x1563 /tmp/ccj3k5lw.debug.temp.o
                 0x0000a9ad                spi_sdk.c.e26edb40
- .debug_info    0x0000bf10      0x68e /tmp/cczIc5bI.debug.temp.o
+ .debug_info    0x0000bf10      0x68e /tmp/ccmJM1Gy.debug.temp.o
                 0x0000bf10                heap.cpp.446b5e30
- .debug_info    0x0000c59e       0x25 /tmp/ccWycZIO.o
+ .debug_info    0x0000c59e       0x25 /tmp/cc41KCel.o
  .debug_info    0x0000c5c3       0xe6 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
  .debug_info    0x0000c6a9      0xa6f CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_abbrev   0x00000000     0x230f
- .debug_abbrev  0x00000000       0x28 /tmp/ccWstJFj.o
- .debug_abbrev  0x00000028       0x12 /tmp/ccBrKQUo.o
- .debug_abbrev  0x0000003a      0x1e7 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .debug_abbrev  0x00000221      0x1bc /tmp/cchDTUXW.debug.temp.o
- .debug_abbrev  0x000003dd      0x352 /tmp/ccb1cDCk.debug.temp.o
- .debug_abbrev  0x0000072f      0x1c0 /tmp/cc8F0cae.debug.temp.o
- .debug_abbrev  0x000008ef      0x120 /tmp/ccwPPaP7.debug.temp.o
- .debug_abbrev  0x00000a0f      0x1f5 /tmp/ccYdfe6Q.debug.temp.o
- .debug_abbrev  0x00000c04      0x206 /tmp/cc0lFeGo.debug.temp.o
- .debug_abbrev  0x00000e0a      0x1c5 /tmp/ccVRlWbd.debug.temp.o
- .debug_abbrev  0x00000fcf      0x287 /tmp/ccwZuWwj.debug.temp.o
- .debug_abbrev  0x00001256       0xdc /tmp/ccAAnhRt.debug.temp.o
- .debug_abbrev  0x00001332      0x208 /tmp/cc7vV2s6.debug.temp.o
- .debug_abbrev  0x0000153a      0x14c /tmp/cchoPLkQ.debug.temp.o
- .debug_abbrev  0x00001686      0x115 /tmp/ccoDhpDZ.debug.temp.o
- .debug_abbrev  0x0000179b       0x2c /tmp/ccy7FwAR.debug.temp.o
- .debug_abbrev  0x000017c7      0x2dd /tmp/cc0Xsu7r.debug.temp.o
- .debug_abbrev  0x00001aa4      0x150 /tmp/ccPbVgpy.debug.temp.o
- .debug_abbrev  0x00001bf4      0x258 /tmp/ccfyyZJ9.debug.temp.o
- .debug_abbrev  0x00001e4c      0x1e7 /tmp/cczIc5bI.debug.temp.o
- .debug_abbrev  0x00002033       0x14 /tmp/ccWycZIO.o
+ .debug_abbrev  0x00000000       0x28 /tmp/ccYcG1pH.o
+ .debug_abbrev  0x00000028       0x12 /tmp/ccb1I2lJ.o
+ .debug_abbrev  0x0000003a      0x1e7 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .debug_abbrev  0x00000221      0x1bc /tmp/ccILpAN4.debug.temp.o
+ .debug_abbrev  0x000003dd      0x352 /tmp/ccuDU4Ro.debug.temp.o
+ .debug_abbrev  0x0000072f      0x1c0 /tmp/ccdDrjZA.debug.temp.o
+ .debug_abbrev  0x000008ef      0x120 /tmp/cc52eAXQ.debug.temp.o
+ .debug_abbrev  0x00000a0f      0x1f5 /tmp/ccHjNlcU.debug.temp.o
+ .debug_abbrev  0x00000c04      0x206 /tmp/ccEx8E8B.debug.temp.o
+ .debug_abbrev  0x00000e0a      0x1c5 /tmp/cc9r2gJM.debug.temp.o
+ .debug_abbrev  0x00000fcf      0x287 /tmp/ccjSN0th.debug.temp.o
+ .debug_abbrev  0x00001256       0xdc /tmp/ccexzcIv.debug.temp.o
+ .debug_abbrev  0x00001332      0x208 /tmp/ccMrniq7.debug.temp.o
+ .debug_abbrev  0x0000153a      0x14c /tmp/ccFGxlJT.debug.temp.o
+ .debug_abbrev  0x00001686      0x115 /tmp/ccjNNXTO.debug.temp.o
+ .debug_abbrev  0x0000179b       0x2c /tmp/cckTu69n.debug.temp.o
+ .debug_abbrev  0x000017c7      0x2dd /tmp/cc1zNvZB.debug.temp.o
+ .debug_abbrev  0x00001aa4      0x150 /tmp/ccedSQ7n.debug.temp.o
+ .debug_abbrev  0x00001bf4      0x258 /tmp/ccj3k5lw.debug.temp.o
+ .debug_abbrev  0x00001e4c      0x1e7 /tmp/ccmJM1Gy.debug.temp.o
+ .debug_abbrev  0x00002033       0x14 /tmp/cc41KCel.o
  .debug_abbrev  0x00002047       0x65 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
  .debug_abbrev  0x000020ac      0x263 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_aranges  0x00000000      0x358
  .debug_aranges
-                0x00000000       0x20 /tmp/ccWstJFj.o
+                0x00000000       0x20 /tmp/ccYcG1pH.o
  .debug_aranges
-                0x00000020       0x28 /tmp/ccBrKQUo.o
+                0x00000020       0x28 /tmp/ccb1I2lJ.o
  .debug_aranges
-                0x00000048      0x2a0 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000048      0x2a0 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .debug_aranges
-                0x000002e8       0x20 /tmp/ccWycZIO.o
+                0x000002e8       0x20 /tmp/cc41KCel.o
  .debug_aranges
                 0x00000308       0x20 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
  .debug_aranges
                 0x00000328       0x30 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_str      0x00000000     0x4f43
- .debug_str     0x00000000     0x4f43 /tmp/ccWstJFj.o
+ .debug_str     0x00000000     0x4f43 /tmp/ccYcG1pH.o
                                  0xb4 (size before relaxing)
- .debug_str     0x00004f43       0xa4 /tmp/ccBrKQUo.o
- .debug_str     0x00004f43      0x158 /tmp/cc5Je6Q3.ltrans0.ltrans.o
- .debug_str     0x00004f43      0x591 /tmp/cchDTUXW.debug.temp.o
- .debug_str     0x00004f43     0x13b7 /tmp/ccb1cDCk.debug.temp.o
- .debug_str     0x00004f43      0xb32 /tmp/cc8F0cae.debug.temp.o
- .debug_str     0x00004f43      0x6bd /tmp/ccwPPaP7.debug.temp.o
- .debug_str     0x00004f43      0x895 /tmp/ccYdfe6Q.debug.temp.o
- .debug_str     0x00004f43      0xac2 /tmp/cc0lFeGo.debug.temp.o
- .debug_str     0x00004f43      0x511 /tmp/ccVRlWbd.debug.temp.o
- .debug_str     0x00004f43      0x84d /tmp/ccwZuWwj.debug.temp.o
- .debug_str     0x00004f43      0x2ab /tmp/ccAAnhRt.debug.temp.o
- .debug_str     0x00004f43      0x961 /tmp/cc7vV2s6.debug.temp.o
- .debug_str     0x00004f43      0x41f /tmp/cchoPLkQ.debug.temp.o
- .debug_str     0x00004f43      0x297 /tmp/ccoDhpDZ.debug.temp.o
- .debug_str     0x00004f43       0xc7 /tmp/ccy7FwAR.debug.temp.o
- .debug_str     0x00004f43      0xaf7 /tmp/cc0Xsu7r.debug.temp.o
- .debug_str     0x00004f43      0x465 /tmp/ccPbVgpy.debug.temp.o
- .debug_str     0x00004f43      0xfce /tmp/ccfyyZJ9.debug.temp.o
- .debug_str     0x00004f43      0x351 /tmp/cczIc5bI.debug.temp.o
- .debug_str     0x00004f43       0xa8 /tmp/ccWycZIO.o
+ .debug_str     0x00004f43       0xa4 /tmp/ccb1I2lJ.o
+ .debug_str     0x00004f43      0x158 /tmp/ccFs0YVg.ltrans0.ltrans.o
+ .debug_str     0x00004f43      0x591 /tmp/ccILpAN4.debug.temp.o
+ .debug_str     0x00004f43     0x13b7 /tmp/ccuDU4Ro.debug.temp.o
+ .debug_str     0x00004f43      0xb32 /tmp/ccdDrjZA.debug.temp.o
+ .debug_str     0x00004f43      0x6bd /tmp/cc52eAXQ.debug.temp.o
+ .debug_str     0x00004f43      0x895 /tmp/ccHjNlcU.debug.temp.o
+ .debug_str     0x00004f43      0xac2 /tmp/ccEx8E8B.debug.temp.o
+ .debug_str     0x00004f43      0x511 /tmp/cc9r2gJM.debug.temp.o
+ .debug_str     0x00004f43      0x84d /tmp/ccjSN0th.debug.temp.o
+ .debug_str     0x00004f43      0x2ab /tmp/ccexzcIv.debug.temp.o
+ .debug_str     0x00004f43      0x961 /tmp/ccMrniq7.debug.temp.o
+ .debug_str     0x00004f43      0x41f /tmp/ccFGxlJT.debug.temp.o
+ .debug_str     0x00004f43      0x297 /tmp/ccjNNXTO.debug.temp.o
+ .debug_str     0x00004f43       0xc7 /tmp/cckTu69n.debug.temp.o
+ .debug_str     0x00004f43      0xaf7 /tmp/cc1zNvZB.debug.temp.o
+ .debug_str     0x00004f43      0x465 /tmp/ccedSQ7n.debug.temp.o
+ .debug_str     0x00004f43      0xfce /tmp/ccj3k5lw.debug.temp.o
+ .debug_str     0x00004f43      0x351 /tmp/ccmJM1Gy.debug.temp.o
+ .debug_str     0x00004f43       0xa8 /tmp/cc41KCel.o
  .debug_str     0x00004f43      0x192 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
  .debug_str     0x00004f43      0x2e8 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_rnglists
                 0x00000000      0x786
  .debug_rnglists
-                0x00000000       0x1a /tmp/ccBrKQUo.o
+                0x00000000       0x1a /tmp/ccb1I2lJ.o
  .debug_rnglists
-                0x0000001a      0x706 /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x0000001a      0x706 /tmp/ccFs0YVg.ltrans0.ltrans.o
  .debug_rnglists
                 0x00000720       0x66 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_loclists
                 0x00000000     0x1bcb
  .debug_loclists
-                0x00000000     0x195b /tmp/cc5Je6Q3.ltrans0.ltrans.o
+                0x00000000     0x195b /tmp/ccFs0YVg.ltrans0.ltrans.o
  .debug_loclists
                 0x0000195b       0x20 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
  .debug_loclists
                 0x0000197b      0x250 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_frame    0x00000000     0x190c
- .debug_frame   0x00000000     0x184c /tmp/cc5Je6Q3.ltrans0.ltrans.o
+ .debug_frame   0x00000000     0x184c /tmp/ccFs0YVg.ltrans0.ltrans.o
  .debug_frame   0x0000184c       0x20 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
  .debug_frame   0x0000186c       0xa0 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
