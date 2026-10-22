@@ -36,6 +36,7 @@ private/
 .vscode/
 .Xil/
 *.txt
+setenv.sh
 
 # Tech files
 *.db
@@ -52,3 +53,5 @@ implementation/drc/*
 implementation/dummyfill/*
 implementation/lvs/*
 implementation/pnr/*
+
+

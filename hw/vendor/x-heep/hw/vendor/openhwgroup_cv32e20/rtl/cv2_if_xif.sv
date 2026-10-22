@@ -28,8 +28,8 @@
 //                                                                            //
 ////////////////////////////////////////////////////////////////////////////////
 
-interface if_xif
-  import cv32e40x_pkg::*;
+interface cv2_if_xif
+  import cve2_pkg::*;
 #(
   parameter int unsigned X_NUM_RS        =  2,  // Number of register file read ports that can be used by the eXtension interface
   parameter int unsigned X_ID_WIDTH = 4,  // Width of ID field.
