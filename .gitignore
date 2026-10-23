@@ -37,6 +37,7 @@ private/
 .Xil/
 *.txt
 setenv.sh
+plan.md
 
 # Tech files
 *.db

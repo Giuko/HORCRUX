@@ -101,6 +101,16 @@ module cve2_core import cve2_pkg::*; #(
   output logic [63:0]                  rvfi_ext_mcycle,
 `endif
 
+`ifdef CVXIF
+  // CORE-V-XIF interfaces
+  if_xif.cpu_compressed                xif_compressed_if,
+  if_xif.cpu_issue                     xif_issue_if,
+  if_xif.cpu_commit                    xif_commit_if,
+  if_xif.cpu_mem                       xif_mem_if,
+  if_xif.cpu_mem_result                xif_mem_result_if,
+  if_xif.cpu_result                    xif_result_if,
+`endif
+
   // CPU Control Signals
   input  logic                         fetch_enable_i,
   output logic                         core_busy_o
