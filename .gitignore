@@ -36,6 +36,7 @@ private/
 .vscode/
 .Xil/
 *.txt
+plan.md
 
 # Tech files
 *.db
