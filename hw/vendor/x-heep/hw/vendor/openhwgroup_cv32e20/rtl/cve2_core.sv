@@ -68,16 +68,6 @@ module cve2_core import cve2_pkg::*; #(
   // SEC_CM: EXCEPTION.CTRL_FLOW.LOCAL_ESC
   // SEC_CM: EXCEPTION.CTRL_FLOW.GLOBAL_ESC
 
-  `ifdef CV_X_IF
-  // CV-X-IF ports
-  if_xif.cpu_compressed                xif_compressed_if,
-  if_xif.cpu_issue                     xif_issue_if,
-  if_xif.cpu_commit                    xif_commit_if,
-  if_xif.cpu_mem                       xif_mem_if,
-  if_xif.cpu_mem_result                xif_mem_result_if,
-  if_xif.cpu_result                    xif_result_if,
-`endif
-
   // RISC-V Formal Interface
   // Does not comply with the coding standards of _i/_o suffixes, but follows
   // the convention of RISC-V Formal Interface Specification.
