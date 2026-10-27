@@ -155,6 +155,14 @@ module cve2_core import cve2_pkg::*; #(
   logic [31:0] rf_rdata_a;
   logic [4:0]  rf_raddr_b;
   logic [31:0] rf_rdata_b;
+
+`ifdef CV_X_IF
+  // Dedicated rs for CV X IF
+  logic [4:0]  rf_raddr_c_cv_x_if;
+  logic [31:0] rf_rdata_c_cv_x_if;
+  logic        rf_ren_c_cv_x_if;
+`endif
+
   logic        rf_ren_a;
   logic        rf_ren_b;
   logic [4:0]  rf_waddr_wb;
@@ -465,7 +473,12 @@ module cve2_core import cve2_pkg::*; #(
     .rf_rdata_b_i      (rf_rdata_b),
     .rf_ren_a_o        (rf_ren_a),
     .rf_ren_b_o        (rf_ren_b),
-    .rf_waddr_id_o     (rf_waddr_id),
+`ifdef CV_X_IF
+    .rf_raddr_c_o      (rf_raddr_c_cv_x_if),
+    .rf_rdata_c_i      (rf_rdata_c_cv_x_if),
+    .rf_ren_c_o        (rf_ren_c_cv_x_if),
+`endif
+	.rf_waddr_id_o     (rf_waddr_id),
     .rf_wdata_id_o     (rf_wdata_id),
     .rf_we_id_o        (rf_we_id),
 
@@ -654,6 +667,10 @@ module cve2_core import cve2_pkg::*; #(
     .rdata_a_o(rf_rdata_a),
     .raddr_b_i(rf_raddr_b),
     .rdata_b_o(rf_rdata_b),
+	`ifdef CV_X_IF
+    .raddr_c_i(rf_raddr_c_cv_x_if),
+    .rdata_c_o(rf_rdata_c_cv_x_if),
+	`endif
     .waddr_a_i(rf_waddr_wb),
     .wdata_a_i(rf_wdata_wb),
     .we_a_i   (rf_we_wb)
@@ -862,6 +879,10 @@ module cve2_core import cve2_pkg::*; #(
   logic [31:0] rvfi_rs2_data_d;
   logic [31:0] rvfi_rs2_data_q;
   logic [31:0] rvfi_rs3_data_d;
+  `ifdef CV_X_IF
+  logic [4:0]  rvfi_rs3_cv_x_if_addr_d;
+  logic [31:0] rvfi_rs3_cv_x_if_data_d;
+  `endif
   logic [4:0]  rvfi_rd_addr_wb;
   logic [4:0]  rvfi_rd_addr_q;
   logic [4:0]  rvfi_rd_addr_d;
@@ -1253,6 +1274,10 @@ module cve2_core import cve2_pkg::*; #(
       rvfi_rs2_addr_d = rf_ren_b ? rf_raddr_b : '0;
       rvfi_rs3_data_d = '0;
       rvfi_rs3_addr_d = '0;
+	  `ifdef CV_X_IF
+      rvfi_rs3_cv_x_if_data_d = rf_ren_c_cv_x_if ? rf_rdata_c_cv_x_if : '0;
+      rvfi_rs3_cv_x_if_addr_d = rf_ren_c_cv_x_if ? rf_raddr_c_cv_x_if : '0;
+      `endif
     end else begin
       rvfi_rs1_data_d = rvfi_rs1_data_q;
       rvfi_rs1_addr_d = rvfi_rs1_addr_q;
