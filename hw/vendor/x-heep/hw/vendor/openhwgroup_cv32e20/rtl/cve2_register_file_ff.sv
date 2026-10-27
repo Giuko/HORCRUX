@@ -29,9 +29,11 @@ module cve2_register_file_ff #(
   input  logic [4:0]           raddr_b_i,
   output logic [DataWidth-1:0] rdata_b_o,
 
-  //Read port R3
+  `ifdef CV_X_IF
+  //Read port R3, dedicated for the external CV X IF
   input  logic [4:0]           raddr_c_i,
   output logic [DataWidth-1:0] rdata_c_o,
+  `endif
 
   // Write port W1
   input  logic [4:0]           waddr_a_i,
@@ -71,7 +73,10 @@ module cve2_register_file_ff #(
 
   assign rdata_a_o = rf_reg[raddr_a_i];
   assign rdata_b_o = rf_reg[raddr_b_i];
+  
+  `ifdef CV_X_IF
   assign rdata_c_o = rf_reg[raddr_c_i];
+  `endif CV_X_IF	
 
   // Signal not used in FF register file
   logic unused_test_en;
