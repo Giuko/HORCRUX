@@ -134,6 +134,13 @@ module cve2_id_stage #(
   output logic                      rf_ren_a_o,
   output logic                      rf_ren_b_o,
 
+`ifdef CV_X_IF
+  // CV-X-IF dedicated rs
+  output logic [4:0]                rf_raddr_c_o,
+  input  logic [31:0]               rf_rdata_c_i,
+  output logic                      rf_ren_c_o,
+`endif
+
   // Register file write (via writeback)
   output logic [4:0]                rf_waddr_id_o,
   output logic [31:0]               rf_wdata_id_o,
@@ -210,6 +217,15 @@ module cve2_id_stage #(
 
   logic [31:0] rf_rdata_a_fwd;
   logic [31:0] rf_rdata_b_fwd;
+
+  `ifdef CV_X_IF
+  logic xif_insn_candidate;
+  logic [31:0] rf_rdata_c_fwd;
+  // Temporary parameter only to test the correct working
+  localparam logic [6:0] HORCRUX_OPCODE = 7'b1101011; // 0x6b
+  localparam logic [2:0] HORCRUX_FUNCT3 = 3'b111;     // 0x7
+  localparam logic [1:0] HORCRUX_FUNCT2 = 2'b10;      // 0x2
+  `endif
 
   // ALU Control
   alu_op_e     alu_operator;
@@ -330,6 +346,26 @@ module cve2_id_stage #(
     endcase
   end
 
+
+
+  /////////////
+  // CV X IF //
+  /////////////
+  `ifdef CV_X_IF
+  assign rf_raddr_c_o       = instr_rdata_i[31:27];
+  assign rf_rdata_c_fwd     = rf_rdata_c_i;
+
+  assign xif_insn_candidate = !instr_is_compressed_i &&
+                              (instr_rdata_i[6:0]   == HORCRUX_OPCODE) &&
+                              (instr_rdata_i[14:12] == HORCRUX_FUNCT3) &&
+                              (instr_rdata_i[26:25] == HORCRUX_FUNCT2);
+
+  assign rf_ren_c_o         = instr_valid_i && 
+	                          !instr_fetch_err_i && 
+					          !instr_is_compressed_i &&
+					          xif_insn_candidate;
+  `endif
+
   /////////////
   // Decoder //
   /////////////
@@ -442,7 +478,13 @@ module cve2_id_stage #(
   // Controller //
   ////////////////
 
-  assign illegal_insn_o = instr_valid_i & (illegal_insn_dec | illegal_csr_insn_i);
+  logic illegal_insn_composed;
+`ifdef CV_X_IF
+  assign illegal_insn_composed = illegal_insn_dec & !xif_insn_candidate;
+`else
+  assign illegal_insn_composed = illegal_insn_dec;
+`endif
+  assign illegal_insn_o = instr_valid_i & (illegal_insn_composed | illegal_csr_insn_i);
 
   cve2_controller #(
   ) controller_i (
