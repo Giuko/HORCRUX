@@ -4,7 +4,7 @@
 module cve2_xif_decoder #()(
   input  logic [31:0] instr_i,
   input  logic        instr_is_compressed_i,
-  output logic        xif_insn_cadidate_o,
+  output logic        xif_insn_candidate_o,
   output logic [4:0]  rs1_addr_o,
   output logic [4:0]  rs2_addr_o,
   output logic [4:0]  rs3_addr_o,
@@ -34,7 +34,7 @@ module cve2_xif_decoder #()(
   end
 
   always_comb begin
-    xif_insn_cadidate_o = 1'b0;
+    xif_insn_candidate_o = 1'b0;
     rs1_addr_o          = instr_i[19:15];
     rs2_addr_o          = instr_i[24:20];
     rs3_addr_o          = '0;
@@ -44,7 +44,7 @@ module cve2_xif_decoder #()(
     if (!instr_is_compressed_i) begin
       for (int unsigned i = 0; i < NbInstr; i++) begin
         if (instruction_match[i]) begin
-          xif_insn_cadidate_o = 1'b1;
+          xif_insn_candidate_o = 1'b1;
 		  rs_valid_o = CoproInstr[i].resp.register_read;
 
           // register_read[2] identifies the R4-type instructions that use rs3.
