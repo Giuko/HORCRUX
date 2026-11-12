@@ -139,6 +139,7 @@ module cve2_id_stage #(
   output logic [4:0]                rf_raddr_c_o,
   input  logic [31:0]               rf_rdata_c_i,
   output logic                      rf_ren_c_o,
+  if_xif.cpu_issue                  xif_issue_if,
 `endif
 
   // Register file write (via writeback)
@@ -208,9 +209,18 @@ module cve2_id_stage #(
   logic        rf_ren_a, rf_ren_b;
   logic        rf_ren_a_dec, rf_ren_b_dec;
 
-  // Read enables should only be asserted for valid and legal instructions
+  // Normal instructions read the operands selected by the decoder. An
+  // instruction offered through XIF is illegal to the base decoder, but its
+  // operands still have to be read before it is offered to the coprocessor.
+`ifdef CV_X_IF
+  assign rf_ren_a = instr_valid_i & ~instr_fetch_err_i &
+                    ((~illegal_insn_o & rf_ren_a_dec) | xif_issue_valid_int);
+  assign rf_ren_b = instr_valid_i & ~instr_fetch_err_i &
+                    ((~illegal_insn_o & rf_ren_b_dec) | xif_issue_valid_int);
+`else
   assign rf_ren_a = instr_valid_i & ~instr_fetch_err_i & ~illegal_insn_o & rf_ren_a_dec;
   assign rf_ren_b = instr_valid_i & ~instr_fetch_err_i & ~illegal_insn_o & rf_ren_b_dec;
+`endif
 
   assign rf_ren_a_o = rf_ren_a;
   assign rf_ren_b_o = rf_ren_b;
@@ -219,12 +229,34 @@ module cve2_id_stage #(
   logic [31:0] rf_rdata_b_fwd;
 
   `ifdef CV_X_IF
-  logic xif_insn_candidate;
   logic [31:0] rf_rdata_c_fwd;
-  // Temporary parameter only to test the correct working
-  localparam logic [6:0] HORCRUX_OPCODE = 7'b1101011; // 0x6b
-  localparam logic [2:0] HORCRUX_FUNCT3 = 3'b111;     // 0x7
-  localparam logic [1:0] HORCRUX_FUNCT2 = 2'b10;      // 0x2
+  logic xif_issue_valid_int;
+
+  logic xif_accepted_q;
+  logic xif_rejected_q;
+
+  // The base decoder determines which instructions are offered to XIF.
+  // HORCRUX determines whether the offered instruction belongs to it through
+  // issue_resp.accept.
+  assign xif_issue_valid_int = instr_valid_i &&
+                               !instr_fetch_err_i &&
+                               !instr_is_compressed_i &&
+                               illegal_insn_dec &&
+                               !xif_accepted_q &&
+                               !xif_rejected_q;
+
+  always_ff @(posedge clk_i or negedge rst_ni) begin
+    if (!rst_ni) begin
+      xif_accepted_q <= 1'b0;
+      xif_rejected_q <= 1'b0;
+    end else if (flush_id || !instr_valid_i) begin
+      xif_accepted_q <= 1'b0;
+      xif_rejected_q <= 1'b0;
+    end else if (xif_issue_if.issue_valid && xif_issue_if.issue_ready) begin
+      xif_accepted_q <= xif_issue_if.issue_resp.accept;
+      xif_rejected_q <= !xif_issue_if.issue_resp.accept;
+    end
+  end
   `endif
 
   // ALU Control
@@ -355,15 +387,27 @@ module cve2_id_stage #(
   assign rf_raddr_c_o       = instr_rdata_i[31:27];
   assign rf_rdata_c_fwd     = rf_rdata_c_i;
 
-  assign xif_insn_candidate = !instr_is_compressed_i &&
-                              (instr_rdata_i[6:0]   == HORCRUX_OPCODE) &&
-                              (instr_rdata_i[14:12] == HORCRUX_FUNCT3) &&
-                              (instr_rdata_i[26:25] == HORCRUX_FUNCT2);
+  // Provide the third operand for every uncompressed instruction offered
+  // through XIF. HORCRUX decides whether it is actually needed.
+  assign rf_ren_c_o = xif_issue_valid_int;
 
-  assign rf_ren_c_o         = instr_valid_i && 
-	                          !instr_fetch_err_i && 
-					          !instr_is_compressed_i &&
-					          xif_insn_candidate;
+  // CV-X-IF issue request. The coprocessor decides whether the instruction is
+  // a HORCRUX instruction through issue_resp.accept.
+  assign xif_issue_if.issue_req.instr = instr_rdata_i;
+  assign xif_issue_if.issue_req.mode = priv_mode_i;
+  assign xif_issue_if.issue_req.id = '0;
+  assign xif_issue_if.issue_req.ecs = '0;
+  assign xif_issue_if.issue_req.ecs_valid = 1'b0;
+
+  assign xif_issue_if.issue_req.rs[0] = rf_rdata_a_i;
+  assign xif_issue_if.issue_req.rs[1] = rf_rdata_b_i;
+  assign xif_issue_if.issue_req.rs[2] = rf_rdata_c_i;
+
+  assign xif_issue_if.issue_req.rs_valid[0] = rf_ren_a;
+  assign xif_issue_if.issue_req.rs_valid[1] = rf_ren_b;
+  assign xif_issue_if.issue_req.rs_valid[2] = rf_ren_c_o;
+
+  assign xif_issue_if.issue_valid = xif_issue_valid_int;
   `endif
 
   /////////////
@@ -480,7 +524,12 @@ module cve2_id_stage #(
 
   logic illegal_insn_composed;
 `ifdef CV_X_IF
-  assign illegal_insn_composed = illegal_insn_dec & !xif_insn_candidate;
+  // Do not raise the illegal-instruction exception while the instruction is
+  // being offered to XIF. If HORCRUX rejects it, raise the exception after
+  // the issue handshake.
+  assign illegal_insn_composed = illegal_insn_dec &&
+                                  (xif_rejected_q ||
+                                   (!xif_issue_valid_int && !xif_accepted_q));
 `else
   assign illegal_insn_composed = illegal_insn_dec;
 `endif
@@ -748,7 +797,11 @@ module cve2_id_stage #(
   // Stall ID/EX stage for reason that relates to instruction in ID/EX, update assertion below if
   // modifying this.
   assign stall_id = stall_mem | stall_multdiv | stall_jump | stall_branch |
-                      stall_alu;
+                    stall_alu
+`ifdef CV_X_IF
+                    | xif_issue_valid_int
+`endif
+                    ;
 
   // Generally illegal instructions have no reason to stall, however they must still stall waiting
   // for outstanding memory requests so exceptions related to them take priority over the illegal
