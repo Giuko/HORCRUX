@@ -134,6 +134,16 @@ module cve2_id_stage #(
   output logic                      rf_ren_a_o,
   output logic                      rf_ren_b_o,
 
+`ifdef CV_X_IF
+  // CV-X-IF dedicated rs
+  output logic [4:0]                rf_raddr_c_o,
+  input  logic [31:0]               rf_rdata_c_i,
+
+  // eXtension interface
+  if_xif.cpu_issue                  xif_issue_if,
+  output logic                      xif_offloading_o,
+`endif
+
   // Register file write (via writeback)
   output logic [4:0]                rf_waddr_id_o,
   output logic [31:0]               rf_wdata_id_o,
@@ -210,6 +220,24 @@ module cve2_id_stage #(
 
   logic [31:0] rf_rdata_a_fwd;
   logic [31:0] rf_rdata_b_fwd;
+
+`ifdef CV_X_IF
+  // eXtension interface signals
+  logic xif_en;
+  logic xif_waiting;
+  logic xif_insn_accept;
+  logic xif_insn_reject;
+  logic xif_we;
+  logic xif_exception;
+  logic xif_dualwrite;
+  logic xif_loadstore;
+  logic xif_issue_fire;
+
+  logic xif_accept_event;
+  logic xif_reject_event;
+
+  logic [2:0] rf_illegal_raddr;
+`endif
 
   // ALU Control
   alu_op_e     alu_operator;
@@ -319,7 +347,12 @@ module cve2_id_stage #(
   ///////////////////////
 
   // Suppress register write if there is an illegal CSR access or instruction is not executing
+`ifdef CV_X_IF
+  // WB enabled by decoder or XIF
+  assign rf_we_id_o = (rf_we_raw || xif_we) & instr_executing & ~illegal_csr_insn_i;
+`else
   assign rf_we_id_o = rf_we_raw & instr_executing & ~illegal_csr_insn_i;
+`endif
 
   // Register file write data mux
   always_comb begin : rf_wdata_id_mux
@@ -329,6 +362,93 @@ module cve2_id_stage #(
       default:   rf_wdata_id_o = result_ex_i;
     endcase
   end
+
+
+
+  /////////////
+  // CV X IF //
+  /////////////
+`ifdef CV_X_IF
+  assign rf_raddr_c_o       = instr_rdata_i[31:27];
+  assign rf_rdata_c_fwd     = rf_rdata_c_i;
+
+
+  // Trying to offload every valid instruction that is considered illegal by
+  // the decoder.
+  assign xif_issue_if.issue_valid = instr_valid_i && 
+                                    !instr_fetch_err_i &&
+                                    !instr_is_compressed_i &&
+                                    illegal_insn_dec &&
+                                    (!xif_accepted_q && !xif_rejected_q);
+
+  // Keep xif_offloading_o high to get a new instruciton ID from IF stge
+  assign xif_offloading_o = xif_issue_if.issue_valid || xif_accepted_q || xif_rejected_q;
+
+  assign xif_issue_if.issue_req.instr = instr_rdata_i; 
+  assign xif_issue_if.issue_req.mode  = PRIV_LVL_M;
+  assign xif_issue_if.issue_req.id    = '0;
+
+  assign rf_illegal_raddr[0] = RV32E && rf_raddr_a_o[4];
+  assign rf_illegal_raddr[1] = RV32E && rf_raddr_b_o[4];
+  assign rf_illegal_raddr[2] = RV32E && rf_raddr_c_o[4];
+
+  always_comb begin
+    xif_issue_if.issue_req.rs           = '0;
+    xif_issue_if.issue_req.rs_valid     = '0;
+    
+    xif_issue_if.issue_req.rs[0]        = rf_rdata_a_fwd;
+    xif_issue_if.issue_req.rs[1]        = rf_rdata_b_fwd;
+    xif_issue_if.issue_req.rs[2]        = rf_rdata_c_fwd; // source C of RF
+    
+    xif_issue_if.issue_req.rs_valid[0]  = !rf_illegal_raddr[0];
+    xif_issue_if.issue_req.rs_valid[1]  = !rf_illegal_raddr[1];
+    xif_issue_if.issue_req.rs_valid[2]  = !rf_illegal_raddr[2];
+  end
+
+
+  //////////////////////////////////////////
+  // eXtension handshake acception/rejection
+  //////////////////////////////////////////
+
+  logic xif_accepted_q;
+  logic xif_rejected_q;
+  
+  assign xif_en = xif_insn_accept || xif_insn_reject;
+  
+  // Issue output are ready
+  assign xif_issue_fire = xif_issue_if.issue_valid && xif_issue_if.issue_ready;
+
+  assign xif_accept_event = xif_issue_fire && xif_issue_if.issue_resp.accept;  // Output ready and accepted
+  assign xif_reject_event = xif_issue_fire && !xif_issue_if.issue_resp.accept; // Output ready and rejected
+
+  assign xif_insn_accept = xif_accept_event || xif_accepted_q;
+  assign xif_insn_reject = xif_reject_event || xif_rejected_q;
+
+  always_ff @(posedge clk_i, negedge rst_ni) begin : IF_XIF_STATE_REGISTER
+    if(rst_ni == 1'b0) begin
+      xif_accepted_q <= 1'b0;
+      xif_rejected_q <= 1'b0;
+    end else begin
+      if (xif_issue_fire) begin
+        xif_accepted_q <= xif_accept_event;
+        xif_rejected_q <= xif_reject_event;
+      end else if(instr_done || instr_valid_clear_o) begin
+        xif_accepted_q <= 1'b0;
+        xif_rejected_q <= 1'b0;
+      end
+    end
+  end
+
+  // Extra signals for eXtension
+  assign xif_we         = xif_issue_if.issue_valid && xif_issue_if.issue_resp.writeback;  // Care in HORCRUX it can assume both 0 and 1
+  assign xif_exception  = xif_issue_if.issue_valid && xif_issue_if.issue_resp.exc;        // Don't care in HORCRUX tied low / not used
+  assign xif_dualwrite  = xif_issue_if.issue_valid && xif_issue_if.issue_resp.dualwrite;  // Don't care in HORCRUX tied low / not used
+  assign xif_loadstore  = xif_issue_if.issue_valid && xif_issue_if.issue_resp.loadstore;  // Don't care in HORCRUX mem_valid/req tied low / not used 
+
+  // The coprocessor still hasn't accepted nor rejected the issue, used with
+  // stall_id
+  assign xif_waiting    = xif_issue_if.issue_valid && !xif_issue_if.issue_ready && !xif_accepted_q && !xif_rejected_q;
+`endif
 
   /////////////
   // Decoder //
@@ -442,7 +562,13 @@ module cve2_id_stage #(
   // Controller //
   ////////////////
 
-  assign illegal_insn_o = instr_valid_i & (illegal_insn_dec | illegal_csr_insn_i);
+  logic illegal_insn_composed;
+`ifdef CV_X_IF
+  assign illegal_insn_composed = illegal_insn_dec & xif_insn_reject;
+`else
+  assign illegal_insn_composed = illegal_insn_dec;
+`endif
+  assign illegal_insn_o = instr_valid_i & (illegal_insn_composed | illegal_csr_insn_i);
 
   cve2_controller #(
   ) controller_i (
@@ -703,10 +829,16 @@ module cve2_id_stage #(
   `ASSERT(StallIDIfMulticycle, (id_fsm_q == FIRST_CYCLE) & (id_fsm_d == MULTI_CYCLE) |-> stall_id)
 
 
+
+
+  // The coprocessor still hasn't accepted nor rejected the issue
   // Stall ID/EX stage for reason that relates to instruction in ID/EX, update assertion below if
   // modifying this.
-  assign stall_id = stall_mem | stall_multdiv | stall_jump | stall_branch |
-                      stall_alu;
+`ifdef CV_X_IF
+  assign stall_id = stall_mem | stall_multdiv | stall_jump | stall_branch | stall_alu | xif_waiting;
+`else
+  assign stall_id = stall_mem | stall_multdiv | stall_jump | stall_branch | stall_alu;
+`endif
 
   // Generally illegal instructions have no reason to stall, however they must still stall waiting
   // for outstanding memory requests so exceptions related to them take priority over the illegal

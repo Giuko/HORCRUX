@@ -36,7 +36,6 @@ private/
 .vscode/
 .Xil/
 *.txt
-setenv.sh
 plan.md
 
 # Tech files

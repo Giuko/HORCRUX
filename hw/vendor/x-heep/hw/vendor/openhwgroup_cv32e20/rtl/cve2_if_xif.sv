@@ -18,7 +18,8 @@
  */
 
 ////////////////////////////////////////////////////////////////////////////////
-// Engineer:       Michael Platzer - michael.platzer@tuwien.ac.at             //
+// Engineer:           Michael Platzer - michael.platzer@tuwien.ac.at  
+// Porting to cv32e20: Giuseppe Maganuco - s345962@studenti.polito.it
 //                                                                            //
 // Design Name:    CORE-V XIF eXtension Interface                             //
 // Project Name:   RI5CY                                                      //
@@ -31,13 +32,13 @@
 interface if_xif
   import cve2_pkg::*;
 #(
-  parameter int unsigned X_NUM_RS        =  2,  // Number of register file read ports that can be used by the eXtension interface
-  parameter int unsigned X_ID_WIDTH = 4,  // Width of ID field.
-  parameter int unsigned X_MEM_WIDTH     =  32, // Memory access width for loads/stores via the eXtension interface
-  parameter int unsigned X_RFR_WIDTH     =  32, // Register file read access width for the eXtension interface
-  parameter int unsigned X_RFW_WIDTH     =  32, // Register file write access width for the eXtension interface
-  parameter logic [31:0] X_MISA = '0,  // MISA extensions implemented on the eXtension interface
-  parameter logic [1:0] X_ECS_XS = '0  // Default value for mstatus.XS
+  parameter int unsigned X_NUM_RS        =   3,  // Number of register file read ports that can be used by the eXtension interface
+  parameter int unsigned X_ID_WIDTH      =   4,  // Width of ID field.
+  parameter int unsigned X_MEM_WIDTH     =  32,  // Memory access width for loads/stores via the eXtension interface
+  parameter int unsigned X_RFR_WIDTH     =  32,  // Register file read access width for the eXtension interface
+  parameter int unsigned X_RFW_WIDTH     =  32,  // Register file write access width for the eXtension interface
+  parameter logic [31:0] X_MISA          =  '0,  // MISA extensions implemented on the eXtension interface
+  parameter logic [1:0] X_ECS_XS         =  '0   // Default value for mstatus.XS
 );
 
   localparam int XLEN = 32;
@@ -150,12 +151,7 @@ interface if_xif
   x_result_t          result;
 
   // Port directions for host CPU
-  modport cpu_compressed(
-      output compressed_valid,
-      input compressed_ready,
-      output compressed_req,
-      input compressed_resp
-  );
+  modport cpu_compressed(output compressed_valid, input compressed_ready, output compressed_req, input compressed_resp);
   modport cpu_issue(output issue_valid, input issue_ready, output issue_req, input issue_resp);
   modport cpu_commit(output commit_valid, output commit);
   modport cpu_mem(input mem_valid, output mem_ready, input mem_req, output mem_resp);
@@ -163,12 +159,7 @@ interface if_xif
   modport cpu_result(input result_valid, output result_ready, input result);
 
   // Port directions for extension
-  modport coproc_compressed(
-      input compressed_valid,
-      output compressed_ready,
-      input compressed_req,
-      output compressed_resp
-  );
+  modport coproc_compressed(input compressed_valid, output compressed_ready, input compressed_req, output compressed_resp);
   modport coproc_issue(input issue_valid, output issue_ready, input issue_req, output issue_resp);
   modport coproc_commit(input commit_valid, input commit);
   modport coproc_mem(output mem_valid, input mem_ready, output mem_req, input mem_resp);
@@ -176,12 +167,7 @@ interface if_xif
   modport coproc_result(output result_valid, input result_ready, output result);
 
   // Monitor port directions
-  modport monitor_compressed(
-      input compressed_valid,
-      input compressed_ready,
-      input compressed_req,
-      input compressed_resp
-  );
+  modport monitor_compressed(input compressed_valid, input compressed_ready, input compressed_req, input compressed_resp);
   modport monitor_issue(input issue_valid, input issue_ready, input issue_req, input issue_resp);
   modport monitor_commit(input commit_valid, input commit);
   modport monitor_mem(input mem_valid, input mem_ready, input mem_req, input mem_resp);

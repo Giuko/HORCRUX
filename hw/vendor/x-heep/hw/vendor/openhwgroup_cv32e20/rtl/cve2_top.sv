@@ -61,15 +61,15 @@ module cve2_top import cve2_pkg::*; #(
   input  logic [31:0]                  dm_exception_addr_i,
   output crash_dump_t                  crash_dump_o,
 
-`ifdef CVXIF
-  // CORE-V-XIF interfaces
-  if_xif.cpu_compressed                xif_compressed_if,
-  if_xif.cpu_issue                     xif_issue_if,
-  if_xif.cpu_commit                    xif_commit_if,
-  if_xif.cpu_mem                       xif_mem_if,
-  if_xif.cpu_mem_result                xif_mem_result_if,
-  if_xif.cpu_result                    xif_result_if,
-`endif
+`ifdef CV_X_IF
+  // XIF CPU host ports
+  if_xif.cpu_compressed  xif_compressed_if,
+  if_xif.cpu_issue       xif_issue_if,
+  if_xif.cpu_commit      xif_commit_if,
+  if_xif.cpu_mem         xif_mem_if,
+  if_xif.cpu_mem_result  xif_mem_result_if,
+  if_xif.cpu_result      xif_result_if,
+`endif 
 
   // RISC-V Formal Interface
   // Does not comply with the coding standards of _i/_o suffixes, but follows
@@ -207,16 +207,15 @@ module cve2_top import cve2_pkg::*; #(
     .dm_halt_addr_i,
     .dm_exception_addr_i,
     .crash_dump_o,
-
-`ifdef CVXIF
+`ifdef CV_X_IF
+    // XIF CPU host ports
     .xif_compressed_if,
     .xif_issue_if,
     .xif_commit_if,
     .xif_mem_if,
     .xif_mem_result_if,
     .xif_result_if,
-`endif
-
+`endif 
 `ifdef RVFI
     .rvfi_valid,
     .rvfi_order,
