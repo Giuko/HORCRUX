@@ -67,6 +67,16 @@ module cve2_core import cve2_pkg::*; #(
   output crash_dump_t                  crash_dump_o,
   // SEC_CM: EXCEPTION.CTRL_FLOW.LOCAL_ESC
   // SEC_CM: EXCEPTION.CTRL_FLOW.GLOBAL_ESC
+  
+`ifdef CV_X_IF
+  // XIF CPU host ports
+  if_xif.cpu_compressed  xif_compressed_if,
+  if_xif.cpu_issue       xif_issue_if,
+  if_xif.cpu_commit      xif_commit_if,
+  if_xif.cpu_mem         xif_mem_if,
+  if_xif.cpu_mem_result  xif_mem_result_if,
+  if_xif.cpu_result      xif_result_if,
+`endif 
 
   // RISC-V Formal Interface
   // Does not comply with the coding standards of _i/_o suffixes, but follows
@@ -477,6 +487,7 @@ module cve2_core import cve2_pkg::*; #(
     .rf_raddr_c_o      (rf_raddr_c_cv_x_if),
     .rf_rdata_c_i      (rf_rdata_c_cv_x_if),
     .rf_ren_c_o        (rf_ren_c_cv_x_if),
+	.xif_issue_if      (xif_issue_if),
 `endif
 	.rf_waddr_id_o     (rf_waddr_id),
     .rf_wdata_id_o     (rf_wdata_id),
@@ -879,10 +890,13 @@ module cve2_core import cve2_pkg::*; #(
   logic [31:0] rvfi_rs2_data_d;
   logic [31:0] rvfi_rs2_data_q;
   logic [31:0] rvfi_rs3_data_d;
+
   `ifdef CV_X_IF
   logic [4:0]  rvfi_rs3_cv_x_if_addr_d;
   logic [31:0] rvfi_rs3_cv_x_if_data_d;
+
   `endif
+  
   logic [4:0]  rvfi_rd_addr_wb;
   logic [4:0]  rvfi_rd_addr_q;
   logic [4:0]  rvfi_rd_addr_d;
