@@ -1,23 +1,23 @@
-//////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
 // Copyright 2025 PoliTO - EDGE Group, @VLSI Lab                                       //
 // Solderpad Hardware License, Version 2.1, see LICENSE.md for details.                //
 // SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1                                    //
-//                                                                                      //
-// Authors:      Alessandra Dolmeta - alessandra.dolmeta@polito.it                      //
-//               Valeria Piscopo    - valeria.piscopo@polito.it                         //
+//                                                                                     //
+// Authors:      Alessandra Dolmeta - alessandra.dolmeta@polito.it                     //
+//               Valeria Piscopo    - valeria.piscopo@polito.it                        //
 // Design Name:  HORCRUX-X-Heep Interface Wrapper                                      //
-// Language:     SystemVerilog                                                          //
+// Language:     SystemVerilog                                                         //
 // Date:         April 2026                                                            //
-//                                                                                      //
-// Description:  Bridge between CV32E40Px core (via CORE-V XIF) and HORCRUX             //
+//                                                                                     //
+// Description:  Bridge between CV32E20 core (via CORE-V XIF) and HORCRUX              //
 //               coprocessor, handling instruction compression and result routing.     //
 //////////////////////////////////////////////////////////////////////////////////////////
 
 
 
 module horcrux_top
-  import cv32e40px_pkg::*;
-  import cv32e40px_core_v_xif_pkg::*;
+  import cve2_pkg::*;
+  import cve2_core_v_xif_pkg::*;
 (
   input clk_i,
   input rst_ni,

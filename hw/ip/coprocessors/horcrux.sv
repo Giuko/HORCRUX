@@ -16,7 +16,7 @@
 
 
 module horcrux
-  import cv32e40px_core_v_xif_pkg::*;
+  import cve2_core_v_xif_pkg::*;
   import horcrux_pkg::*;
 #(
     parameter int unsigned NUM_VARIABLES   = 50,

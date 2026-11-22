@@ -76,7 +76,7 @@ module cve2_register_file_ff #(
   
   `ifdef CV_X_IF
   assign rdata_c_o = rf_reg[raddr_c_i];
-  `endif CV_X_IF	
+  `endif
 
   // Signal not used in FF register file
   logic unused_test_en;

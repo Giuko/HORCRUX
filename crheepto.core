@@ -205,6 +205,7 @@ targets:
         - -suppress vlog-2583
         - -pedanticerrors
         - -define MODELSIM
+        - -define CV_X_IF
         vsim_options:
         - -suppress 3111 # suppress error on passing string variables to $fdumpvars, that is apparently supported instead
         - -sv_lib ../../sw/sim/uartdpi
@@ -477,6 +478,11 @@ targets:
 
 # Parameters
 parameters:
+  CV_X_IF:
+    datatype: bool
+    paramtype: vlogdefine
+    default: true
+
   trace:
     datatype: str
     description: If 'true', generate simulation waves dump.

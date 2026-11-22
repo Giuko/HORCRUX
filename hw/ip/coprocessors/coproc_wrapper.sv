@@ -1,20 +1,20 @@
-// Copyright 2025 PoliTO - EDGE Group, @VLSI Lab                                       //
-// Solderpad Hardware License, Version 2.1, see LICENSE.md for details.                //
-// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1                                    //
+// Copyright 2025 PoliTO - EDGE Group, @VLSI Lab                                       	//
+// Solderpad Hardware License, Version 2.1, see LICENSE.md for details.                	//
+// SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1                                    	//
 //                                                                                      //
 // Authors:      Alessandra Dolmeta - alessandra.dolmeta@polito.it                      //
 //               Valeria Piscopo    - valeria.piscopo@polito.it                         //
 // Design Name:  HORCRUX Coprocessor Wrapper                                            //
 // Language:     SystemVerilog                                                          //
-// Date:         April 2026                                                            //
+// Date:         April 2026                                                            	//
 //                                                                                      //
-// Description:  Top-level wrapper connecting CV32E40Px CORE-V XIF interface to the     //
-//               HORCRUX coprocessor with compressed/issue/commit/mem/result signals.  //
+// Description:  Top-level wrapper connecting CV32E20 CORE-V XIF interface to the     	//
+//               HORCRUX coprocessor with compressed/issue/commit/mem/result signals.  	//
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 module coproc_wrapper
-  import cv32e40px_pkg::*;
-  import cv32e40px_core_v_xif_pkg::*;
+  import cve2_pkg::*;
+  import cve2_core_v_xif_pkg::*;
 (
   input logic clk_i,
   input logic rst_ni,

@@ -24,8 +24,7 @@ filesets:
 
   horcrux_sv:
     depend:
-    - openhwgroup.org:ip:cv32e40x
-    - esl_epfl:ip:cv32e40px
+    - openhwgroup:cve2:cve2_top:0.1
     files:
     - coprocessors/include/horcrux_pkg.sv
     - coprocessors/sampler.sv

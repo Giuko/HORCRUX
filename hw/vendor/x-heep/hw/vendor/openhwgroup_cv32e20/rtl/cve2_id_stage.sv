@@ -236,6 +236,9 @@ module cve2_id_stage #(
   logic xif_accept_event;
   logic xif_reject_event;
 
+  logic xif_accepted_q;
+  logic xif_rejected_q;
+
   logic [2:0] rf_illegal_raddr;
 `endif
 
@@ -409,10 +412,6 @@ module cve2_id_stage #(
   //////////////////////////////////////////
   // eXtension handshake acception/rejection
   //////////////////////////////////////////
-
-  logic xif_accepted_q;
-  logic xif_rejected_q;
-  
   assign xif_en = xif_insn_accept || xif_insn_reject;
   
   // Issue output are ready

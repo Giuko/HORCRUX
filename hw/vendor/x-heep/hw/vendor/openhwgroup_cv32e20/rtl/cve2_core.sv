@@ -111,16 +111,6 @@ module cve2_core import cve2_pkg::*; #(
   output logic [63:0]                  rvfi_ext_mcycle,
 `endif
 
-`ifdef CVXIF
-  // CORE-V-XIF interfaces
-  if_xif.cpu_compressed                xif_compressed_if,
-  if_xif.cpu_issue                     xif_issue_if,
-  if_xif.cpu_commit                    xif_commit_if,
-  if_xif.cpu_mem                       xif_mem_if,
-  if_xif.cpu_mem_result                xif_mem_result_if,
-  if_xif.cpu_result                    xif_result_if,
-`endif
-
   // CPU Control Signals
   input  logic                         fetch_enable_i,
   output logic                         core_busy_o
@@ -181,6 +171,7 @@ module cve2_core import cve2_pkg::*; #(
   logic [4:0]  rf_raddr_c_cv_x_if;
   logic [31:0] rf_rdata_c_cv_x_if;
   logic        rf_ren_c_cv_x_if;
+  logic        xif_offloading_o;
 `endif
 
   logic        rf_ren_a;
@@ -496,10 +487,10 @@ module cve2_core import cve2_pkg::*; #(
 `ifdef CV_X_IF
     .rf_raddr_c_o      (rf_raddr_c_cv_x_if),
     .rf_rdata_c_i      (rf_rdata_c_cv_x_if),
-    .rf_ren_c_o        (rf_ren_c_cv_x_if),
-	.xif_issue_if      (xif_issue_if),
+    .xif_issue_if      (xif_issue_if),
+    .xif_offloading_o  (xif_offloading_o),
 `endif
-	.rf_waddr_id_o     (rf_waddr_id),
+    .rf_waddr_id_o     (rf_waddr_id),
     .rf_wdata_id_o     (rf_wdata_id),
     .rf_we_id_o        (rf_we_id),
 
@@ -1298,10 +1289,10 @@ module cve2_core import cve2_pkg::*; #(
       rvfi_rs2_addr_d = rf_ren_b ? rf_raddr_b : '0;
       rvfi_rs3_data_d = '0;
       rvfi_rs3_addr_d = '0;
-	  `ifdef CV_X_IF
+`ifdef CV_X_IF
       rvfi_rs3_cv_x_if_data_d = rf_ren_c_cv_x_if ? rf_rdata_c_cv_x_if : '0;
       rvfi_rs3_cv_x_if_addr_d = rf_ren_c_cv_x_if ? rf_raddr_c_cv_x_if : '0;
-      `endif
+`endif
     end else begin
       rvfi_rs1_data_d = rvfi_rs1_data_q;
       rvfi_rs1_addr_d = rvfi_rs1_addr_q;

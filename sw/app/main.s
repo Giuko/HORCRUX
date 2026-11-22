@@ -1,680 +1,536 @@
 
-/home/thesis/giuseppe.maganuco/HORCRUX/hw/vendor/x-heep/sw/build/CMakeFiles/main.elf.dir//home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj:     file format elf32-littleriscv
+/home/thesis/giuseppe.maganuco/HORCRUX/hw/vendor/x-heep/sw/build/CMakeFiles/main.elf.dir//home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj:     file format elf32-littleriscv
 
-
-Disassembly of section .text.test_multi_squeeze:
-
-00000000 <test_multi_squeeze>:
-    verify_hash(out1, out2, 64, "SHAKE256 consistency");
-}
-
-// Test: Multi-block squeeze (large output)
-static void test_multi_squeeze(void) {
-    printf("Test: SHAKE128 multi-squeeze (500B output)\n");
-   0:	00000537          	lui	a0,0x0
-static void test_multi_squeeze(void) {
-   4:	dc010113          	addi	sp,sp,-576
-    printf("Test: SHAKE128 multi-squeeze (500B output)\n");
-   8:	00050513          	mv	a0,a0
-static void test_multi_squeeze(void) {
-   c:	22112e23          	sw	ra,572(sp)
-    printf("Test: SHAKE128 multi-squeeze (500B output)\n");
-  10:	00000097          	auipc	ra,0x0
-  14:	000080e7          	jalr	ra # 10 <test_multi_squeeze+0x10>
-
-00000018 <.LBB4>:
-    
-    uint8_t msg[50];
-    for(int i = 0; i < 50; i++) msg[i] = i & 0xFF;
-  18:	003c                	addi	a5,sp,8
-  1a:	4681                	li	a3,0
-  1c:	03200713          	li	a4,50
-
-00000020 <.L2>:
-  20:	00d78023          	sb	a3,0(a5)
-  24:	0685                	addi	a3,a3,1
-  26:	0785                	addi	a5,a5,1
-  28:	fee69ce3          	bne	a3,a4,20 <.L2>
-
-0000002c <.LBE4>:
-    
-    uint8_t output[500];
-    uint32_t cycles = 0;
-    CSR_WRITE(CSR_REG_MCYCLE, 0);
-  2c:	4781                	li	a5,0
-  2e:	b0079073          	csrw	mcycle,a5
-    shake128(output, 500, msg, 50);
-  32:	1f400593          	li	a1,500
-  36:	0030                	addi	a2,sp,8
-  38:	1868                	addi	a0,sp,60
-  3a:	00000097          	auipc	ra,0x0
-  3e:	000080e7          	jalr	ra # 3a <.LBE4+0xe>
-
-00000042 <.LVL4>:
-    CSR_READ(CSR_REG_MCYCLE, &cycles);
-  42:	b00025f3          	csrr	a1,mcycle
-
-00000046 <.LVL5>:
-    printf("  Cycles: %u\n", cycles);
-  46:	00000537          	lui	a0,0x0
-  4a:	00050513          	mv	a0,a0
-  4e:	00000097          	auipc	ra,0x0
-  52:	000080e7          	jalr	ra # 4e <.LVL5+0x8>
-
-00000056 <.LBB5>:
-    
-    // Verify non-zero output
-    int non_zero = 0;
-    for(int i = 0; i < 500; i++) {
-  56:	187c                	addi	a5,sp,60
-
-00000058 <.LBE5>:
-    int non_zero = 0;
-  58:	4681                	li	a3,0
-
-0000005a <.L3>:
-        if(output[i] != 0) non_zero = 1;
-  5a:	0007c703          	lbu	a4,0(a5)
-    for(int i = 0; i < 500; i++) {
-  5e:	0785                	addi	a5,a5,1
-
-00000060 <.LVL8>:
-        if(output[i] != 0) non_zero = 1;
-  60:	00e03733          	snez	a4,a4
-  64:	8ed9                	or	a3,a3,a4
-
-00000066 <.LVL9>:
-    for(int i = 0; i < 500; i++) {
-  66:	1c18                	addi	a4,sp,560
-  68:	fee799e3          	bne	a5,a4,5a <.L3>
-
-0000006c <.LBE6>:
-    }
-    
-    total_tests++;
-  6c:	00000737          	lui	a4,0x0
-  70:	00072783          	lw	a5,0(a4) # 0 <test_multi_squeeze>
-  74:	0785                	addi	a5,a5,1
-  76:	00f72023          	sw	a5,0(a4)
-    if(non_zero) {
-  7a:	ce89                	beqz	a3,94 <.L4>
-        passed_tests++;
-  7c:	00000737          	lui	a4,0x0
-  80:	00072783          	lw	a5,0(a4) # 0 <test_multi_squeeze>
-  84:	0785                	addi	a5,a5,1
-  86:	00f72023          	sw	a5,0(a4)
-
-0000008a <.L1>:
-    } else {
-        printf("[FAIL] SHAKE128 multi-squeeze - all zeros output\n");
-    }
-}
-  8a:	23c12083          	lw	ra,572(sp)
-  8e:	24010113          	addi	sp,sp,576
-  92:	8082                	ret
-
-00000094 <.L4>:
-        printf("[FAIL] SHAKE128 multi-squeeze - all zeros output\n");
-  94:	00000537          	lui	a0,0x0
-  98:	00050513          	mv	a0,a0
-  9c:	00000097          	auipc	ra,0x0
-  a0:	000080e7          	jalr	ra # 9c <.L4+0x8>
-
-000000a4 <.LVL12>:
-}
-  a4:	b7dd                	j	8a <.L1>
-
-Disassembly of section .text.verify_hash.isra.0:
-
-00000000 <verify_hash.isra.0>:
-    total_tests++;
-   0:	00000737          	lui	a4,0x0
-   4:	00072783          	lw	a5,0(a4) # 0 <verify_hash.isra.0>
-static int verify_hash(const uint8_t* result, const uint8_t* expected, 
-   8:	1101                	addi	sp,sp,-32
-   a:	cc22                	sw	s0,24(sp)
-    total_tests++;
-   c:	0785                	addi	a5,a5,1
-static int verify_hash(const uint8_t* result, const uint8_t* expected, 
-   e:	ca26                	sw	s1,20(sp)
-  10:	c84a                	sw	s2,16(sp)
-  12:	ce06                	sw	ra,28(sp)
-  14:	8936                	mv	s2,a3
-    total_tests++;
-  16:	00f72023          	sw	a5,0(a4)
-static int verify_hash(const uint8_t* result, const uint8_t* expected, 
-  1a:	842a                	mv	s0,a0
-  1c:	84ae                	mv	s1,a1
-    if(memcmp(result, expected, len) == 0) {
-  1e:	00000097          	auipc	ra,0x0
-  22:	000080e7          	jalr	ra # 1e <verify_hash.isra.0+0x1e>
-
-00000026 <.LVL14>:
-  26:	ed11                	bnez	a0,42 <.L11>
-        passed_tests++;
-  28:	00000737          	lui	a4,0x0
-  2c:	00072783          	lw	a5,0(a4) # 0 <verify_hash.isra.0>
-}
-  30:	40f2                	lw	ra,28(sp)
-  32:	4462                	lw	s0,24(sp)
-
-00000034 <.LVL15>:
-        passed_tests++;
-  34:	0785                	addi	a5,a5,1
-  36:	00f72023          	sw	a5,0(a4)
-}
-  3a:	44d2                	lw	s1,20(sp)
-
-0000003c <.LVL16>:
-  3c:	4942                	lw	s2,16(sp)
-
-0000003e <.LVL17>:
-  3e:	6105                	addi	sp,sp,32
-  40:	8082                	ret
-
-00000042 <.L11>:
-        printf("[FAIL] %s\n", test_name);
-  42:	00000537          	lui	a0,0x0
-  46:	85ca                	mv	a1,s2
-  48:	00050513          	mv	a0,a0
-  4c:	c64e                	sw	s3,12(sp)
-
-0000004e <.LVL19>:
-  4e:	00000097          	auipc	ra,0x0
-  52:	000080e7          	jalr	ra # 4e <.LVL19>
-
-00000056 <.LVL20>:
-        printf("  Expected: ");
-  56:	00000537          	lui	a0,0x0
-  5a:	00050513          	mv	a0,a0
-  5e:	00000097          	auipc	ra,0x0
-  62:	000080e7          	jalr	ra # 5e <.LVL20+0x8>
-
-00000066 <.LBB15>:
-        for(size_t i = 0; i < (len < 16 ? len : 16); i++) printf("%02x", expected[i]);
-  66:	01048993          	addi	s3,s1,16
-  6a:	00000937          	lui	s2,0x0
-
-0000006e <.L13>:
-  6e:	0004c583          	lbu	a1,0(s1)
-  72:	00090513          	mv	a0,s2
-  76:	0485                	addi	s1,s1,1
-
-00000078 <.LVL23>:
-  78:	00000097          	auipc	ra,0x0
-  7c:	000080e7          	jalr	ra # 78 <.LVL23>
-
-00000080 <.LVL24>:
-  80:	ff3497e3          	bne	s1,s3,6e <.L13>
-
-00000084 <.LBE15>:
-        if(len > 16) printf("...");
-  84:	000009b7          	lui	s3,0x0
-
-00000088 <.LVL25>:
-  88:	00098513          	mv	a0,s3
-  8c:	00000097          	auipc	ra,0x0
-  90:	000080e7          	jalr	ra # 8c <.LVL25+0x4>
-
-00000094 <.LVL26>:
-        printf("\n  Got:      ");
-  94:	00000537          	lui	a0,0x0
-  98:	00050513          	mv	a0,a0
-  9c:	00000097          	auipc	ra,0x0
-  a0:	000080e7          	jalr	ra # 9c <.LVL26+0x8>
-
-000000a4 <.LBB16>:
-        for(size_t i = 0; i < (len < 16 ? len : 16); i++) printf("%02x", result[i]);
-  a4:	01040493          	addi	s1,s0,16
-
-000000a8 <.L14>:
-  a8:	00044583          	lbu	a1,0(s0)
-  ac:	00090513          	mv	a0,s2
-  b0:	0405                	addi	s0,s0,1
-
-000000b2 <.LVL29>:
-  b2:	00000097          	auipc	ra,0x0
-  b6:	000080e7          	jalr	ra # b2 <.LVL29>
-
-000000ba <.LVL30>:
-  ba:	fe9417e3          	bne	s0,s1,a8 <.L14>
-
-000000be <.LBE16>:
-        if(len > 16) printf("...");
-  be:	00098513          	mv	a0,s3
-  c2:	00000097          	auipc	ra,0x0
-  c6:	000080e7          	jalr	ra # c2 <.LBE16+0x4>
-
-000000ca <.LBE13>:
-}
-  ca:	4462                	lw	s0,24(sp)
-
-000000cc <.LBB20>:
-        printf("\n");
-  cc:	49b2                	lw	s3,12(sp)
-
-000000ce <.LBE20>:
-}
-  ce:	40f2                	lw	ra,28(sp)
-  d0:	44d2                	lw	s1,20(sp)
-
-000000d2 <.LVL32>:
-  d2:	4942                	lw	s2,16(sp)
-
-000000d4 <.LBB21>:
-        printf("\n");
-  d4:	4529                	li	a0,10
-
-000000d6 <.LBE21>:
-}
-  d6:	6105                	addi	sp,sp,32
-
-000000d8 <.LBB22>:
-        printf("\n");
-  d8:	00000317          	auipc	t1,0x0
-  dc:	00030067          	jr	t1 # d8 <.LBB22>
 
 Disassembly of section .text.startup.main:
 
 00000000 <main>:
+    }
+    if (ok) printf("PASSED: Dilithium NTT (Hardware)\n");
+    return ok;
+}
 
 int main(void) {
-   0:	7149                	addi	sp,sp,-368
-   2:	16112623          	sw	ra,364(sp)
-   6:	16812423          	sw	s0,360(sp)
-   a:	16912223          	sw	s1,356(sp)
-   e:	17212023          	sw	s2,352(sp)
-  12:	15312e23          	sw	s3,348(sp)
+   0:	711d                	addi	sp,sp,-96
+   2:	ce86                	sw	ra,92(sp)
+   4:	cca2                	sw	s0,88(sp)
+   6:	caa6                	sw	s1,84(sp)
+   8:	c8ca                	sw	s2,80(sp)
+   a:	c6ce                	sw	s3,76(sp)
+   c:	c4d2                	sw	s4,72(sp)
+   e:	c2d6                	sw	s5,68(sp)
+  10:	c0da                	sw	s6,64(sp)
+  12:	de5e                	sw	s7,60(sp)
+  14:	dc62                	sw	s8,56(sp)
+  16:	da66                	sw	s9,52(sp)
+  18:	d86a                	sw	s10,48(sp)
+  1a:	d66e                	sw	s11,44(sp)
+    unsigned int cycles_sw = 0;
+    unsigned int cycles_hw = 0;
+    dsa_poly a_sw, a_hw;
+
     // Initialize cycle counter
     CSR_CLEAR_BITS(CSR_REG_MCOUNTINHIBIT, 0x1);
-  16:	4785                	li	a5,1
-  18:	3207b073          	csrc	mcountinhibit,a5
+  1c:	4785                	li	a5,1
+int main(void) {
+  1e:	81010113          	addi	sp,sp,-2032
+    CSR_CLEAR_BITS(CSR_REG_MCOUNTINHIBIT, 0x1);
+  22:	3207b073          	csrc	mcountinhibit,a5
     CSR_WRITE(CSR_REG_MCYCLE, 0);
-  1c:	4481                	li	s1,0
-  1e:	b0049073          	csrw	mcycle,s1
+  26:	4781                	li	a5,0
+  28:	b0079073          	csrw	mcycle,a5
 
-    printf("   KECCAK ABSORPTION TEST            \n");
-  22:	00000537          	lui	a0,0x0
-  26:	00050513          	mv	a0,a0
-  2a:	00000097          	auipc	ra,0x0
-  2e:	000080e7          	jalr	ra # 2a <main+0x2a>
+    printf("    DILITHIUM NTT TEST               \n");
+  2c:	00000537          	lui	a0,0x0
+  30:	00050513          	mv	a0,a0
+  34:	00000097          	auipc	ra,0x0
+  38:	000080e7          	jalr	ra # 34 <main+0x34>
 
-00000032 <.LVL34>:
-    printf("Testing SHA3/SHAKE with HW acceleration\n\n");
-  32:	00000537          	lui	a0,0x0
-  36:	00050513          	mv	a0,a0
-  3a:	00000097          	auipc	ra,0x0
-  3e:	000080e7          	jalr	ra # 3a <.LVL34+0x8>
+0000003c <.LVL1>:
 
-00000042 <.LBB35>:
-    printf("Test: SHA3-256 single block\n");
-  42:	00000537          	lui	a0,0x0
-  46:	00050513          	mv	a0,a0
-  4a:	00000097          	auipc	ra,0x0
-  4e:	000080e7          	jalr	ra # 4a <.LBB35+0x8>
+#if SW_TEST_ENABLED
+    a_sw = dsa_tv_ntt_in;
+  3c:	000007b7          	lui	a5,0x0
+  40:	00078b13          	mv	s6,a5
+  44:	0818                	addi	a4,sp,16
+  46:	00078793          	mv	a5,a5
+  4a:	400b0b93          	addi	s7,s6,1024
 
-00000052 <.LVL36>:
-    const uint8_t expected[32] = {
-  52:	000007b7          	lui	a5,0x0
-  56:	00078793          	mv	a5,a5
-  5a:	0007a883          	lw	a7,0(a5) # 0 <main>
-  5e:	0047a803          	lw	a6,4(a5)
-  62:	4788                	lw	a0,8(a5)
-  64:	47cc                	lw	a1,12(a5)
-  66:	4b90                	lw	a2,16(a5)
-  68:	4bd4                	lw	a3,20(a5)
-  6a:	4f98                	lw	a4,24(a5)
-  6c:	4fdc                	lw	a5,28(a5)
-    const uint8_t msg[] = "abc";
-  6e:	00636437          	lui	s0,0x636
-  72:	26140413          	addi	s0,s0,609 # 636261 <.LFE11+0x635f65>
-    const uint8_t expected[32] = {
-  76:	c546                	sw	a7,136(sp)
-  78:	c742                	sw	a6,140(sp)
-  7a:	c92a                	sw	a0,144(sp)
-  7c:	cb2e                	sw	a1,148(sp)
-  7e:	cd32                	sw	a2,152(sp)
-  80:	cf36                	sw	a3,156(sp)
-  82:	d13a                	sw	a4,160(sp)
-  84:	d33e                	sw	a5,164(sp)
-    const uint8_t msg[] = "abc";
-  86:	c422                	sw	s0,8(sp)
-
-00000088 <.LVL37>:
+0000004e <.L2>:
+  4e:	4388                	lw	a0,0(a5)
+  50:	43cc                	lw	a1,4(a5)
+  52:	4790                	lw	a2,8(a5)
+  54:	47d4                	lw	a3,12(a5)
+  56:	c308                	sw	a0,0(a4)
+  58:	c34c                	sw	a1,4(a4)
+  5a:	c710                	sw	a2,8(a4)
+  5c:	c754                	sw	a3,12(a4)
+  5e:	07c1                	addi	a5,a5,16 # 10 <main+0x10>
+  60:	0741                	addi	a4,a4,16
+  62:	ff7796e3          	bne	a5,s7,4e <.L2>
     CSR_WRITE(CSR_REG_MCYCLE, 0);
-  88:	b0049073          	csrw	mcycle,s1
-    sha3_256(hash, msg, sizeof(msg)-1);
-  8c:	460d                	li	a2,3
-  8e:	002c                	addi	a1,sp,8
-  90:	00a8                	addi	a0,sp,72
-  92:	00000097          	auipc	ra,0x0
-  96:	000080e7          	jalr	ra # 92 <.LVL37+0xa>
+  66:	4781                	li	a5,0
+  68:	b0079073          	csrw	mcycle,a5
 
-0000009a <.LVL38>:
-    CSR_READ(CSR_REG_MCYCLE, &cycles);
-  9a:	b00025f3          	csrr	a1,mcycle
+0000006c <.LBB27>:
+    dilithium_ntt(a->coeffs);
+  6c:	0808                	addi	a0,sp,16
 
-0000009e <.LVL39>:
-    printf("  Cycles: %u\n", cycles);
-  9e:	000004b7          	lui	s1,0x0
-  a2:	00048513          	mv	a0,s1
-  a6:	00000097          	auipc	ra,0x0
-  aa:	000080e7          	jalr	ra # a6 <.LVL39+0x8>
+0000006e <.LVL3>:
+  6e:	00000097          	auipc	ra,0x0
+  72:	000080e7          	jalr	ra # 6e <.LVL3>
 
-000000ae <.LVL40>:
-    verify_hash(hash, expected, 32, "SHA3-256 single block");
-  ae:	000006b7          	lui	a3,0x0
-  b2:	00068693          	mv	a3,a3
-  b6:	012c                	addi	a1,sp,136
-  b8:	00a8                	addi	a0,sp,72
-  ba:	02000613          	li	a2,32
-  be:	00000097          	auipc	ra,0x0
-  c2:	000080e7          	jalr	ra # be <.LVL40+0x10>
+00000076 <.LBE27>:
+    dilithium_ntt_sw_compute(&a_sw);
+    CSR_READ(CSR_REG_MCYCLE, &cycles_sw);
+  76:	b00029f3          	csrr	s3,mcycle
 
-000000c6 <.LBB37>:
-    printf("Test: SHA3-512 single block\n");
-  c6:	00000537          	lui	a0,0x0
-  ca:	00050513          	mv	a0,a0
-  ce:	00000097          	auipc	ra,0x0
-  d2:	000080e7          	jalr	ra # ce <.LBB37+0x8>
+0000007a <.LBB29>:
+    int ok = 1;
+  7a:	4905                	li	s2,1
+  7c:	01010a93          	addi	s5,sp,16
 
-000000d6 <.LVL42>:
-    const uint8_t expected[64] = {
-  d6:	000007b7          	lui	a5,0x0
-  da:	00078793          	mv	a5,a5
-    const uint8_t msg[] = "abc";
-  de:	c422                	sw	s0,8(sp)
-    const uint8_t expected[64] = {
-  e0:	0138                	addi	a4,sp,136
-  e2:	04078693          	addi	a3,a5,64 # 40 <.LVL34+0xe>
+00000080 <.LVL6>:
+  80:	84de                	mv	s1,s7
 
-000000e6 <.L20>:
-  e6:	0007a803          	lw	a6,0(a5)
-  ea:	43c8                	lw	a0,4(a5)
-  ec:	478c                	lw	a1,8(a5)
-  ee:	47d0                	lw	a2,12(a5)
-  f0:	01072023          	sw	a6,0(a4)
-  f4:	c348                	sw	a0,4(a4)
-  f6:	c70c                	sw	a1,8(a4)
-  f8:	c750                	sw	a2,12(a4)
+00000082 <.LBE29>:
+    CSR_READ(CSR_REG_MCYCLE, &cycles_sw);
+  82:	8c5e                	mv	s8,s7
+
+00000084 <.LBB38>:
+    for (int i = 0; i < DSA_N; i++) {
+  84:	4401                	li	s0,0
+
+00000086 <.LBB32>:
+        printf("[%s ERROR] Mismatch @ idx %3d: Got %8d, Expected %8d\n", 
+  86:	00000db7          	lui	s11,0x0
+  8a:	00000d37          	lui	s10,0x0
+
+0000008e <.LBE32>:
+    for (int i = 0; i < DSA_N; i++) {
+  8e:	10000c93          	li	s9,256
+
+00000092 <.L4>:
+        ok &= compare_coeffs("D-NTT-SW", i, a->coeffs[i], dsa_tv_ntt_out.coeffs[i]);
+  92:	000aa683          	lw	a3,0(s5)
+  96:	000c2703          	lw	a4,0(s8)
+
+0000009a <.LBB37>:
+        printf("[%s ERROR] Mismatch @ idx %3d: Got %8d, Expected %8d\n", 
+  9a:	8622                	mv	a2,s0
+  9c:	000d8593          	mv	a1,s11
+    int match = (got == exp);
+  a0:	40e68a33          	sub	s4,a3,a4
+        printf("[%s ERROR] Mismatch @ idx %3d: Got %8d, Expected %8d\n", 
+  a4:	000d0513          	mv	a0,s10
+    int match = (got == exp);
+  a8:	001a3a13          	seqz	s4,s4
+
+000000ac <.LVL9>:
+    if (!match && !DEBUG) {
+  ac:	00e68663          	beq	a3,a4,b8 <.L3>
+        printf("[%s ERROR] Mismatch @ idx %3d: Got %8d, Expected %8d\n", 
+  b0:	00000097          	auipc	ra,0x0
+  b4:	000080e7          	jalr	ra # b0 <.LVL9+0x4>
+
+000000b8 <.L3>:
+    for (int i = 0; i < DSA_N; i++) {
+  b8:	0405                	addi	s0,s0,1
+
+000000ba <.LVL11>:
+        ok &= compare_coeffs("D-NTT-SW", i, a->coeffs[i], dsa_tv_ntt_out.coeffs[i]);
+  ba:	01497933          	and	s2,s2,s4
+
+000000be <.LVL12>:
+    for (int i = 0; i < DSA_N; i++) {
+  be:	0a91                	addi	s5,s5,4
+  c0:	0c11                	addi	s8,s8,4
+  c2:	fd9418e3          	bne	s0,s9,92 <.L4>
+
+000000c6 <.LBE38>:
+    if (ok) printf("PASSED: Dilithium NTT (Software)\n");
+  c6:	1e091463          	bnez	s2,2ae <.L44>
+
+000000ca <.L5>:
+    all_passed &= dilithium_ntt_sw_verify(&a_sw);
+    printf("Software Cycles: %u\n\n", cycles_sw);
+  ca:	00000537          	lui	a0,0x0
+  ce:	00050513          	mv	a0,a0
+  d2:	85ce                	mv	a1,s3
+  d4:	00000097          	auipc	ra,0x0
+  d8:	000080e7          	jalr	ra # d4 <.L5+0xa>
+
+000000dc <.LVL14>:
+#else
+    printf("--- SOFTWARE TEST SKIPPED ---\n\n");
+#endif
+
+    a_hw = dsa_tv_ntt_in;
+  dc:	41010793          	addi	a5,sp,1040
+
+000000e0 <.L6>:
+  e0:	000b2583          	lw	a1,0(s6)
+  e4:	004b2603          	lw	a2,4(s6)
+  e8:	008b2683          	lw	a3,8(s6)
+  ec:	00cb2703          	lw	a4,12(s6)
+  f0:	c38c                	sw	a1,0(a5)
+  f2:	c3d0                	sw	a2,4(a5)
+  f4:	c794                	sw	a3,8(a5)
+  f6:	c7d8                	sw	a4,12(a5)
+  f8:	0b41                	addi	s6,s6,16
   fa:	07c1                	addi	a5,a5,16
-  fc:	0741                	addi	a4,a4,16
-  fe:	fed794e3          	bne	a5,a3,e6 <.L20>
-
-00000102 <.LVL43>:
+  fc:	ff7b12e3          	bne	s6,s7,e0 <.L6>
     CSR_WRITE(CSR_REG_MCYCLE, 0);
- 102:	4781                	li	a5,0
- 104:	b0079073          	csrw	mcycle,a5
-    sha3_512(hash, msg, sizeof(msg)-1);
- 108:	460d                	li	a2,3
- 10a:	002c                	addi	a1,sp,8
- 10c:	00a8                	addi	a0,sp,72
- 10e:	00000097          	auipc	ra,0x0
- 112:	000080e7          	jalr	ra # 10e <.LVL43+0xc>
+ 100:	4781                	li	a5,0
+ 102:	b0079073          	csrw	mcycle,a5
 
-00000116 <.LVL44>:
-    CSR_READ(CSR_REG_MCYCLE, &cycles);
- 116:	b00025f3          	csrr	a1,mcycle
+00000106 <.LBB42>:
+    for (int len = 128; len > 0; len >>= 1) {
+ 106:	00000d37          	lui	s10,0x0
+ 10a:	800d0793          	addi	a5,s10,-2048 # fffff800 <.LANCHOR1+0xffffe800>
+ 10e:	c63e                	sw	a5,12(sp)
 
-0000011a <.LVL45>:
-    printf("  Cycles: %u\n", cycles);
- 11a:	00048513          	mv	a0,s1
- 11e:	00000097          	auipc	ra,0x0
- 122:	000080e7          	jalr	ra # 11e <.LVL45+0x4>
-
-00000126 <.LVL46>:
-    verify_hash(hash, expected, 64, "SHA3-512 single block");
- 126:	000006b7          	lui	a3,0x0
- 12a:	04000613          	li	a2,64
- 12e:	012c                	addi	a1,sp,136
- 130:	00a8                	addi	a0,sp,72
- 132:	00068693          	mv	a3,a3
- 136:	00000097          	auipc	ra,0x0
- 13a:	000080e7          	jalr	ra # 136 <.LVL46+0x10>
-
-0000013e <.LBB39>:
-    printf("Test: SHA3-256 multi-block (200B input)\n");
- 13e:	00000537          	lui	a0,0x0
- 142:	00050513          	mv	a0,a0
- 146:	00000097          	auipc	ra,0x0
- 14a:	000080e7          	jalr	ra # 146 <.LBB39+0x8>
-
-0000014e <.LBB41>:
-    for(int i = 0; i < 200; i++) msg[i] = i & 0xFF;
- 14e:	013c                	addi	a5,sp,136
- 150:	4601                	li	a2,0
- 152:	0c800713          	li	a4,200
-
-00000156 <.L21>:
- 156:	00c78023          	sb	a2,0(a5)
- 15a:	0605                	addi	a2,a2,1
- 15c:	0785                	addi	a5,a5,1
- 15e:	fee61ce3          	bne	a2,a4,156 <.L21>
-
-00000162 <.LBE41>:
+00000110 <.LBE42>:
     CSR_WRITE(CSR_REG_MCYCLE, 0);
- 162:	4401                	li	s0,0
- 164:	b0041073          	csrw	mcycle,s0
-    sha3_256(hash, msg, 200);
- 168:	012c                	addi	a1,sp,136
- 16a:	00a8                	addi	a0,sp,72
- 16c:	00000097          	auipc	ra,0x0
- 170:	000080e7          	jalr	ra # 16c <.LBE41+0xa>
+ 110:	4ea1                	li	t4,8
 
-00000174 <.LVL52>:
-    CSR_READ(CSR_REG_MCYCLE, &cycles);
- 174:	b00025f3          	csrr	a1,mcycle
+00000112 <.LBB51>:
+    int k = 0;
+ 112:	4f81                	li	t6,0
 
-00000178 <.LVL53>:
-    printf("  Cycles: %u\n", cycles);
- 178:	00048513          	mv	a0,s1
- 17c:	00000097          	auipc	ra,0x0
- 180:	000080e7          	jalr	ra # 17c <.LVL53+0x4>
+00000114 <.LBB49>:
+    for (int len = 128; len > 0; len >>= 1) {
+ 114:	08000e13          	li	t3,128
 
-00000184 <.LVL54>:
-    total_tests++;
- 184:	00000937          	lui	s2,0x0
-    passed_tests++;
- 188:	000009b7          	lui	s3,0x0
-    total_tests++;
- 18c:	00092703          	lw	a4,0(s2) # 0 <main>
-    passed_tests++;
- 190:	0009a783          	lw	a5,0(s3) # 0 <main>
+00000118 <.L7>:
+        for (int start = 0; start < 256; start = start + 2 * len) {
+ 118:	47b2                	lw	a5,12(sp)
+ 11a:	001f8893          	addi	a7,t6,1
+ 11e:	00289593          	slli	a1,a7,0x2
+ 122:	95be                	add	a1,a1,a5
+ 124:	41010413          	addi	s0,sp,1040
 
-00000194 <.LBB44>:
-    printf("Test: SHAKE128 XOF\n");
- 194:	00000537          	lui	a0,0x0
+00000128 <.LVL17>:
+ 128:	8c46                	mv	s8,a7
+ 12a:	fffe0513          	addi	a0,t3,-1
+ 12e:	4781                	li	a5,0
 
-00000198 <.LBB48>:
-    total_tests++;
- 198:	0705                	addi	a4,a4,1
-    passed_tests++;
- 19a:	0785                	addi	a5,a5,1
+00000130 <.LBB46>:
+            int32_t zeta = zetas_DSA[++k];
+ 130:	4190                	lw	a2,0(a1)
 
-0000019c <.LBB49>:
-    printf("Test: SHAKE128 XOF\n");
- 19c:	00050513          	mv	a0,a0
+00000132 <.LBE46>:
+        for (int start = 0; start < 256; start = start + 2 * len) {
+ 132:	001e1813          	slli	a6,t3,0x1
+ 136:	8772                	mv	a4,t3
+ 138:	003e1b93          	slli	s7,t3,0x3
+ 13c:	002e1313          	slli	t1,t3,0x2
+ 140:	86a2                	mv	a3,s0
 
-000001a0 <.LBB50>:
-    total_tests++;
- 1a0:	00e92023          	sw	a4,0(s2)
-    passed_tests++;
- 1a4:	00f9a023          	sw	a5,0(s3)
+00000142 <.LBB47>:
+            int32_t zeta = zetas_DSA[++k];
+ 142:	8fe2                	mv	t6,s8
 
-000001a8 <.LBB51>:
-    printf("Test: SHAKE128 XOF\n");
- 1a8:	00000097          	auipc	ra,0x0
- 1ac:	000080e7          	jalr	ra # 1a8 <.LBB51>
+00000144 <.LVL19>:
+            for (j = start; j < start + len - 1; j += 2) {
+ 144:	0aa7db63          	bge	a5,a0,1fa <.L23>
 
-000001b0 <.LVL56>:
-    uint8_t msg[50] = {0};
- 1b0:	c502                	sw	zero,136(sp)
- 1b2:	c702                	sw	zero,140(sp)
- 1b4:	c902                	sw	zero,144(sp)
- 1b6:	cb02                	sw	zero,148(sp)
- 1b8:	cd02                	sw	zero,152(sp)
- 1ba:	cf02                	sw	zero,156(sp)
- 1bc:	d102                	sw	zero,160(sp)
- 1be:	d302                	sw	zero,164(sp)
- 1c0:	d502                	sw	zero,168(sp)
- 1c2:	d702                	sw	zero,172(sp)
- 1c4:	d902                	sw	zero,176(sp)
- 1c6:	db02                	sw	zero,180(sp)
- 1c8:	0a011c23          	sh	zero,184(sp)
+00000148 <.L45>:
+ 148:	006683b3          	add	t2,a3,t1
+ 14c:	8f36                	mv	t5,a3
+ 14e:	c43e                	sw	a5,8(sp)
+ 150:	c23e                	sw	a5,4(sp)
 
-000001cc <.LVL57>:
-    CSR_WRITE(CSR_REG_MCYCLE, 0);
- 1cc:	b0041073          	csrw	mcycle,s0
-    shake128(out1, 32, msg, 50);
- 1d0:	03200693          	li	a3,50
- 1d4:	0130                	addi	a2,sp,136
- 1d6:	0028                	addi	a0,sp,8
- 1d8:	02000593          	li	a1,32
- 1dc:	00000097          	auipc	ra,0x0
- 1e0:	000080e7          	jalr	ra # 1dc <.LVL57+0x10>
+00000152 <.L9>:
+                asm volatile ( 
+ 152:	000f2a83          	lw	s5,0(t5)
+ 156:	0003aa03          	lw	s4,0(t2)
+ 15a:	004f2b03          	lw	s6,4(t5)
+ 15e:	0043a783          	lw	a5,4(t2)
+ 162:	82d2                	mv	t0,s4
+ 164:	645afd6b          	.insn	4, 0x645afd6b
+ 168:	2e007dbb          	.insn	4, 0x2e007dbb
+ 16c:	82be                	mv	t0,a5
+ 16e:	645b7ceb          	.insn	4, 0x645b7ceb
+ 172:	2e0078bb          	.insn	4, 0x2e0078bb
 
-000001e4 <.LVL58>:
-    CSR_READ(CSR_REG_MCYCLE, &cycles);
- 1e4:	b00025f3          	csrr	a1,mcycle
+00000176 <.LVL22>:
+            for (j = start; j < start + len - 1; j += 2) {
+ 176:	47a2                	lw	a5,8(sp)
+                a->coeffs[j]       = (int32_t)out0.rd_lo;
+ 178:	01af2023          	sw	s10,0(t5)
+                a->coeffs[j+len]   = (int32_t)out0.rd_hi;
+ 17c:	01b3a023          	sw	s11,0(t2)
+                a->coeffs[j+1]     = (int32_t)out1.rd_lo;
+ 180:	019f2223          	sw	s9,4(t5)
+            for (j = start; j < start + len - 1; j += 2) {
+ 184:	0789                	addi	a5,a5,2
+                a->coeffs[j+1+len] = (int32_t)out1.rd_hi;
+ 186:	0113a223          	sw	a7,4(t2)
+            for (j = start; j < start + len - 1; j += 2) {
+ 18a:	c43e                	sw	a5,8(sp)
 
-000001e8 <.LVL59>:
-    printf("  Cycles: %u\n", cycles);
- 1e8:	00048513          	mv	a0,s1
- 1ec:	00000097          	auipc	ra,0x0
- 1f0:	000080e7          	jalr	ra # 1ec <.LVL59+0x4>
+0000018c <.LVL23>:
+ 18c:	0f21                	addi	t5,t5,8
+ 18e:	03a1                	addi	t2,t2,8
+ 190:	fca7c1e3          	blt	a5,a0,152 <.L9>
+ 194:	4792                	lw	a5,4(sp)
 
-000001f4 <.LVL60>:
-    shake128(out2, 32, msg, 50);
- 1f4:	0130                	addi	a2,sp,136
- 1f6:	00a8                	addi	a0,sp,72
- 1f8:	03200693          	li	a3,50
- 1fc:	02000593          	li	a1,32
- 200:	00000097          	auipc	ra,0x0
- 204:	000080e7          	jalr	ra # 200 <.LVL60+0xc>
+00000196 <.LVL24>:
+ 196:	ffe70293          	addi	t0,a4,-2
+ 19a:	40f282b3          	sub	t0,t0,a5
+ 19e:	ffe2f293          	andi	t0,t0,-2
+ 1a2:	00278893          	addi	a7,a5,2
 
-00000208 <.LVL61>:
-    verify_hash(out1, out2, 32, "SHAKE128 consistency");
- 208:	000006b7          	lui	a3,0x0
- 20c:	00ac                	addi	a1,sp,72
- 20e:	0028                	addi	a0,sp,8
- 210:	00068693          	mv	a3,a3
- 214:	02000613          	li	a2,32
- 218:	00000097          	auipc	ra,0x0
- 21c:	000080e7          	jalr	ra # 218 <.LVL61+0x10>
+000001a6 <.LVL25>:
+ 1a6:	011283b3          	add	t2,t0,a7
 
-00000220 <.LBB52>:
-    printf("Test: SHAKE256 XOF\n");
- 220:	00000537          	lui	a0,0x0
- 224:	00050513          	mv	a0,a0
- 228:	00000097          	auipc	ra,0x0
- 22c:	000080e7          	jalr	ra # 228 <.LBB52+0x8>
+000001aa <.L8>:
+            for (; j < start + len; ++j) {
+ 1aa:	02e3da63          	bge	t2,a4,1de <.L14>
+ 1ae:	00239893          	slli	a7,t2,0x2
+ 1b2:	41010f13          	addi	t5,sp,1040
+ 1b6:	98fa                	add	a7,a7,t5
 
-00000230 <.LBB54>:
-    for(int i = 0; i < 100; i++) msg[i] = i & 0xFF;
- 230:	013c                	addi	a5,sp,136
- 232:	06400713          	li	a4,100
+000001b8 <.L13>:
+            asm volatile (
+ 1b8:	00688f33          	add	t5,a7,t1
+ 1bc:	000f2b03          	lw	s6,0(t5)
+ 1c0:	0008ad03          	lw	s10,0(a7)
+ 1c4:	82da                	mv	t0,s6
+ 1c6:	645d7deb          	.insn	4, 0x645d7deb
+ 1ca:	2e007cbb          	.insn	4, 0x2e007cbb
 
-00000236 <.L22>:
- 236:	00878023          	sb	s0,0(a5)
- 23a:	0405                	addi	s0,s0,1
- 23c:	0785                	addi	a5,a5,1
- 23e:	fee41ce3          	bne	s0,a4,236 <.L22>
+000001ce <.LVL27>:
+            a->coeffs[j]     = (int32_t)out0.rd_lo;
+ 1ce:	01b8a023          	sw	s11,0(a7)
+            a->coeffs[j+len] = (int32_t)out0.rd_hi;
+ 1d2:	019f2023          	sw	s9,0(t5)
+            for (; j < start + len; ++j) {
+ 1d6:	0385                	addi	t2,t2,1
+ 1d8:	0891                	addi	a7,a7,4
+ 1da:	fce39fe3          	bne	t2,a4,1b8 <.L13>
 
-00000242 <.LBE54>:
-    CSR_WRITE(CSR_REG_MCYCLE, 0);
- 242:	4781                	li	a5,0
- 244:	b0079073          	csrw	mcycle,a5
-    shake256(out1, 64, msg, 100);
- 248:	04000593          	li	a1,64
- 24c:	86a2                	mv	a3,s0
- 24e:	0130                	addi	a2,sp,136
- 250:	0028                	addi	a0,sp,8
- 252:	00000097          	auipc	ra,0x0
- 256:	000080e7          	jalr	ra # 252 <.LBE54+0x10>
+000001de <.L14>:
+        for (int start = 0; start < 256; start = start + 2 * len) {
+ 1de:	97c2                	add	a5,a5,a6
 
-0000025a <.LVL67>:
-    CSR_READ(CSR_REG_MCYCLE, &cycles);
- 25a:	b00025f3          	csrr	a1,mcycle
+000001e0 <.LVL30>:
+ 1e0:	0ff00613          	li	a2,255
 
-0000025e <.LVL68>:
-    printf("  Cycles: %u\n", cycles);
- 25e:	00048513          	mv	a0,s1
- 262:	00000097          	auipc	ra,0x0
- 266:	000080e7          	jalr	ra # 262 <.LVL68+0x4>
+000001e4 <.LVL31>:
+ 1e4:	0591                	addi	a1,a1,4
+ 1e6:	9542                	add	a0,a0,a6
+ 1e8:	9742                	add	a4,a4,a6
+ 1ea:	96de                	add	a3,a3,s7
+ 1ec:	00f64963          	blt	a2,a5,1fe <.L40>
+ 1f0:	0c05                	addi	s8,s8,1
 
-0000026a <.LVL69>:
-    shake256(out2, 64, msg, 100);
- 26a:	86a2                	mv	a3,s0
- 26c:	0130                	addi	a2,sp,136
- 26e:	00a8                	addi	a0,sp,72
- 270:	04000593          	li	a1,64
- 274:	00000097          	auipc	ra,0x0
- 278:	000080e7          	jalr	ra # 274 <.LVL69+0xa>
+000001f2 <.LBB48>:
+            int32_t zeta = zetas_DSA[++k];
+ 1f2:	4190                	lw	a2,0(a1)
+ 1f4:	8fe2                	mv	t6,s8
 
-0000027c <.LVL70>:
-    verify_hash(out1, out2, 64, "SHAKE256 consistency");
- 27c:	000006b7          	lui	a3,0x0
- 280:	00ac                	addi	a1,sp,72
- 282:	0028                	addi	a0,sp,8
- 284:	00068693          	mv	a3,a3
- 288:	04000613          	li	a2,64
- 28c:	00000097          	auipc	ra,0x0
- 290:	000080e7          	jalr	ra # 28c <.LVL70+0x10>
+000001f6 <.LVL33>:
+            for (j = start; j < start + len - 1; j += 2) {
+ 1f6:	f4a7c9e3          	blt	a5,a0,148 <.L45>
 
-00000294 <.LBE52>:
-    test_sha3_256_single_block();
-    test_sha3_512_single_block();
-    test_sha3_256_multi_block();
-    test_shake128();
-    test_shake256();
-    test_multi_squeeze();
- 294:	00000097          	auipc	ra,0x0
- 298:	000080e7          	jalr	ra # 294 <.LBE52>
+000001fa <.L23>:
+ 1fa:	83be                	mv	t2,a5
+ 1fc:	b77d                	j	1aa <.L8>
 
-0000029c <.LVL72>:
+000001fe <.L40>:
+    for (int len = 128; len > 0; len >>= 1) {
+ 1fe:	1efd                	addi	t4,t4,-1
+ 200:	401e5e13          	srai	t3,t3,0x1
+ 204:	f00e9ae3          	bnez	t4,118 <.L7>
 
-    printf("  Tests: %d/%d passed\n", passed_tests, total_tests);
- 29c:	00092603          	lw	a2,0(s2)
- 2a0:	0009a583          	lw	a1,0(s3)
- 2a4:	00000537          	lui	a0,0x0
- 2a8:	00050513          	mv	a0,a0
- 2ac:	00000097          	auipc	ra,0x0
- 2b0:	000080e7          	jalr	ra # 2ac <.LVL72+0x10>
+00000208 <.LBE49>:
+    dilithium_ntt_hw_compute(&a_hw);
+    CSR_READ(CSR_REG_MCYCLE, &cycles_hw);
+ 208:	b0002af3          	csrr	s5,mcycle
 
-000002b4 <.LVL73>:
+0000020c <.LBB52>:
+    int ok = 1;
+ 20c:	4b05                	li	s6,1
 
-    if (passed_tests == total_tests) {
- 2b4:	0009a703          	lw	a4,0(s3)
- 2b8:	00092783          	lw	a5,0(s2)
- 2bc:	02f70763          	beq	a4,a5,2ea <.L29>
+0000020e <.LBB61>:
+    for (int i = 0; i < 256; i++) {
+ 20e:	4a01                	li	s4,0
+
+00000210 <.LBB55>:
+        printf("[%s ERROR] Mismatch @ idx %3d: Got %8d, Expected %8d\n", 
+ 210:	00000cb7          	lui	s9,0x0
+ 214:	00000c37          	lui	s8,0x0
+
+00000218 <.LBE55>:
+    for (int i = 0; i < 256; i++) {
+ 218:	10000b93          	li	s7,256
+
+0000021c <.L17>:
+        ok &= compare_coeffs("D-NTT-HW", i, a->coeffs[i], dsa_tv_ntt_out.coeffs[i]);
+ 21c:	4014                	lw	a3,0(s0)
+ 21e:	4098                	lw	a4,0(s1)
+
+00000220 <.LBB60>:
+        printf("[%s ERROR] Mismatch @ idx %3d: Got %8d, Expected %8d\n", 
+ 220:	8652                	mv	a2,s4
+ 222:	000c8593          	mv	a1,s9
+    int match = (got == exp);
+ 226:	40e68d33          	sub	s10,a3,a4
+        printf("[%s ERROR] Mismatch @ idx %3d: Got %8d, Expected %8d\n", 
+ 22a:	000c0513          	mv	a0,s8
+    int match = (got == exp);
+ 22e:	001d3d13          	seqz	s10,s10
+
+00000232 <.LVL40>:
+    if (!match && !DEBUG) {
+ 232:	00e68663          	beq	a3,a4,23e <.L16>
+        printf("[%s ERROR] Mismatch @ idx %3d: Got %8d, Expected %8d\n", 
+ 236:	00000097          	auipc	ra,0x0
+ 23a:	000080e7          	jalr	ra # 236 <.LVL40+0x4>
+
+0000023e <.L16>:
+    for (int i = 0; i < 256; i++) {
+ 23e:	0a05                	addi	s4,s4,1
+
+00000240 <.LVL42>:
+        ok &= compare_coeffs("D-NTT-HW", i, a->coeffs[i], dsa_tv_ntt_out.coeffs[i]);
+ 240:	01ab7b33          	and	s6,s6,s10
+
+00000244 <.LVL43>:
+    for (int i = 0; i < 256; i++) {
+ 244:	0411                	addi	s0,s0,4
+ 246:	0491                	addi	s1,s1,4
+ 248:	fd7a1ae3          	bne	s4,s7,21c <.L17>
+
+0000024c <.LBE61>:
+    if (ok) printf("PASSED: Dilithium NTT (Hardware)\n");
+ 24c:	060b1a63          	bnez	s6,2c0 <.L46>
+
+00000250 <.LBE52>:
+    all_passed &= dilithium_ntt_hw_verify(&a_hw);
+    printf("Hardware Cycles: %u\n", cycles_hw);
+ 250:	00000537          	lui	a0,0x0
+ 254:	85d6                	mv	a1,s5
+ 256:	00050513          	mv	a0,a0
+ 25a:	00000097          	auipc	ra,0x0
+ 25e:	000080e7          	jalr	ra # 25a <.LBE52+0xa>
+
+00000262 <.LVL45>:
+
+#if SW_TEST_ENABLED
+    printf("SW Cycles: %u | HW Cycles: %u\n", cycles_sw, cycles_hw);
+ 262:	00000537          	lui	a0,0x0
+ 266:	8656                	mv	a2,s5
+ 268:	85ce                	mv	a1,s3
+ 26a:	00050513          	mv	a0,a0
+ 26e:	00000097          	auipc	ra,0x0
+ 272:	000080e7          	jalr	ra # 26e <.LVL45+0xc>
+
+00000276 <.LVL46>:
+    if (cycles_sw > 0) {
+ 276:	08099263          	bnez	s3,2fa <.L22>
+
+0000027a <.L20>:
+#endif
+
+    if (all_passed) {
         printf("FINAL STATUS: ALL TESTS PASSED\n");
     } else {
         printf("FINAL STATUS: TEST FAILURE DETECTED\n");
- 2c0:	00000537          	lui	a0,0x0
- 2c4:	00050513          	mv	a0,a0
- 2c8:	00000097          	auipc	ra,0x0
- 2cc:	000080e7          	jalr	ra # 2c8 <.LVL73+0x14>
+ 27a:	00000537          	lui	a0,0x0
+ 27e:	00050513          	mv	a0,a0
+ 282:	00000097          	auipc	ra,0x0
+ 286:	000080e7          	jalr	ra # 282 <.L20+0x8>
 
-000002d0 <.L24>:
+0000028a <.L41>:
     }
 
     return EXIT_SUCCESS;
 }
- 2d0:	16c12083          	lw	ra,364(sp)
- 2d4:	16812403          	lw	s0,360(sp)
- 2d8:	16412483          	lw	s1,356(sp)
- 2dc:	16012903          	lw	s2,352(sp)
- 2e0:	15c12983          	lw	s3,348(sp)
- 2e4:	4501                	li	a0,0
- 2e6:	6175                	addi	sp,sp,368
- 2e8:	8082                	ret
+ 28a:	7f010113          	addi	sp,sp,2032
+ 28e:	40f6                	lw	ra,92(sp)
+ 290:	4466                	lw	s0,88(sp)
+ 292:	44d6                	lw	s1,84(sp)
+ 294:	4946                	lw	s2,80(sp)
+ 296:	49b6                	lw	s3,76(sp)
 
-000002ea <.L29>:
+00000298 <.LVL49>:
+ 298:	4a26                	lw	s4,72(sp)
+ 29a:	4a96                	lw	s5,68(sp)
+
+0000029c <.LVL50>:
+ 29c:	4b06                	lw	s6,64(sp)
+ 29e:	5bf2                	lw	s7,60(sp)
+ 2a0:	5c62                	lw	s8,56(sp)
+ 2a2:	5cd2                	lw	s9,52(sp)
+ 2a4:	5d42                	lw	s10,48(sp)
+ 2a6:	5db2                	lw	s11,44(sp)
+ 2a8:	4501                	li	a0,0
+ 2aa:	6125                	addi	sp,sp,96
+ 2ac:	8082                	ret
+
+000002ae <.L44>:
+    if (ok) printf("PASSED: Dilithium NTT (Software)\n");
+ 2ae:	00000537          	lui	a0,0x0
+ 2b2:	00050513          	mv	a0,a0
+ 2b6:	00000097          	auipc	ra,0x0
+ 2ba:	000080e7          	jalr	ra # 2b6 <.L44+0x8>
+
+000002be <.LVL52>:
+ 2be:	b531                	j	ca <.L5>
+
+000002c0 <.L46>:
+    if (ok) printf("PASSED: Dilithium NTT (Hardware)\n");
+ 2c0:	00000537          	lui	a0,0x0
+ 2c4:	00050513          	mv	a0,a0
+ 2c8:	00000097          	auipc	ra,0x0
+ 2cc:	000080e7          	jalr	ra # 2c8 <.L46+0x8>
+
+000002d0 <.LBE64>:
+    printf("Hardware Cycles: %u\n", cycles_hw);
+ 2d0:	00000537          	lui	a0,0x0
+ 2d4:	85d6                	mv	a1,s5
+ 2d6:	00050513          	mv	a0,a0
+ 2da:	00000097          	auipc	ra,0x0
+ 2de:	000080e7          	jalr	ra # 2da <.LBE64+0xa>
+
+000002e2 <.LVL55>:
+    printf("SW Cycles: %u | HW Cycles: %u\n", cycles_sw, cycles_hw);
+ 2e2:	00000537          	lui	a0,0x0
+ 2e6:	8656                	mv	a2,s5
+ 2e8:	85ce                	mv	a1,s3
+ 2ea:	00050513          	mv	a0,a0
+ 2ee:	00000097          	auipc	ra,0x0
+ 2f2:	000080e7          	jalr	ra # 2ee <.LVL55+0xc>
+
+000002f6 <.LVL56>:
+    if (cycles_sw > 0) {
+ 2f6:	02098463          	beqz	s3,31e <.L19>
+
+000002fa <.L22>:
+        printf("Speedup: %u.%02ux\n", cycles_sw / cycles_hw, ((cycles_sw * 100) / cycles_hw) % 100);
+ 2fa:	06400613          	li	a2,100
+ 2fe:	02c987b3          	mul	a5,s3,a2
+ 302:	00000537          	lui	a0,0x0
+ 306:	00050513          	mv	a0,a0
+ 30a:	0357d7b3          	divu	a5,a5,s5
+ 30e:	0359d5b3          	divu	a1,s3,s5
+ 312:	02c7f633          	remu	a2,a5,a2
+ 316:	00000097          	auipc	ra,0x0
+ 31a:	000080e7          	jalr	ra # 316 <.L22+0x1c>
+
+0000031e <.L19>:
+    all_passed &= dilithium_ntt_hw_verify(&a_hw);
+ 31e:	012b7b33          	and	s6,s6,s2
+    if (all_passed) {
+ 322:	f40b0ce3          	beqz	s6,27a <.L20>
         printf("FINAL STATUS: ALL TESTS PASSED\n");
- 2ea:	00000537          	lui	a0,0x0
- 2ee:	00050513          	mv	a0,a0
- 2f2:	00000097          	auipc	ra,0x0
- 2f6:	000080e7          	jalr	ra # 2f2 <.L29+0x8>
+ 326:	00000537          	lui	a0,0x0
+ 32a:	00050513          	mv	a0,a0
+ 32e:	00000097          	auipc	ra,0x0
+ 332:	000080e7          	jalr	ra # 32e <.L19+0x10>
 
-000002fa <.LVL75>:
- 2fa:	bfd9                	j	2d0 <.L24>
+00000336 <.LVL59>:
+ 336:	bf91                	j	28a <.L41>
