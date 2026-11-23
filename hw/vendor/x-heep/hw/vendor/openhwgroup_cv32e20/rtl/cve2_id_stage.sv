@@ -18,6 +18,7 @@
 `include "dv_fcov_macros.svh"
 
 module cve2_id_stage #(
+  parameter                   COREV_X_IF      = 0,
   parameter bit               RV32E           = 0,
   parameter cve2_pkg::rv32m_e RV32M           = cve2_pkg::RV32MFast,
   parameter cve2_pkg::rv32b_e RV32B           = cve2_pkg::RV32BNone
@@ -131,18 +132,48 @@ module cve2_id_stage #(
   input  logic [31:0]               rf_rdata_a_i,
   output logic [4:0]                rf_raddr_b_o,
   input  logic [31:0]               rf_rdata_b_i,
-  output logic                      rf_ren_a_o,
-  output logic                      rf_ren_b_o,
-
-`ifdef CV_X_IF
-  // CV-X-IF dedicated rs
   output logic [4:0]                rf_raddr_c_o,
   input  logic [31:0]               rf_rdata_c_i,
+  output logic                      rf_ren_a_o,
+  output logic                      rf_ren_b_o,
+  output logic                      rf_ren_c_o,
 
-  // eXtension interface
-  if_xif.cpu_issue                  xif_issue_if,
-  output logic                      xif_offloading_o,
-`endif
+  // CORE-V-XIF
+  // Compressed Interface
+  output logic [3:0]    x_compressed_id_o,
+  
+  // Issue Interface
+  output logic          x_issue_valid_o,
+  input  logic          x_issue_ready_i,
+  output x_issue_req_t  x_issue_req_o,
+  input  x_issue_resp_t x_issue_resp_i,
+
+  // Commit Interface
+  output logic      x_commit_valid_o,
+  output x_commit_t x_commit_o,
+  
+  // Memory request/response Interface
+  input  logic        x_mem_valid_i,
+  output logic        x_mem_ready_o,
+  input  x_mem_req_t  x_mem_req_i,
+  output x_mem_resp_t x_mem_resp_o,
+
+  // Memory Result Interface
+  output logic x_mem_result_valid_o,
+  output logic x_mem_result_err_o,
+  
+  // Core internal xif memory signals 
+  output logic        x_mem_instr_ex_o,
+  output logic [ 3:0] x_mem_id_ex_o,
+  input  logic        x_mem_instr_wb_i,
+  input  logic [31:0] result_fw_to_x_i,
+
+  // Result Interface
+  input  logic      x_result_valid_i,
+  output logic      x_result_ready_o,
+  input  x_result_t x_result_i,
+  output logic      x_result_valid_assigned_o,
+
 
   // Register file write (via writeback)
   output logic [4:0]                rf_waddr_id_o,
@@ -221,26 +252,24 @@ module cve2_id_stage #(
   logic [31:0] rf_rdata_a_fwd;
   logic [31:0] rf_rdata_b_fwd;
 
-`ifdef CV_X_IF
-  // eXtension interface signals
-  logic xif_en;
-  logic xif_waiting;
-  logic xif_insn_accept;
-  logic xif_insn_reject;
-  logic xif_we;
-  logic xif_exception;
-  logic xif_dualwrite;
-  logic xif_loadstore;
-  logic xif_issue_fire;
-
-  logic xif_accept_event;
-  logic xif_reject_event;
-
-  logic xif_accepted_q;
-  logic xif_rejected_q;
-
-  logic [2:0] rf_illegal_raddr;
-`endif
+  // eXtension
+  logic [4:0] regfile_addr_ra_id;
+  logic [4:0] regfile_addr_rb_id;
+  logic [4:0] regfile_addr_rc_id;
+  logic       illegal_insn;
+  logic       x_illegal_insn;
+  logic       x_branch_or_async_taken;
+  logic       x_control_illegal_reset;
+  logic [4:0] waddr_id;
+  logic [4:0] waddr_ex;
+  logic [4:0] waddr_wb;
+  logic [2:0] regs_used;
+  logic       x_stall;
+  logic [2:0][4:0] x_rs_addr;
+  logic x_mem_data_req;
+  logic x_mem_valid;
+  logic [RF_READ_PORTS-1:0] x_ex_fwd;
+  logic [RF_READ_PORTS-1:0] x_wb_fwd;
 
   // ALU Control
   alu_op_e     alu_operator;
@@ -350,12 +379,8 @@ module cve2_id_stage #(
   ///////////////////////
 
   // Suppress register write if there is an illegal CSR access or instruction is not executing
-`ifdef CV_X_IF
-  // WB enabled by decoder or XIF
-  assign rf_we_id_o = (rf_we_raw || xif_we) & instr_executing & ~illegal_csr_insn_i;
-`else
-  assign rf_we_id_o = rf_we_raw & instr_executing & ~illegal_csr_insn_i;
-`endif
+  // WB enabled by decoder or eXtension
+  assign rf_we_id_o = (rf_we_raw) & instr_executing & ~illegal_csr_insn_i;
 
   // Register file write data mux
   always_comb begin : rf_wdata_id_mux
@@ -368,86 +393,172 @@ module cve2_id_stage #(
 
 
 
-  /////////////
-  // CV X IF //
-  /////////////
-`ifdef CV_X_IF
-  assign rf_raddr_c_o       = instr_rdata_i[31:27];
-  assign rf_rdata_c_fwd     = rf_rdata_c_i;
+  assign regfile_addr_ra_id = instr_rdata_i[19:15];
+  assign regfile_addr_rb_id = instr_rdata_i[24:20];
+  assign regfile_addr_rc_id = instr_rdata_i[31:27];
+  generate
+    if (COREV_X_IF != 0) begin : gen_x_disp
+      // eXtension dispatcher
+      cve2_x_disp x_disp_i (
+        // clock and reset
+        .clk_i (clk_i),
+        .rst_ni(rst_ni),
 
+        // compressed interface
+        .x_compressed_id_o(x_compressed_id_o),
 
-  // Trying to offload every valid instruction that is considered illegal by
-  // the decoder.
-  assign xif_issue_if.issue_valid = instr_valid_i && 
-                                    !instr_fetch_err_i &&
-                                    !instr_is_compressed_i &&
-                                    illegal_insn_dec &&
-                                    (!xif_accepted_q && !xif_rejected_q);
+        // issue interface
+        .x_issue_valid_o         (x_issue_valid_o),
+        .x_issue_ready_i         (x_issue_ready_i),
+        .x_issue_resp_writeback_i(x_issue_resp_i.writeback),
+        .x_issue_resp_dualread_i (x_issue_resp_i.dualread),
+        .x_issue_resp_accept_i   (x_issue_resp_i.accept),
+        .x_issue_resp_loadstore_i(x_issue_resp_i.loadstore),
+        .x_issue_req_rs_valid_o  (x_issue_req_o.rs_valid),
+        .x_issue_req_id_o        (x_issue_req_o.id),
+        .x_issue_req_mode_o      (x_issue_req_o.mode),
+        .x_issue_req_ecs_valid   (x_issue_req_o.ecs_valid),
 
-  // Keep xif_offloading_o high to get a new instruciton ID from IF stge
-  assign xif_offloading_o = xif_issue_if.issue_valid || xif_accepted_q || xif_rejected_q;
+        // commit interface
+        .x_commit_valid_o    (x_commit_valid_o),
+        .x_commit_id_o       (x_commit_o.id),
+        .x_commit_commit_kill(x_commit_o.commit_kill),
 
-  assign xif_issue_if.issue_req.instr = instr_rdata_i; 
-  assign xif_issue_if.issue_req.mode  = PRIV_LVL_M;
-  assign xif_issue_if.issue_req.id    = '0;
+        // memory (request/response) interface
+        .x_mem_valid_i       (x_mem_valid_i),
+        .x_mem_ready_o       (x_mem_ready_o),
+        .x_mem_req_mode_i    (x_mem_req_i.mode),
+        .x_mem_req_spec_i    (x_mem_req_i.spec),
+        .x_mem_req_last_i    (x_mem_req_i.last),
+        .x_mem_resp_exc_o    (x_mem_resp_o.exc),
+        .x_mem_resp_exccode_o(x_mem_resp_o.exccode),
+        .x_mem_resp_dbg_o    (x_mem_resp_o.dbg),
 
-  assign rf_illegal_raddr[0] = RV32E && rf_raddr_a_o[4];
-  assign rf_illegal_raddr[1] = RV32E && rf_raddr_b_o[4];
-  assign rf_illegal_raddr[2] = RV32E && rf_raddr_c_o[4];
+        // memory result interface
+        .x_mem_result_valid_o(x_mem_result_valid_o),
+        .x_mem_result_err_o  (x_mem_result_err_o),
 
-  always_comb begin
-    xif_issue_if.issue_req.rs           = '0;
-    xif_issue_if.issue_req.rs_valid     = '0;
+        // memory result interface
+        .x_mem_result_valid_o(x_mem_result_valid_o),
+        .x_mem_result_err_o  (x_mem_result_err_o),
+
+        // result interface
+        .x_result_valid_i(x_result_valid_i),
+        .x_result_ready_o(x_result_ready_o),
+        .x_result_rd_i   (x_result_i.rd),
+        .x_result_we_i   (x_result_i.we),
+
+        // scoreboard, dependency check, stall, forwarding
+        .waddr_id_i          (waddr_id),
+        .waddr_ex_i          (waddr_ex),
+        .waddr_wb_i          (waddr_wb),
+        .we_ex_i             (1'b0),                            // Forwarding not available
+        .we_wb_i             (1'b0),                            // Forwarding not available
+        .mem_instr_waddr_ex_i(rf_waddr_id_o),                   // Current destination address
+        .mem_instr_we_ex_i   (ex_valid_i && lsu_req_dec && !lsu_we),           // Only when is a load
+        .regs_used_i         (regs_used),
+        .branch_or_jump_i    (branch_in_dec | jump_in_dec),     // If there's a branch or a jump
+        .instr_valid_i       (instr_valid_i),
+        .x_rs_addr_i         (x_rs_addr),
+        .x_ex_fwd_o          (x_ex_fwd),
+        .x_wb_fwd_o          (x_wb_fwd),
+
+        // memory request core-internal status signals
+        .x_mem_data_req_o(x_mem_data_req),
+        .x_mem_instr_wb_i(1'b0),              // Temporarely 0
+        .wb_ready_i      (1'b0),
+
+        // additional status signals
+        .x_stall_o                (x_stall),
+        .x_illegal_insn_o         (x_illegal_insn),
+        .x_illegal_insn_dec_i     (illegal_insn_dec),
+        .x_control_illegal_reset_i(1'0),  // Temporarely, it should be managed differently, illegal instruction will break everything
+        .id_ready_i               (id_ready_o),
+        .ex_valid_i               (ex_valid_i),
+        .ex_ready_i               (ex_ready_i),
+        .current_priv_lvl_i       (priv_mode_i),
+        .data_req_dec_i           (data_req_id)
+      );
+
+      // illegal instruction signal
+      assign illegal_insn = x_illegal_insn;
     
-    xif_issue_if.issue_req.rs[0]        = rf_rdata_a_fwd;
-    xif_issue_if.issue_req.rs[1]        = rf_rdata_b_fwd;
-    xif_issue_if.issue_req.rs[2]        = rf_rdata_c_fwd; // source C of RF
-    
-    xif_issue_if.issue_req.rs_valid[0]  = !rf_illegal_raddr[0];
-    xif_issue_if.issue_req.rs_valid[1]  = !rf_illegal_raddr[1];
-    xif_issue_if.issue_req.rs_valid[2]  = !rf_illegal_raddr[2];
-  end
+      // x-dispatcher signal assignments
+      assign x_issue_req_o.instr       = instr;
+      assign x_issue_req_o.ecs         = '0;
+      assign x_rs_addr[0]              = regfile_addr_ra_id;
+      assign x_rs_addr[1]              = regfile_addr_rb_id;
+      assign x_rs_addr[2]              = regfile_addr_rc_id;
+
+      assign waddr_id                  = instr_rdata_i[11:7];
+      
+      // TODO check better 
+      assign waddr_ex                  = '0;
+      assign waddr_wb                  = '0;
+      
+      // When instruction is illegal (offloaded to XIF coprocessor), assume all
+      // three source registers are used so the scoreboard properly detects
+      // load-use hazards and stalls the pipeline.  Without this, the decoder
+      // defaults reg{a,b,c}_used to 0 for unknown opcodes, disabling stalls.
+      
+      assign regs_used = 3'b111;
+      assign x_result_valid_assigned_o = x_result_valid_i;
+      assign x_mem_valid               = x_mem_valid_i;
 
 
-  //////////////////////////////////////////
-  // eXtension handshake acception/rejection
-  //////////////////////////////////////////
-  assign xif_en = xif_insn_accept || xif_insn_reject;
-  
-  // Issue output are ready
-  assign xif_issue_fire = xif_issue_if.issue_valid && xif_issue_if.issue_ready;
-
-  assign xif_accept_event = xif_issue_fire && xif_issue_if.issue_resp.accept;  // Output ready and accepted
-  assign xif_reject_event = xif_issue_fire && !xif_issue_if.issue_resp.accept; // Output ready and rejected
-
-  assign xif_insn_accept = xif_accept_event || xif_accepted_q;
-  assign xif_insn_reject = xif_reject_event || xif_rejected_q;
-
-  always_ff @(posedge clk_i, negedge rst_ni) begin : IF_XIF_STATE_REGISTER
-    if(rst_ni == 1'b0) begin
-      xif_accepted_q <= 1'b0;
-      xif_rejected_q <= 1'b0;
-    end else begin
-      if (xif_issue_fire) begin
-        xif_accepted_q <= xif_accept_event;
-        xif_rejected_q <= xif_reject_event;
-      end else if(instr_done || instr_valid_clear_o) begin
-        xif_accepted_q <= 1'b0;
-        xif_rejected_q <= 1'b0;
+      // xif integer souce operand selection
+      for (genvar j = 0; j < REGFILE_NUM_READ_PORTS; j++) begin : xif_operand_assignment_dualread
+        for (genvar i = 0; i < 3; i++) begin : xif_operand_assignment
+          always_comb begin
+            if (i == 0) begin
+              x_issue_req_o.rs[i+3*j] = regfile_data_ra_id[j];
+            end else if (i == 1) begin
+              x_issue_req_o.rs[i+3*j] = regfile_data_rb_id[j];
+            end else begin
+              x_issue_req_o.rs[i+3*j] = regfile_data_rc_id[j];
+            end
+            if (x_ex_fwd[i+3*j]) begin
+              x_issue_req_o.rs[i+3*j] = result_fw_to_x_i;
+            end else if (x_wb_fwd[i+3*j]) begin
+              x_issue_req_o.rs[i+3*j] = regfile_wdata_wb_i;
+            end
+          end
+        end
       end
-    end
-  end
 
-  // Extra signals for eXtension
-  assign xif_we         = xif_issue_if.issue_valid && xif_issue_if.issue_resp.writeback;  // Care in HORCRUX it can assume both 0 and 1
-  assign xif_exception  = xif_issue_if.issue_valid && xif_issue_if.issue_resp.exc;        // Don't care in HORCRUX tied low / not used
-  assign xif_dualwrite  = xif_issue_if.issue_valid && xif_issue_if.issue_resp.dualwrite;  // Don't care in HORCRUX tied low / not used
-  assign xif_loadstore  = xif_issue_if.issue_valid && xif_issue_if.issue_resp.loadstore;  // Don't care in HORCRUX mem_valid/req tied low / not used 
+      // LSU signal assignment/MUX
+      always_comb begin
+        x_mem_data_type_id = 2'b00;
+        case (x_mem_req_i.size)
+          3'd0:    x_mem_data_type_id = 2'b10;  // SB
+          3'd1:    x_mem_data_type_id = 2'b01;  // SH
+          3'd2:    x_mem_data_type_id = 2'b00;  // SW
+          default: x_mem_data_type_id = 2'b00;  // SW
+        endcase
+      end
 
-  // The coprocessor still hasn't accepted nor rejected the issue, used with
-  // stall_id
-  assign xif_waiting    = xif_issue_if.issue_valid && !xif_issue_if.issue_ready && !xif_accepted_q && !xif_rejected_q;
-`endif
+    end else begin : gen_no_x_disp
+      // default illegal instruction assignment
+      assign illegal_insn = illegal_insn_dec;
+
+      // default assignment for x-interface control signals
+      assign x_stall                    = 'b0;
+      assign x_result_valid_assigned_o  = 'b0;
+      assign x_mem_valid                = 'b0;
+      assign x_mem_data_req             = 'b0;
+      assign x_mem_data_type_id         = 'b0;
+      assign x_issue_valid_o            = 'b0;
+      assign x_compressed_id_o          = 'b0;
+      assign x_issue_req_o              = 'b0;
+      assign x_commit_valid_o           = 'b0;
+      assign x_commit_o                 = 'b0;
+      assign x_mem_ready_o              = 'b0;
+      assign x_mem_resp_o               = 'b0;
+      assign x_mem_result_valid_o       = 'b0;
+      assign x_mem_result_err_o         = 'b0;
+      assign x_result_ready_o           = 'b0;
+    end : gen_no_x_disp
+  endgenerate
 
   /////////////
   // Decoder //
@@ -562,12 +673,7 @@ module cve2_id_stage #(
   ////////////////
 
   logic illegal_insn_composed;
-`ifdef CV_X_IF
-  assign illegal_insn_composed = illegal_insn_dec & xif_insn_reject;
-`else
-  assign illegal_insn_composed = illegal_insn_dec;
-`endif
-  assign illegal_insn_o = instr_valid_i & (illegal_insn_composed | illegal_csr_insn_i);
+  assign illegal_insn_o = instr_valid_i & (illegal_insn | illegal_csr_insn_i);
 
   cve2_controller #(
   ) controller_i (
@@ -833,11 +939,7 @@ module cve2_id_stage #(
   // The coprocessor still hasn't accepted nor rejected the issue
   // Stall ID/EX stage for reason that relates to instruction in ID/EX, update assertion below if
   // modifying this.
-`ifdef CV_X_IF
-  assign stall_id = stall_mem | stall_multdiv | stall_jump | stall_branch | stall_alu | xif_waiting;
-`else
-  assign stall_id = stall_mem | stall_multdiv | stall_jump | stall_branch | stall_alu;
-`endif
+  assign stall_id = stall_mem | stall_multdiv | stall_jump | stall_branch | stall_alu | x_stall;
 
   // Generally illegal instructions have no reason to stall, however they must still stall waiting
   // for outstanding memory requests so exceptions related to them take priority over the illegal
