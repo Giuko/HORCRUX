@@ -1,9 +1,9 @@
 Archive member included to satisfy reference by file (symbol)
 
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
-                              /tmp/ccFZ9UGy.o (atexit)
+                              /tmp/cchj02cM.o (atexit)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-exit.o)
-                              /tmp/ccFZ9UGy.o (exit)
+                              /tmp/cchj02cM.o (exit)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-exit.o) (__stdio_exit_handler)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fwalk.o)
@@ -21,11 +21,11 @@ Archive member included to satisfy reference by file (symbol)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-readr.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o) (_read_r)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-init.o)
-                              /tmp/ccFZ9UGy.o (__libc_init_array)
+                              /tmp/cchj02cM.o (__libc_init_array)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fini.o)
-                              /tmp/ccFZ9UGy.o (__libc_fini_array)
+                              /tmp/cchj02cM.o (__libc_fini_array)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memset.o)
-                              /tmp/ccFZ9UGy.o (memset)
+                              /tmp/cchj02cM.o (memset)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__atexit.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o) (__register_exitproc)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__call_atexit.o)
@@ -41,7 +41,7 @@ Archive member included to satisfy reference by file (symbol)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-sbrkr.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o) (_sbrk_r)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a(libm_a-w_log.o)
-                              /tmp/ccqTGjrk.o (symbol from plugin) (log)
+                              /tmp/ccC4wQhn.o (symbol from plugin) (log)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a(libm_a-s_nan.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a(libm_a-w_log.o) (nan)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a(libm_a-e_log.o)
@@ -67,21 +67,25 @@ Archive member included to satisfy reference by file (symbol)
 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_clz.o)
                               /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_clzsi2.o) (__clz_tab)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-malloc.o)
-                              /tmp/ccCUw8RQ.ltrans0.ltrans.o (malloc)
+                              /tmp/ccVTr9ms.ltrans0.ltrans.o (malloc)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o)
-                              CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj (printf)
+                              CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj (printf)
+/software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putchar.o)
+                              CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj (putchar)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
-                              CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj (puts)
+                              CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj (puts)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wbuf.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o) (__swbuf_r)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wsetup.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o) (__swsetup_r)
+/software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcmp.o)
+                              CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj (memcmp)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-errno.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a(libm_a-w_log.o) (__errno)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcpy-asm.o)
-                              /tmp/ccCUw8RQ.ltrans0.ltrans.o (memcpy)
+                              /tmp/ccVTr9ms.ltrans0.ltrans.o (memcpy)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-strlen.o)
-                              /tmp/ccCUw8RQ.ltrans0.ltrans.o (strlen)
+                              /tmp/ccVTr9ms.ltrans0.ltrans.o (strlen)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o) (_vfprintf_r)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
@@ -90,6 +94,8 @@ Archive member included to satisfy reference by file (symbol)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o) (__sfvwrite_r)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wsetup.o) (__smakebuf_r)
+/software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putc.o)
+                              /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putchar.o) (_putc_r)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memchr.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o) (memchr)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fstatr.o)
@@ -103,261 +109,263 @@ Archive member included to satisfy reference by file (symbol)
 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-msizer.o)
                               /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-reallocr.o) (_malloc_usable_size_r)
 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
-                              /tmp/ccCUw8RQ.ltrans0.ltrans.o (__bswapsi2)
+                              /tmp/ccVTr9ms.ltrans0.ltrans.o (__bswapsi2)
 
 Discarded input sections
 
- .text          0x00000000        0x0 /tmp/ccFZ9UGy.o
- .data          0x00000000        0x0 /tmp/ccFZ9UGy.o
- .bss           0x00000000        0x0 /tmp/ccFZ9UGy.o
- .text          0x00000000        0x0 /tmp/ccBdqmW6.o
- .data          0x00000000        0x0 /tmp/ccBdqmW6.o
- .bss           0x00000000        0x0 /tmp/ccBdqmW6.o
- .text          0x00000000        0x0 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .data          0x00000000        0x0 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .bss           0x00000000        0x0 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+ .text          0x00000000        0x0 /tmp/cchj02cM.o
+ .data          0x00000000        0x0 /tmp/cchj02cM.o
+ .bss           0x00000000        0x0 /tmp/cchj02cM.o
+ .text          0x00000000        0x0 /tmp/cceN0cuV.o
+ .data          0x00000000        0x0 /tmp/cceN0cuV.o
+ .bss           0x00000000        0x0 /tmp/cceN0cuV.o
+ .text          0x00000000        0x0 /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .data          0x00000000        0x0 /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .bss           0x00000000        0x0 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.dma_is_ready
-                0x00000000       0x3c /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x3c /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.dma_intr_handler_window_done
-                0x00000000       0x22 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x22 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.dma_window_ratio_warning_threshold
-                0x00000000       0x14 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x14 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_timer_2
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_timer_3
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_ext_peripheral
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_gpio_0
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_gpio_1
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_gpio_2
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_gpio_3
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_gpio_4
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_gpio_5
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_gpio_6
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_gpio_7
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.gpio_handler_irq_dummy
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.handler_irq_i2c
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.handler_irq_i2s
-                0x00000000       0x1e /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x1e /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.handler_irq_im2col_spc
-                0x00000000       0x20 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x20 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.handler_irq_dummy
-                0x00000000       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.handler_irq_uart
-                0x00000000       0x1e /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x1e /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_spi
-                0x00000000       0x70 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x70 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.spi_intr_handler_error_host
-                0x00000000       0x22 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x22 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.spi_intr_handler_event_host
-                0x00000000       0x24 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x24 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_spi_flash
-                0x00000000       0x68 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x68 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.spi_intr_handler_error_flash
-                0x00000000       0x1e /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x1e /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.spi_intr_handler_event_flash
-                0x00000000       0x20 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x20 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.unlikely.abort
-                0x00000000        0xe /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000        0xe /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.spi_intr_handler_event_host2
-                0x00000000       0x26 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x26 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.spi_intr_handler_error_host2
-                0x00000000       0x24 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .text._Znwj    0x00000000        0x8 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .text._ZdlPv   0x00000000        0x8 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .text._Znaj    0x00000000        0x8 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .text._ZdaPv   0x00000000        0x8 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000       0x24 /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .text._Znwj    0x00000000        0x8 /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .text._ZdlPv   0x00000000        0x8 /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .text._Znaj    0x00000000        0x8 /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .text._ZdaPv   0x00000000        0x8 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .sbss.dma_sdk_intr_flag
-                0x00000000        0x1 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000        0x1 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .srodata.im2col_spc_base_addr
-                0x00000000        0x4 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .comment       0x00000000       0x32 /tmp/cclBn76O.debug.temp.o
+                0x00000000        0x4 /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .comment       0x00000000       0x32 /tmp/ccTyAumK.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cclBn76O.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc4qhxcO.debug.temp.o
+                0x00000000        0x0 /tmp/ccTyAumK.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccWmDZ1q.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc4qhxcO.debug.temp.o
- .debug_info    0x00000000       0xf2 /tmp/ccHAY7wD.debug.temp.o
- .debug_abbrev  0x00000000       0xa4 /tmp/ccHAY7wD.debug.temp.o
- .debug_line    0x00000000       0x4c /tmp/ccHAY7wD.debug.temp.o
- .debug_str     0x00000000      0x17b /tmp/ccHAY7wD.debug.temp.o
+                0x00000000        0x0 /tmp/ccWmDZ1q.debug.temp.o
+ .debug_info    0x00000000       0xf2 /tmp/cc4y9xaM.debug.temp.o
+ .debug_abbrev  0x00000000       0xa4 /tmp/cc4y9xaM.debug.temp.o
+ .debug_line    0x00000000       0x4c /tmp/cc4y9xaM.debug.temp.o
+ .debug_str     0x00000000      0x17b /tmp/cc4y9xaM.debug.temp.o
  .debug_line_str
-                0x00000000      0x167 /tmp/ccHAY7wD.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccHAY7wD.debug.temp.o
+                0x00000000      0x167 /tmp/cc4y9xaM.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc4y9xaM.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccHAY7wD.debug.temp.o
- .debug_info    0x00000000      0x28b /tmp/cciihiKx.debug.temp.o
- .debug_abbrev  0x00000000      0x115 /tmp/cciihiKx.debug.temp.o
- .debug_line    0x00000000       0x56 /tmp/cciihiKx.debug.temp.o
- .debug_str     0x00000000      0x2a9 /tmp/cciihiKx.debug.temp.o
+                0x00000000        0x0 /tmp/cc4y9xaM.debug.temp.o
+ .debug_info    0x00000000      0x28b /tmp/cckw1Pub.debug.temp.o
+ .debug_abbrev  0x00000000      0x115 /tmp/cckw1Pub.debug.temp.o
+ .debug_line    0x00000000       0x56 /tmp/cckw1Pub.debug.temp.o
+ .debug_str     0x00000000      0x2a9 /tmp/cckw1Pub.debug.temp.o
  .debug_line_str
-                0x00000000      0x173 /tmp/cciihiKx.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cciihiKx.debug.temp.o
+                0x00000000      0x173 /tmp/cckw1Pub.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cckw1Pub.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cciihiKx.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccj8bxB2.debug.temp.o
+                0x00000000        0x0 /tmp/cckw1Pub.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccsSC3S3.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccj8bxB2.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc72jg4A.debug.temp.o
+                0x00000000        0x0 /tmp/ccsSC3S3.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc0LAnQb.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc72jg4A.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccn3Tp2W.debug.temp.o
+                0x00000000        0x0 /tmp/cc0LAnQb.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc62cJF7.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccn3Tp2W.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccv8fIYy.debug.temp.o
+                0x00000000        0x0 /tmp/cc62cJF7.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccFUyxJ6.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccv8fIYy.debug.temp.o
- .debug_info    0x00000000      0x381 /tmp/ccP5iD1g.debug.temp.o
- .debug_abbrev  0x00000000      0x151 /tmp/ccP5iD1g.debug.temp.o
- .debug_line    0x00000000       0x56 /tmp/ccP5iD1g.debug.temp.o
- .debug_str     0x00000000      0x475 /tmp/ccP5iD1g.debug.temp.o
+                0x00000000        0x0 /tmp/ccFUyxJ6.debug.temp.o
+ .debug_info    0x00000000      0x381 /tmp/ccfJLf34.debug.temp.o
+ .debug_abbrev  0x00000000      0x151 /tmp/ccfJLf34.debug.temp.o
+ .debug_line    0x00000000       0x56 /tmp/ccfJLf34.debug.temp.o
+ .debug_str     0x00000000      0x475 /tmp/ccfJLf34.debug.temp.o
  .debug_line_str
-                0x00000000      0x178 /tmp/ccP5iD1g.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccP5iD1g.debug.temp.o
+                0x00000000      0x178 /tmp/ccfJLf34.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccfJLf34.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccP5iD1g.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccoy7Pv1.debug.temp.o
+                0x00000000        0x0 /tmp/ccfJLf34.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc4hlvU5.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccoy7Pv1.debug.temp.o
- .debug_info    0x00000000      0x1ea /tmp/cc2DWFag.debug.temp.o
- .debug_abbrev  0x00000000       0xcd /tmp/cc2DWFag.debug.temp.o
- .debug_line    0x00000000       0x5a /tmp/cc2DWFag.debug.temp.o
- .debug_str     0x00000000      0x26d /tmp/cc2DWFag.debug.temp.o
+                0x00000000        0x0 /tmp/cc4hlvU5.debug.temp.o
+ .debug_info    0x00000000      0x1ea /tmp/ccGks7dJ.debug.temp.o
+ .debug_abbrev  0x00000000       0xcd /tmp/ccGks7dJ.debug.temp.o
+ .debug_line    0x00000000       0x5a /tmp/ccGks7dJ.debug.temp.o
+ .debug_str     0x00000000      0x26d /tmp/ccGks7dJ.debug.temp.o
  .debug_line_str
-                0x00000000      0x1de /tmp/cc2DWFag.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc2DWFag.debug.temp.o
+                0x00000000      0x1de /tmp/ccGks7dJ.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccGks7dJ.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc2DWFag.debug.temp.o
- .debug_info    0x00000000      0x913 /tmp/ccHKcQSY.debug.temp.o
- .debug_abbrev  0x00000000      0x1ac /tmp/ccHKcQSY.debug.temp.o
- .debug_line    0x00000000       0x5f /tmp/ccHKcQSY.debug.temp.o
- .debug_str     0x00000000      0x78a /tmp/ccHKcQSY.debug.temp.o
+                0x00000000        0x0 /tmp/ccGks7dJ.debug.temp.o
+ .debug_info    0x00000000      0x913 /tmp/ccKxR6VS.debug.temp.o
+ .debug_abbrev  0x00000000      0x1ac /tmp/ccKxR6VS.debug.temp.o
+ .debug_line    0x00000000       0x5f /tmp/ccKxR6VS.debug.temp.o
+ .debug_str     0x00000000      0x78a /tmp/ccKxR6VS.debug.temp.o
  .debug_line_str
-                0x00000000      0x1f3 /tmp/ccHKcQSY.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccHKcQSY.debug.temp.o
+                0x00000000      0x1f3 /tmp/ccKxR6VS.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccKxR6VS.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccHKcQSY.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccKy6O3q.debug.temp.o
+                0x00000000        0x0 /tmp/ccKxR6VS.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccE6PdLD.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccKy6O3q.debug.temp.o
- .debug_info    0x00000000      0x8bb /tmp/ccR4nWxF.debug.temp.o
- .debug_abbrev  0x00000000      0x19a /tmp/ccR4nWxF.debug.temp.o
- .debug_line    0x00000000       0x5f /tmp/ccR4nWxF.debug.temp.o
- .debug_str     0x00000000      0x77b /tmp/ccR4nWxF.debug.temp.o
+                0x00000000        0x0 /tmp/ccE6PdLD.debug.temp.o
+ .debug_info    0x00000000      0x8bb /tmp/cc25e1Zd.debug.temp.o
+ .debug_abbrev  0x00000000      0x19a /tmp/cc25e1Zd.debug.temp.o
+ .debug_line    0x00000000       0x5f /tmp/cc25e1Zd.debug.temp.o
+ .debug_str     0x00000000      0x77b /tmp/cc25e1Zd.debug.temp.o
  .debug_line_str
-                0x00000000      0x1da /tmp/ccR4nWxF.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccR4nWxF.debug.temp.o
+                0x00000000      0x1da /tmp/cc25e1Zd.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc25e1Zd.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccR4nWxF.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccsLx4RA.debug.temp.o
+                0x00000000        0x0 /tmp/cc25e1Zd.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccOt1uUE.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccsLx4RA.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc8M54dR.debug.temp.o
+                0x00000000        0x0 /tmp/ccOt1uUE.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccziDqlU.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc8M54dR.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc5yYwXx.debug.temp.o
+                0x00000000        0x0 /tmp/ccziDqlU.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccZws9fO.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc5yYwXx.debug.temp.o
- .debug_info    0x00000000       0xd1 /tmp/ccuTzzRj.debug.temp.o
- .debug_abbrev  0x00000000       0xb3 /tmp/ccuTzzRj.debug.temp.o
- .debug_line    0x00000000       0x43 /tmp/ccuTzzRj.debug.temp.o
- .debug_str     0x00000000      0x1b7 /tmp/ccuTzzRj.debug.temp.o
+                0x00000000        0x0 /tmp/ccZws9fO.debug.temp.o
+ .debug_info    0x00000000       0xd1 /tmp/cce5KcZF.debug.temp.o
+ .debug_abbrev  0x00000000       0xb3 /tmp/cce5KcZF.debug.temp.o
+ .debug_line    0x00000000       0x43 /tmp/cce5KcZF.debug.temp.o
+ .debug_str     0x00000000      0x1b7 /tmp/cce5KcZF.debug.temp.o
  .debug_line_str
-                0x00000000      0x12f /tmp/ccuTzzRj.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccuTzzRj.debug.temp.o
+                0x00000000      0x12f /tmp/cce5KcZF.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cce5KcZF.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccuTzzRj.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc02Neqa.debug.temp.o
+                0x00000000        0x0 /tmp/cce5KcZF.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccogGQM0.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc02Neqa.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccGUKOWZ.debug.temp.o
+                0x00000000        0x0 /tmp/ccogGQM0.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccHw83Q1.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccGUKOWZ.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccyKKBg3.debug.temp.o
+                0x00000000        0x0 /tmp/ccHw83Q1.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc0UadbH.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccyKKBg3.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccNROqHq.debug.temp.o
+                0x00000000        0x0 /tmp/cc0UadbH.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cci5gzod.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccNROqHq.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccr09uTi.debug.temp.o
+                0x00000000        0x0 /tmp/cci5gzod.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccetVsDU.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccr09uTi.debug.temp.o
- .debug_info    0x00000000      0x930 /tmp/cc7CulRb.debug.temp.o
- .debug_abbrev  0x00000000      0x227 /tmp/cc7CulRb.debug.temp.o
- .debug_line    0x00000000       0x5f /tmp/cc7CulRb.debug.temp.o
- .debug_str     0x00000000      0x894 /tmp/cc7CulRb.debug.temp.o
+                0x00000000        0x0 /tmp/ccetVsDU.debug.temp.o
+ .debug_info    0x00000000      0x930 /tmp/ccSZtLEA.debug.temp.o
+ .debug_abbrev  0x00000000      0x227 /tmp/ccSZtLEA.debug.temp.o
+ .debug_line    0x00000000       0x5f /tmp/ccSZtLEA.debug.temp.o
+ .debug_str     0x00000000      0x894 /tmp/ccSZtLEA.debug.temp.o
  .debug_line_str
-                0x00000000      0x1f0 /tmp/cc7CulRb.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc7CulRb.debug.temp.o
+                0x00000000      0x1f0 /tmp/ccSZtLEA.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccSZtLEA.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc7CulRb.debug.temp.o
- .debug_info    0x00000000      0x4f5 /tmp/cc352YwE.debug.temp.o
- .debug_abbrev  0x00000000      0x1bb /tmp/cc352YwE.debug.temp.o
- .debug_line    0x00000000       0x63 /tmp/cc352YwE.debug.temp.o
- .debug_str     0x00000000      0x5fd /tmp/cc352YwE.debug.temp.o
+                0x00000000        0x0 /tmp/ccSZtLEA.debug.temp.o
+ .debug_info    0x00000000      0x4f5 /tmp/cc34zWdl.debug.temp.o
+ .debug_abbrev  0x00000000      0x1bb /tmp/cc34zWdl.debug.temp.o
+ .debug_line    0x00000000       0x63 /tmp/cc34zWdl.debug.temp.o
+ .debug_str     0x00000000      0x5fd /tmp/cc34zWdl.debug.temp.o
  .debug_line_str
-                0x00000000      0x216 /tmp/cc352YwE.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cc352YwE.debug.temp.o
+                0x00000000      0x216 /tmp/cc34zWdl.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/cc34zWdl.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cc352YwE.debug.temp.o
- .debug_info    0x00000000      0x1e5 /tmp/ccHvU9jy.debug.temp.o
- .debug_abbrev  0x00000000       0xe0 /tmp/ccHvU9jy.debug.temp.o
- .debug_line    0x00000000       0x4c /tmp/ccHvU9jy.debug.temp.o
- .debug_str     0x00000000      0x37a /tmp/ccHvU9jy.debug.temp.o
+                0x00000000        0x0 /tmp/cc34zWdl.debug.temp.o
+ .debug_info    0x00000000      0x1e5 /tmp/ccbS40xs.debug.temp.o
+ .debug_abbrev  0x00000000       0xe0 /tmp/ccbS40xs.debug.temp.o
+ .debug_line    0x00000000       0x4c /tmp/ccbS40xs.debug.temp.o
+ .debug_str     0x00000000      0x37a /tmp/ccbS40xs.debug.temp.o
  .debug_line_str
-                0x00000000      0x16e /tmp/ccHvU9jy.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccHvU9jy.debug.temp.o
+                0x00000000      0x16e /tmp/ccbS40xs.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccbS40xs.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccHvU9jy.debug.temp.o
- .comment       0x00000000       0x32 /tmp/ccDJivtr.debug.temp.o
+                0x00000000        0x0 /tmp/ccbS40xs.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccBMMD81.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccDJivtr.debug.temp.o
- .debug_info    0x00000000       0x9e /tmp/cctuP2Zi.debug.temp.o
- .debug_abbrev  0x00000000       0x9b /tmp/cctuP2Zi.debug.temp.o
- .debug_line    0x00000000       0x3a /tmp/cctuP2Zi.debug.temp.o
- .debug_str     0x00000000      0x135 /tmp/cctuP2Zi.debug.temp.o
+                0x00000000        0x0 /tmp/ccBMMD81.debug.temp.o
+ .debug_info    0x00000000       0x9e /tmp/ccy2eH62.debug.temp.o
+ .debug_abbrev  0x00000000       0x9b /tmp/ccy2eH62.debug.temp.o
+ .debug_line    0x00000000       0x3a /tmp/ccy2eH62.debug.temp.o
+ .debug_str     0x00000000      0x135 /tmp/ccy2eH62.debug.temp.o
  .debug_line_str
-                0x00000000       0xdd /tmp/cctuP2Zi.debug.temp.o
- .comment       0x00000000       0x32 /tmp/cctuP2Zi.debug.temp.o
+                0x00000000       0xdd /tmp/ccy2eH62.debug.temp.o
+ .comment       0x00000000       0x32 /tmp/ccy2eH62.debug.temp.o
  .note.GNU-stack
-                0x00000000        0x0 /tmp/cctuP2Zi.debug.temp.o
- .text          0x00000000       0xe2 /tmp/cchxyYCc.o
- .data          0x00000000        0x0 /tmp/cchxyYCc.o
- .bss           0x00000000        0x0 /tmp/cchxyYCc.o
- .debug_line    0x00000000      0x194 /tmp/cchxyYCc.o
+                0x00000000        0x0 /tmp/ccy2eH62.debug.temp.o
+ .data          0x00000000        0x0 /tmp/ccurpHOA.o
+ .bss           0x00000000        0x0 /tmp/ccurpHOA.o
+ .text          0x00000000       0xe2 /tmp/ccmtHoDW.o
+ .data          0x00000000        0x0 /tmp/ccmtHoDW.o
+ .bss           0x00000000        0x0 /tmp/ccmtHoDW.o
+ .debug_line    0x00000000      0x194 /tmp/ccmtHoDW.o
  .debug_line_str
-                0x00000000       0xa8 /tmp/cchxyYCc.o
- .debug_info    0x00000000       0x25 /tmp/cchxyYCc.o
- .debug_abbrev  0x00000000       0x14 /tmp/cchxyYCc.o
+                0x00000000       0xa8 /tmp/ccmtHoDW.o
+ .debug_info    0x00000000       0x25 /tmp/ccmtHoDW.o
+ .debug_abbrev  0x00000000       0x14 /tmp/ccmtHoDW.o
  .debug_aranges
-                0x00000000       0x20 /tmp/cchxyYCc.o
- .debug_str     0x00000000       0xb7 /tmp/cchxyYCc.o
+                0x00000000       0x20 /tmp/ccmtHoDW.o
+ .debug_str     0x00000000       0xb7 /tmp/ccmtHoDW.o
  .riscv.attributes
-                0x00000000       0x53 /tmp/cchxyYCc.o
- .text          0x00000000       0xf4 /tmp/ccyeMrir.o
- .data          0x00000000        0x0 /tmp/ccyeMrir.o
- .bss           0x00000000        0x0 /tmp/ccyeMrir.o
- .debug_line    0x00000000      0x1ac /tmp/ccyeMrir.o
+                0x00000000       0x53 /tmp/ccmtHoDW.o
+ .text          0x00000000       0xf4 /tmp/ccAsQTT6.o
+ .data          0x00000000        0x0 /tmp/ccAsQTT6.o
+ .bss           0x00000000        0x0 /tmp/ccAsQTT6.o
+ .debug_line    0x00000000      0x1ac /tmp/ccAsQTT6.o
  .debug_line_str
-                0x00000000       0xa6 /tmp/ccyeMrir.o
- .debug_info    0x00000000       0x25 /tmp/ccyeMrir.o
- .debug_abbrev  0x00000000       0x14 /tmp/ccyeMrir.o
+                0x00000000       0xa6 /tmp/ccAsQTT6.o
+ .debug_info    0x00000000       0x25 /tmp/ccAsQTT6.o
+ .debug_abbrev  0x00000000       0x14 /tmp/ccAsQTT6.o
  .debug_aranges
-                0x00000000       0x20 /tmp/ccyeMrir.o
- .debug_str     0x00000000       0xb5 /tmp/ccyeMrir.o
+                0x00000000       0x20 /tmp/ccAsQTT6.o
+ .debug_str     0x00000000       0xb5 /tmp/ccAsQTT6.o
  .riscv.attributes
-                0x00000000       0x53 /tmp/ccyeMrir.o
+                0x00000000       0x53 /tmp/ccAsQTT6.o
  .text          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
  .data          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
  .bss           0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
@@ -452,6 +460,11 @@ Discarded input sections
  .bss           0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o)
  .text._printf_r
                 0x00000000       0x26 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o)
+ .text          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putchar.o)
+ .data          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putchar.o)
+ .bss           0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putchar.o)
+ .text._putchar_r
+                0x00000000        0xa /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putchar.o)
  .text          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
  .data          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
  .bss           0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
@@ -462,6 +475,9 @@ Discarded input sections
  .text          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wsetup.o)
  .data          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wsetup.o)
  .bss           0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wsetup.o)
+ .text          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcmp.o)
+ .data          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcmp.o)
+ .bss           0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcmp.o)
  .text          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-errno.o)
  .data          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-errno.o)
  .bss           0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-errno.o)
@@ -499,6 +515,10 @@ Discarded input sections
  .text          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
  .data          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
  .bss           0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
+ .text          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putc.o)
+ .data          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putc.o)
+ .bss           0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putc.o)
+ .text.putc     0x00000000       0x14 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putc.o)
  .text          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memchr.o)
  .data          0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memchr.o)
  .bss           0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memchr.o)
@@ -775,9 +795,9 @@ Discarded input sections
                 0x00000000       0x2a /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_clz.o)
  .data          0x00000000        0x0 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
  .bss           0x00000000        0x0 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
- .text          0x00000000        0x0 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
- .data          0x00000000        0x0 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
- .bss           0x00000000        0x0 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+ .text          0x00000000        0x0 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
+ .data          0x00000000        0x0 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 Memory Configuration
 
@@ -791,71 +811,72 @@ FLASH_left       0x40100000         0x00f00000         xr
 
 Linker script and memory map
 
-LOAD /tmp/ccFZ9UGy.o
-LOAD /tmp/ccBdqmW6.o
-LOAD /tmp/ccUxfjSd.o
-LOAD /tmp/ccCUw8RQ.ltrans0.ltrans.o
-LOAD /tmp/cclBn76O.debug.temp.o
-LOAD /tmp/cc4qhxcO.debug.temp.o
-LOAD /tmp/ccHAY7wD.debug.temp.o
-LOAD /tmp/cciihiKx.debug.temp.o
-LOAD /tmp/ccj8bxB2.debug.temp.o
-LOAD /tmp/cc72jg4A.debug.temp.o
-LOAD /tmp/ccn3Tp2W.debug.temp.o
-LOAD /tmp/ccv8fIYy.debug.temp.o
-LOAD /tmp/ccP5iD1g.debug.temp.o
-LOAD /tmp/ccoy7Pv1.debug.temp.o
-LOAD /tmp/cc2DWFag.debug.temp.o
-LOAD /tmp/ccHKcQSY.debug.temp.o
-LOAD /tmp/ccKy6O3q.debug.temp.o
-LOAD /tmp/ccR4nWxF.debug.temp.o
-LOAD /tmp/ccsLx4RA.debug.temp.o
-LOAD /tmp/cc8M54dR.debug.temp.o
-LOAD /tmp/cc5yYwXx.debug.temp.o
-LOAD /tmp/ccuTzzRj.debug.temp.o
-LOAD /tmp/cc02Neqa.debug.temp.o
-LOAD /tmp/ccGUKOWZ.debug.temp.o
-LOAD /tmp/ccyKKBg3.debug.temp.o
-LOAD /tmp/ccNROqHq.debug.temp.o
-LOAD /tmp/ccr09uTi.debug.temp.o
-LOAD /tmp/cc7CulRb.debug.temp.o
-LOAD /tmp/cc352YwE.debug.temp.o
-LOAD /tmp/ccHvU9jy.debug.temp.o
-LOAD /tmp/ccDJivtr.debug.temp.o
-LOAD /tmp/cctuP2Zi.debug.temp.o
-LOAD /tmp/ccS5WJCm.o
-LOAD /tmp/ccOiqczq.o
-LOAD /tmp/cccOSGPd.o
-LOAD /tmp/ccROJNsh.o
-LOAD /tmp/ccjCj0yO.o
-LOAD /tmp/ccFJzUIh.o
-LOAD /tmp/ccgmfVhm.o
-LOAD /tmp/ccbsGjqN.o
-LOAD /tmp/ccqTGjrk.o
-LOAD /tmp/ccyIoJju.o
-LOAD /tmp/ccHRYV6h.o
-LOAD /tmp/cc8YKEDy.o
-LOAD /tmp/cc4iGacc.o
-LOAD /tmp/ccInBEzJ.o
-LOAD /tmp/ccIFuhaU.o
-LOAD /tmp/ccVpBNPt.o
-LOAD /tmp/ccTCaTCo.o
-LOAD /tmp/cczOlTGp.o
-LOAD /tmp/ccq0zcmJ.o
-LOAD /tmp/cckD7RPw.o
-LOAD /tmp/ccSsUvFp.o
-LOAD /tmp/cc98f131.o
-LOAD /tmp/ccm3Q8um.o
-LOAD /tmp/cciX2yQJ.o
-LOAD /tmp/ccJ4Sk2l.o
-LOAD /tmp/cchxyYCc.o
-LOAD /tmp/ccyeMrir.o
-LOAD /tmp/ccnyQM10.o
-LOAD /tmp/ccBz9ElQ.o
+LOAD /tmp/cchj02cM.o
+LOAD /tmp/cceN0cuV.o
+LOAD /tmp/cca2OFdS.o
+LOAD /tmp/ccVTr9ms.ltrans0.ltrans.o
+LOAD /tmp/ccTyAumK.debug.temp.o
+LOAD /tmp/ccWmDZ1q.debug.temp.o
+LOAD /tmp/cc4y9xaM.debug.temp.o
+LOAD /tmp/cckw1Pub.debug.temp.o
+LOAD /tmp/ccsSC3S3.debug.temp.o
+LOAD /tmp/cc0LAnQb.debug.temp.o
+LOAD /tmp/cc62cJF7.debug.temp.o
+LOAD /tmp/ccFUyxJ6.debug.temp.o
+LOAD /tmp/ccfJLf34.debug.temp.o
+LOAD /tmp/cc4hlvU5.debug.temp.o
+LOAD /tmp/ccGks7dJ.debug.temp.o
+LOAD /tmp/ccKxR6VS.debug.temp.o
+LOAD /tmp/ccE6PdLD.debug.temp.o
+LOAD /tmp/cc25e1Zd.debug.temp.o
+LOAD /tmp/ccOt1uUE.debug.temp.o
+LOAD /tmp/ccziDqlU.debug.temp.o
+LOAD /tmp/ccZws9fO.debug.temp.o
+LOAD /tmp/cce5KcZF.debug.temp.o
+LOAD /tmp/ccogGQM0.debug.temp.o
+LOAD /tmp/ccHw83Q1.debug.temp.o
+LOAD /tmp/cc0UadbH.debug.temp.o
+LOAD /tmp/cci5gzod.debug.temp.o
+LOAD /tmp/ccetVsDU.debug.temp.o
+LOAD /tmp/ccSZtLEA.debug.temp.o
+LOAD /tmp/cc34zWdl.debug.temp.o
+LOAD /tmp/ccbS40xs.debug.temp.o
+LOAD /tmp/ccBMMD81.debug.temp.o
+LOAD /tmp/ccy2eH62.debug.temp.o
+LOAD /tmp/ccL7nioz.o
+LOAD /tmp/ccJrPNF3.o
+LOAD /tmp/ccvHxGv0.o
+LOAD /tmp/ccdzSYFz.o
+LOAD /tmp/ccZ7CL5F.o
+LOAD /tmp/ccOfsBpr.o
+LOAD /tmp/ccuMvi58.o
+LOAD /tmp/cc1fLQCM.o
+LOAD /tmp/ccC4wQhn.o
+LOAD /tmp/ccyPJYnv.o
+LOAD /tmp/ccktYdD4.o
+LOAD /tmp/cczm90j8.o
+LOAD /tmp/cc6AtYMt.o
+LOAD /tmp/cc2DKD9f.o
+LOAD /tmp/cc2icUna.o
+LOAD /tmp/ccopTk8W.o
+LOAD /tmp/ccaVjWDU.o
+LOAD /tmp/cc5B1wTR.o
+LOAD /tmp/ccK3FuuH.o
+LOAD /tmp/ccW69xoc.o
+LOAD /tmp/cccNDgbO.o
+LOAD /tmp/ccSldzGI.o
+LOAD /tmp/ccppFykm.o
+LOAD /tmp/ccZoE8lv.o
+LOAD /tmp/cca9z7tt.o
+LOAD /tmp/ccurpHOA.o
+LOAD /tmp/ccmtHoDW.o
+LOAD /tmp/ccAsQTT6.o
+LOAD /tmp/ccw2sWCv.o
+LOAD /tmp/ccHJJP06.o
 LOAD /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a
 LOAD /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libm_nano.a
 LOAD /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a
-LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
                 0x00000180                        PROVIDE (__boot_address = 0x180)
                 0x00018000                        __stack_size = DEFINED (__stack_size)?__stack_size:0x18000
                 [!provide]                        PROVIDE (__stack_size = __stack_size)
@@ -865,7 +886,7 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
                 0x00000000                        PROVIDE (__vector_start = .)
                 0x40000000                        _lma_text_start = LOADADDR (.vectors)
  *(.vectors)
- .vectors       0x00000000       0x80 /tmp/ccBdqmW6.o
+ .vectors       0x00000000       0x80 /tmp/cceN0cuV.o
                 0x00000080                        __VECTORS_AT = .
 
 .fill           0x00000080      0x100 load address 0x40000080
@@ -877,13 +898,13 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
 .init           0x00000180      0x2a8 load address 0x40000180
  *(SORT_NONE(.init))
  *(.text.start)
- .text.start    0x00000180       0xac /tmp/ccFZ9UGy.o
+ .text.start    0x00000180       0xac /tmp/cchj02cM.o
                 0x00000180                _start
                 0x00000226                _init
                 0x0000022a                _fini
  *(.text.w25q128jw_init_crt0)
  .text.w25q128jw_init_crt0
-                0x0000022c        0xa /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000022c        0xa /tmp/ccVTr9ms.ltrans0.ltrans.o
                 0x0000022c                w25q128jw_init_crt0
  *(.text.w25q128jw_sanity_checks)
  *(.text.spi_write_word*)
@@ -896,311 +917,320 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
  *(.text.memcpy)
  *(.text.w25q128jw_read_standard)
  .text.w25q128jw_read_standard
-                0x00000236      0x1b8 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000236      0x1b8 /tmp/ccVTr9ms.ltrans0.ltrans.o
                 0x00000236                w25q128jw_read_standard
  *(.text.w25q128jw_read_standard.*)
  *(.xheep_init_data_crt0)
  *fill*         0x000003ee        0x2 
  .xheep_init_data_crt0
-                0x000003f0        0x4 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x000003f0        0x4 /tmp/ccVTr9ms.ltrans0.ltrans.o
  *_bswapsi2*(.text)
  .text          0x000003f4       0x34 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
                 0x000003f4                __bswapsi2
 
-.text           0x00000428     0x44e8 load address 0x40000428
-                0x00000428                        . = ALIGN (0x4)
-                0x00000428                        __text_start = .
+.text           0x00000430     0x3578 load address 0x40000430
+                0x00000430                        . = ALIGN (0x4)
+                0x00000430                        __text_start = .
  *(.text)
- .text          0x00000428       0x10 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memset.o)
-                0x00000428                memset
- .text          0x00000438       0x16 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcpy-asm.o)
-                0x00000438                memcpy
+ .text          0x00000430      0x172 /tmp/ccurpHOA.o
+                0x00000430                keccak_coproc_S
+                0x0000054e                keccak_hw_init
+                0x00000554                keccak_hw_absorb_xor
+                0x0000055a                keccak_hw_permute
+                0x00000592                keccak_hw_store_word
+ .text          0x000005a2       0x10 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memset.o)
+                0x000005a2                memset
+ .text          0x000005b2       0x16 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcpy-asm.o)
+                0x000005b2                memcpy
  *(.text*)
- .text.vecs     0x0000044e        0x4 /tmp/ccBdqmW6.o
-                0x0000044e                __no_irq_handler
+ .text.vecs     0x000005c8        0x4 /tmp/cceN0cuV.o
+                0x000005c8                __no_irq_handler
  .text.fic_irq_dma_window
-                0x00000452       0x54 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x000005cc       0x54 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_dma_done
-                0x000004a6       0x6c /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000620       0x6c /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.dma_intr_handler_trans_done
-                0x00000512       0x18 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000068c       0x18 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.fic_irq_timer_1
-                0x0000052a       0x12 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .text._write   0x0000053c       0x68 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x000006a4       0x12 /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .text._write   0x000006b6       0x68 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.spi_empty_rx
-                0x000005a4       0x44 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000071e       0x44 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.spi_event_handler
-                0x000005e8      0x164 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000762      0x164 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.spi_error_handler.isra.0
-                0x0000074c       0xf6 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x000008c6       0xf6 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.spi_get_events.isra.0
-                0x00000842       0x56 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x000009bc       0x56 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text._writestr
-                0x00000898       0x1c /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000a12       0x1c /tmp/ccVTr9ms.ltrans0.ltrans.o
  .text.print_exc_msg
-                0x000008b4       0x40 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .text.dilithium_ntt
-                0x000008f4      0x122 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x000008f4                dilithium_ntt
- *fill*         0x00000a16        0x2 
+                0x00000a2e       0x40 /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .text.pqcrystals_kyber_fips202_ref_sha3_256
+                0x00000a6e      0x14a /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00000a6e                pqcrystals_kyber_fips202_ref_sha3_256
+ *fill*         0x00000bb8        0x0 
  .text.handler_irq_fast_spi
-                0x00000a18      0x16c /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00000a18                handler_irq_fast_spi
- *fill*         0x00000b84        0x0 
+                0x00000bb8      0x16c /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00000bb8                handler_irq_fast_spi
+ *fill*         0x00000d24        0x0 
  .text.handler_irq_fast_spi_flash
-                0x00000b84      0x168 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00000b84                handler_irq_fast_spi_flash
- *fill*         0x00000cec        0x0 
+                0x00000d24      0x168 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00000d24                handler_irq_fast_spi_flash
+ *fill*         0x00000e8c        0x0 
  .text.handler_irq_external
-                0x00000cec      0x13a /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00000cec                handler_irq_external
- *fill*         0x00000e26        0x2 
+                0x00000e8c      0x13a /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00000e8c                handler_irq_external
+ *fill*         0x00000fc6        0x2 
  .text.handler_irq_fast_timer_1
-                0x00000e28      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00000e28                handler_irq_fast_timer_1
- *fill*         0x00000f4e        0x2 
+                0x00000fc8      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00000fc8                handler_irq_fast_timer_1
+ *fill*         0x000010ee        0x2 
  .text.handler_irq_fast_timer_2
-                0x00000f50      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00000f50                handler_irq_fast_timer_2
- *fill*         0x00001076        0x2 
+                0x000010f0      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x000010f0                handler_irq_fast_timer_2
+ *fill*         0x00001216        0x2 
  .text.handler_irq_fast_timer_3
-                0x00001078      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00001078                handler_irq_fast_timer_3
- *fill*         0x0000119e        0x2 
+                0x00001218      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00001218                handler_irq_fast_timer_3
+ *fill*         0x0000133e        0x2 
  .text.handler_irq_fast_external_peripheral
-                0x000011a0      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x000011a0                handler_irq_fast_external_peripheral
- *fill*         0x000012c6        0x2 
+                0x00001340      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00001340                handler_irq_fast_external_peripheral
+ *fill*         0x00001466        0x2 
  .text.handler_irq_fast_gpio_0
-                0x000012c8      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x000012c8                handler_irq_fast_gpio_0
- *fill*         0x000013ee        0x2 
+                0x00001468      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00001468                handler_irq_fast_gpio_0
+ *fill*         0x0000158e        0x2 
  .text.handler_irq_fast_gpio_1
-                0x000013f0      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x000013f0                handler_irq_fast_gpio_1
- *fill*         0x00001516        0x2 
+                0x00001590      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00001590                handler_irq_fast_gpio_1
+ *fill*         0x000016b6        0x2 
  .text.handler_irq_fast_gpio_2
-                0x00001518      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00001518                handler_irq_fast_gpio_2
- *fill*         0x0000163e        0x2 
+                0x000016b8      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x000016b8                handler_irq_fast_gpio_2
+ *fill*         0x000017de        0x2 
  .text.handler_irq_fast_gpio_3
-                0x00001640      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00001640                handler_irq_fast_gpio_3
- *fill*         0x00001766        0x2 
+                0x000017e0      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x000017e0                handler_irq_fast_gpio_3
+ *fill*         0x00001906        0x2 
  .text.handler_irq_fast_gpio_4
-                0x00001768      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00001768                handler_irq_fast_gpio_4
- *fill*         0x0000188e        0x2 
+                0x00001908      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00001908                handler_irq_fast_gpio_4
+ *fill*         0x00001a2e        0x2 
  .text.handler_irq_fast_gpio_5
-                0x00001890      0x12a /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00001890                handler_irq_fast_gpio_5
- *fill*         0x000019ba        0x2 
+                0x00001a30      0x12a /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00001a30                handler_irq_fast_gpio_5
+ *fill*         0x00001b5a        0x2 
  .text.handler_irq_fast_gpio_6
-                0x000019bc      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x000019bc                handler_irq_fast_gpio_6
- *fill*         0x00001ae2        0x2 
+                0x00001b5c      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00001b5c                handler_irq_fast_gpio_6
+ *fill*         0x00001c82        0x2 
  .text.handler_irq_fast_gpio_7
-                0x00001ae4      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00001ae4                handler_irq_fast_gpio_7
- *fill*         0x00001c0a        0x2 
+                0x00001c84      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00001c84                handler_irq_fast_gpio_7
+ *fill*         0x00001daa        0x2 
  .text.handler_irq_fast_dma_done
-                0x00001c0c      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00001c0c                handler_irq_fast_dma_done
- *fill*         0x00001d32        0x2 
+                0x00001dac      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00001dac                handler_irq_fast_dma_done
+ *fill*         0x00001ed2        0x2 
  .text.handler_irq_fast_dma_window
-                0x00001d34      0x126 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00001d34                handler_irq_fast_dma_window
- *fill*         0x00001e5a        0x2 
+                0x00001ed4      0x126 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00001ed4                handler_irq_fast_dma_window
+ *fill*         0x00001ffa        0x2 
  .text.handler_exception
-                0x00001e5c       0xda /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00001e5c                handler_exception
- *fill*         0x00001f36        0x2 
+                0x00001ffc       0xda /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00001ffc                handler_exception
+ *fill*         0x000020d6        0x2 
  .text.handler_irq_software
-                0x00001f38       0x98 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00001f38                handler_irq_software
- *fill*         0x00001fd0        0x0 
+                0x000020d8       0x98 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x000020d8                handler_irq_software
+ *fill*         0x00002170        0x0 
  .text.handler_irq_timer
-                0x00001fd0       0x98 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00001fd0                handler_irq_timer
- .text.init     0x00002068        0x4 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00002068                init
- .text._close   0x0000206c        0x4 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x0000206c                _close
- .text._exit    0x00002070       0x10 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00002070                _exit
- .text._fstat   0x00002080        0x8 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00002080                _fstat
- .text._isatty  0x00002088        0x8 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00002088                _isatty
- .text._lseek   0x00002090        0x4 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00002090                _lseek
- .text._read    0x00002094        0x4 /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00002094                _read
+                0x00002170       0x98 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00002170                handler_irq_timer
+ .text.init     0x00002208        0x4 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00002208                init
+ .text._close   0x0000220c        0x4 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x0000220c                _close
+ .text._exit    0x00002210       0x10 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00002210                _exit
+ .text._fstat   0x00002220        0x8 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00002220                _fstat
+ .text._isatty  0x00002228        0x8 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00002228                _isatty
+ .text._lseek   0x00002230        0x4 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00002230                _lseek
+ .text._read    0x00002234        0x4 /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00002234                _read
  .text._write_r
-                0x00002098        0xa /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x00002098                _write_r
- .text._sbrk    0x000020a2       0x2e /tmp/ccCUw8RQ.ltrans0.ltrans.o
-                0x000020a2                _sbrk
- .text.atexit   0x000020d0        0xa /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
-                0x000020d0                atexit
- .text.exit     0x000020da       0x22 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-exit.o)
-                0x000020da                exit
- .text.std      0x000020fc       0x6a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
+                0x00002238        0xa /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00002238                _write_r
+ .text._sbrk    0x00002242       0x2e /tmp/ccVTr9ms.ltrans0.ltrans.o
+                0x00002242                _sbrk
+ .text.atexit   0x00002270        0xa /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
+                0x00002270                atexit
+ .text.exit     0x0000227a       0x22 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-exit.o)
+                0x0000227a                exit
+ .text.std      0x0000229c       0x6a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
  .text.stdio_exit_handler
-                0x00002166       0x1a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
+                0x00002306       0x1a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
  .text.cleanup_stdio
-                0x00002180       0x42 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
+                0x00002320       0x42 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
  .text.global_stdio_init.part.0
-                0x000021c2       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
- .text.__sinit  0x000021f4       0x18 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
-                0x000021f4                __sinit
+                0x00002362       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
+ .text.__sinit  0x00002394       0x18 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
+                0x00002394                __sinit
  .text._fwalk_sglue
-                0x0000220c       0x68 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fwalk.o)
-                0x0000220c                _fwalk_sglue
- .text.__sread  0x00002274       0x30 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o)
-                0x00002274                __sread
+                0x000023ac       0x68 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fwalk.o)
+                0x000023ac                _fwalk_sglue
+ .text.__sread  0x00002414       0x30 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o)
+                0x00002414                __sread
  .text.__swrite
-                0x000022a4       0x4e /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o)
-                0x000022a4                __swrite
- .text.__sseek  0x000022f2       0x36 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o)
-                0x000022f2                __sseek
+                0x00002444       0x4e /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o)
+                0x00002444                __swrite
+ .text.__sseek  0x00002492       0x36 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o)
+                0x00002492                __sseek
  .text.__sclose
-                0x00002328        0x6 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o)
-                0x00002328                __sclose
+                0x000024c8        0x6 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o)
+                0x000024c8                __sclose
  .text._close_r
-                0x0000232e       0x26 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-closer.o)
-                0x0000232e                _close_r
+                0x000024ce       0x26 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-closer.o)
+                0x000024ce                _close_r
  .text._lseek_r
-                0x00002354       0x2a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-lseekr.o)
-                0x00002354                _lseek_r
- .text._read_r  0x0000237e       0x2a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-readr.o)
-                0x0000237e                _read_r
+                0x000024f4       0x2a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-lseekr.o)
+                0x000024f4                _lseek_r
+ .text._read_r  0x0000251e       0x2a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-readr.o)
+                0x0000251e                _read_r
  .text.__libc_init_array
-                0x000023a8       0x4e /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-init.o)
-                0x000023a8                __libc_init_array
+                0x00002548       0x4e /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-init.o)
+                0x00002548                __libc_init_array
  .text.__libc_fini_array
-                0x000023f6       0x2e /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fini.o)
-                0x000023f6                __libc_fini_array
+                0x00002596       0x2e /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fini.o)
+                0x00002596                __libc_fini_array
  .text.__register_exitproc
-                0x00002424       0x74 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__atexit.o)
-                0x00002424                __register_exitproc
+                0x000025c4       0x74 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__atexit.o)
+                0x000025c4                __register_exitproc
  .text.__call_exitprocs
-                0x00002498       0xc4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__call_atexit.o)
-                0x00002498                __call_exitprocs
- .text._free_r  0x0000255c       0x9e /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-freer.o)
-                0x0000255c                _free_r
+                0x00002638       0xc4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__call_atexit.o)
+                0x00002638                __call_exitprocs
+ .text._free_r  0x000026fc       0x9e /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-freer.o)
+                0x000026fc                _free_r
  .text.sbrk_aligned
-                0x000025fa       0x54 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o)
+                0x0000279a       0x54 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o)
  .text._malloc_r
-                0x0000264e      0x118 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o)
-                0x0000264e                _malloc_r
+                0x000027ee      0x118 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o)
+                0x000027ee                _malloc_r
  .text.__malloc_lock
-                0x00002766        0x2 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mlock.o)
-                0x00002766                __malloc_lock
+                0x00002906        0x2 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mlock.o)
+                0x00002906                __malloc_lock
  .text.__malloc_unlock
-                0x00002768        0x2 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mlock.o)
-                0x00002768                __malloc_unlock
+                0x00002908        0x2 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mlock.o)
+                0x00002908                __malloc_unlock
  .text.__sflush_r
-                0x0000276a      0x130 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fflush.o)
-                0x0000276a                __sflush_r
+                0x0000290a      0x130 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fflush.o)
+                0x0000290a                __sflush_r
  .text._fflush_r
-                0x0000289a       0x38 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fflush.o)
-                0x0000289a                _fflush_r
- .text._sbrk_r  0x000028d2       0x28 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-sbrkr.o)
-                0x000028d2                _sbrk_r
- .text.printf   0x000028fa       0x28 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o)
-                0x000028fa                printf
-                0x000028fa                iprintf
- .text._puts_r  0x00002922       0xa4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
-                0x00002922                _puts_r
- .text.puts     0x000029c6        0x8 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
-                0x000029c6                puts
+                0x00002a3a       0x38 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fflush.o)
+                0x00002a3a                _fflush_r
+ .text._sbrk_r  0x00002a72       0x28 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-sbrkr.o)
+                0x00002a72                _sbrk_r
+ .text.printf   0x00002a9a       0x28 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o)
+                0x00002a9a                printf
+                0x00002a9a                iprintf
+ .text.putchar  0x00002ac2        0xc /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putchar.o)
+                0x00002ac2                putchar
+ .text._puts_r  0x00002ace       0xa4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
+                0x00002ace                _puts_r
+ .text.puts     0x00002b72        0x8 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
+                0x00002b72                puts
  .text.__swbuf_r
-                0x000029ce       0x98 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wbuf.o)
-                0x000029ce                __swbuf_r
+                0x00002b7a       0x98 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wbuf.o)
+                0x00002b7a                __swbuf_r
  .text.__swsetup_r
-                0x00002a66       0xbc /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wsetup.o)
-                0x00002a66                __swsetup_r
- .text.strlen   0x00002b22       0x12 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-strlen.o)
-                0x00002b22                strlen
+                0x00002c12       0xbe /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wsetup.o)
+                0x00002c12                __swsetup_r
+ .text.memcmp   0x00002cd0       0x26 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcmp.o)
+                0x00002cd0                memcmp
+ .text.strlen   0x00002cf6       0x12 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-strlen.o)
+                0x00002cf6                strlen
  .text.__sfputc_r
-                0x00002b34       0x28 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
+                0x00002d08       0x28 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x00002b5c       0x42 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
-                0x00002b5c                __sfputs_r
+                0x00002d30       0x42 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
+                0x00002d30                __sfputs_r
  .text._vfprintf_r
-                0x00002b9e      0x262 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
-                0x00002b9e                _vfiprintf_r
-                0x00002b9e                _vfprintf_r
+                0x00002d72      0x262 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
+                0x00002d72                _vfiprintf_r
+                0x00002d72                _vfprintf_r
  .text._printf_common
-                0x00002e00      0x112 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
-                0x00002e00                _printf_common
+                0x00002fd4      0x112 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00002fd4                _printf_common
  .text._printf_i
-                0x00002f12      0x260 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
-                0x00002f12                _printf_i
+                0x000030e6      0x260 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x000030e6                _printf_i
  .text.__swhatbuf_r
-                0x00003172       0x5a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
-                0x00003172                __swhatbuf_r
+                0x00003346       0x5a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
+                0x00003346                __swhatbuf_r
  .text.__smakebuf_r
-                0x000031cc       0x84 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
-                0x000031cc                __smakebuf_r
- .text.memchr   0x00003250       0x1a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memchr.o)
-                0x00003250                memchr
+                0x000033a0       0x84 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
+                0x000033a0                __smakebuf_r
+ .text._putc_r  0x00003424       0x58 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putc.o)
+                0x00003424                _putc_r
+ .text.memchr   0x0000347c       0x1a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memchr.o)
+                0x0000347c                memchr
  .text._fstat_r
-                0x0000326a       0x2a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fstatr.o)
-                0x0000326a                _fstat_r
+                0x00003496       0x2a /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fstatr.o)
+                0x00003496                _fstat_r
  .text._isatty_r
-                0x00003294       0x28 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-isattyr.o)
-                0x00003294                _isatty_r
+                0x000034c0       0x28 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-isattyr.o)
+                0x000034c0                _isatty_r
  .text.startup.main
-                0x000032bc      0x2de CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
-                0x000032bc                main
+                0x000034e8      0x164 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
+                0x000034e8                main
  *(.rodata)
- *fill*         0x0000359a        0x2 
- .rodata        0x0000359c      0xc00 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
  *(.rodata*)
  .rodata.print_exc_msg.str1.4
-                0x0000419c       0x10 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000364c       0x10 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .rodata.handler_exception.str1.4
-                0x0000419c      0x102 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000364c      0x102 /tmp/ccVTr9ms.ltrans0.ltrans.o
+ *fill*         0x0000364c        0x0 
  .rodata.handler_exception
-                0x0000419c       0x30 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000364c       0x30 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .rodata.handler_irq_software.str1.4
-                0x000041cc       0x19 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000367c       0x19 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .rodata.handler_irq_timer.str1.4
-                0x000041cc       0x16 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .rodata.zetas_DSA
-                0x000041cc      0x400 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000367c       0x16 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .rodata._vfprintf_r.str1.4
-                0x000045cc       0x13 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
+                0x0000367c       0x13 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
  .rodata._printf_i.str1.4
-                0x000045cc       0x25 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x0000367c       0x25 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
  .rodata._printf_i
-                0x000045cc       0x58 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x0000367c       0x58 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
  .rodata.str1.4
-                0x00004624      0x2e9 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
-                                0x168 (size before relaxing)
+                0x000036d4      0x2d1 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
+                                0x14d (size before relaxing)
  *(.srodata)
  *(.srodata*)
-                0x00004910                        . = ALIGN (0x4)
- *fill*         0x0000490d        0x3 
-                0x00004910                        _etext = .
+                0x000039a8                        . = ALIGN (0x4)
+ *fill*         0x000039a5        0x3 
+                0x000039a8                        _etext = .
 
-.rela.dyn       0x00004910        0x0 load address 0x40004910
+.rela.dyn       0x000039a8        0x0 load address 0x400039a8
  .rela.text.start
-                0x00004910        0x0 /tmp/ccFZ9UGy.o
+                0x000039a8        0x0 /tmp/cchj02cM.o
  .rela.text.__libc_init_array
-                0x00004910        0x0 /tmp/ccFZ9UGy.o
+                0x000039a8        0x0 /tmp/cchj02cM.o
  .rela.text.__libc_fini_array
-                0x00004910        0x0 /tmp/ccFZ9UGy.o
+                0x000039a8        0x0 /tmp/cchj02cM.o
  .rela.text.__register_exitproc
-                0x00004910        0x0 /tmp/ccFZ9UGy.o
+                0x000039a8        0x0 /tmp/cchj02cM.o
  .rela.text._sbrk
-                0x00004910        0x0 /tmp/ccFZ9UGy.o
+                0x000039a8        0x0 /tmp/cchj02cM.o
  .rela.sdata.brk
-                0x00004910        0x0 /tmp/ccFZ9UGy.o
+                0x000039a8        0x0 /tmp/cchj02cM.o
  .rela.text._vfprintf_r
-                0x00004910        0x0 /tmp/ccFZ9UGy.o
+                0x000039a8        0x0 /tmp/cchj02cM.o
 
 .data           0x0000e800      0x138 load address 0x4000e800
                 0x0000e800                        __data_start = .
@@ -1213,7 +1243,7 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
  *(.data)
  *(.data*)
  .data.peripherals
-                0x0000e800       0xd8 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000e800       0xd8 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .data.__sglue  0x0000e8d8        0xc /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
                 0x0000e8d8                __sglue
  .data._impure_data
@@ -1222,7 +1252,7 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
                 0x0000e930                        __SDATA_BEGIN__ = .
  *(.sdata)
  *(.sdata*)
- .sdata.brk     0x0000e930        0x4 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+ .sdata.brk     0x0000e930        0x4 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .sdata._impure_ptr
                 0x0000e934        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-impure.o)
                 0x0000e934                _impure_ptr
@@ -1235,55 +1265,56 @@ LOAD CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applicatio
                 0x0000ea38                        . = (. + 0x100)
  *fill*         0x0000e938      0x100 
 
-.bss            0x0000ea38      0x208 load address 0x4000ea38
+.bss            0x0000ea38      0x210 load address 0x4000ea38
                 0x0000ea38                        . = ALIGN (0x4)
                 0x0000ea38                        __bss_start = .
  *(.bss)
  *(.bss*)
  .bss.dma_subsys_per
-                0x0000ea38       0x30 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000ea38       0x30 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .bss.__sf      0x0000ea68      0x138 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
                 0x0000ea68                __sf
  .bss.__atexit0
                 0x0000eba0       0x8c /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__atexit.o)
                 0x0000eba0                __atexit0
  *(.sbss)
+ .sbss          0x0000ec2c        0x8 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
  *(.sbss*)
  .sbss.__stdio_exit_handler
-                0x0000ec2c        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
-                0x0000ec2c                __stdio_exit_handler
- .sbss.errno    0x0000ec30        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-reent.o)
-                0x0000ec30                errno
+                0x0000ec34        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
+                0x0000ec34                __stdio_exit_handler
+ .sbss.errno    0x0000ec38        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-reent.o)
+                0x0000ec38                errno
  .sbss.__atexit
-                0x0000ec34        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__call_atexit.o)
-                0x0000ec34                __atexit
+                0x0000ec3c        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__call_atexit.o)
+                0x0000ec3c                __atexit
  .sbss.__malloc_sbrk_start
-                0x0000ec38        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o)
-                0x0000ec38                __malloc_sbrk_start
+                0x0000ec40        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o)
+                0x0000ec40                __malloc_sbrk_start
  .sbss.__malloc_free_list
-                0x0000ec3c        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o)
-                0x0000ec3c                __malloc_free_list
+                0x0000ec44        0x4 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o)
+                0x0000ec44                __malloc_free_list
  *(COMMON)
-                0x0000ec40                        . = ALIGN (0x4)
-                0x0000ec40                        __bss_end = .
-                0x0000ec40                        __BSS_END__ = .
-                0x4000ec40                        _lma_data_end = (((_lma_data_start + SIZEOF (.data)) + SIZEOF (.power_manager)) + SIZEOF (.bss))
+                0x0000ec48                        . = ALIGN (0x4)
+                0x0000ec48                        __bss_end = .
+                0x0000ec48                        __BSS_END__ = .
+                0x4000ec48                        _lma_data_end = (((_lma_data_start + SIZEOF (.data)) + SIZEOF (.power_manager)) + SIZEOF (.bss))
                 0x40000000                        _lma_vma_data_offset = (_lma_data_start - __data_start)
-                0x40004c50                        _lma_text_end = ((((((_lma_text_start + SIZEOF (.vectors)) + SIZEOF (.init)) + SIZEOF (.text)) + SIZEOF (.data)) + SIZEOF (.power_manager)) + SIZEOF (.bss))
+                0x40003ce8                        _lma_text_end = ((((((_lma_text_start + SIZEOF (.vectors)) + SIZEOF (.init)) + SIZEOF (.text)) + SIZEOF (.data)) + SIZEOF (.power_manager)) + SIZEOF (.bss))
                 0x40000000                        _lma_text_vma_offset = (_lma_text_start - __vector_start)
                 0x0000f000                        __global_pointer$ = MIN ((__SDATA_BEGIN__ + 0x800), MAX ((__DATA_BEGIN__ + 0x800), (__BSS_END__ - 0x800)))
 
-.heap           0x0000ec40    0x18000 load address 0x4000ec40
-                0x0000ec40                        PROVIDE (__heap_start = .)
+.heap           0x0000ec48    0x18000 load address 0x4000ec48
+                0x0000ec48                        PROVIDE (__heap_start = .)
                 0x00018000                        . = __heap_size
- *fill*         0x0000ec40    0x18000 
-                0x00026c40                        PROVIDE (__heap_end = .)
+ *fill*         0x0000ec48    0x18000 
+                0x00026c48                        PROVIDE (__heap_end = .)
 
-.stack          0x00026c40    0x18000 load address 0x4000ec40
+.stack          0x00026c50    0x18000 load address 0x4000ec50
                 [!provide]                        PROVIDE (__stack_start = .)
                 0x00018000                        . = __stack_size
- *fill*         0x00026c40    0x18000 
-                0x0003ec40                        PROVIDE (_sp = .)
+ *fill*         0x00026c50    0x18000 
+                0x0003ec50                        PROVIDE (_sp = .)
                 [!provide]                        PROVIDE (__stack_end = .)
                 [!provide]                        PROVIDE (__freertos_irq_stack_top = .)
 
@@ -1297,82 +1328,90 @@ OUTPUT(main.elf elf32-littleriscv)
 .riscv.attributes
                 0x00000000       0x5a
  .riscv.attributes
-                0x00000000       0x53 /tmp/ccFZ9UGy.o
+                0x00000000       0x53 /tmp/cchj02cM.o
  .riscv.attributes
-                0x00000053       0x4a /tmp/ccBdqmW6.o
+                0x00000053       0x4a /tmp/cceN0cuV.o
  .riscv.attributes
-                0x0000009d       0x55 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000009d       0x55 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .riscv.attributes
-                0x000000f2       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
+                0x000000f2       0x4f /tmp/ccurpHOA.o
  .riscv.attributes
-                0x00000126       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-exit.o)
+                0x00000141       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
  .riscv.attributes
-                0x0000015a       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
+                0x00000175       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-exit.o)
  .riscv.attributes
-                0x0000018e       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fwalk.o)
+                0x000001a9       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-findfp.o)
  .riscv.attributes
-                0x000001c2       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o)
+                0x000001dd       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fwalk.o)
  .riscv.attributes
-                0x000001f6       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-closer.o)
+                0x00000211       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-stdio.o)
  .riscv.attributes
-                0x0000022a       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-reent.o)
+                0x00000245       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-closer.o)
  .riscv.attributes
-                0x0000025e       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-impure.o)
+                0x00000279       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-reent.o)
  .riscv.attributes
-                0x00000292       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-lseekr.o)
+                0x000002ad       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-impure.o)
  .riscv.attributes
-                0x000002c6       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-readr.o)
+                0x000002e1       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-lseekr.o)
  .riscv.attributes
-                0x000002fa       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-init.o)
+                0x00000315       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-readr.o)
  .riscv.attributes
-                0x0000032e       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fini.o)
+                0x00000349       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-init.o)
  .riscv.attributes
-                0x00000362       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memset.o)
+                0x0000037d       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fini.o)
  .riscv.attributes
-                0x00000394       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__atexit.o)
+                0x000003b1       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memset.o)
  .riscv.attributes
-                0x000003c8       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__call_atexit.o)
+                0x000003e3       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__atexit.o)
  .riscv.attributes
-                0x000003fc       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-freer.o)
+                0x00000417       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-__call_atexit.o)
  .riscv.attributes
-                0x00000430       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o)
+                0x0000044b       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-freer.o)
  .riscv.attributes
-                0x00000464       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mlock.o)
+                0x0000047f       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mallocr.o)
  .riscv.attributes
-                0x00000498       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fflush.o)
+                0x000004b3       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-mlock.o)
  .riscv.attributes
-                0x000004cc       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-sbrkr.o)
+                0x000004e7       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fflush.o)
  .riscv.attributes
-                0x00000500       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o)
+                0x0000051b       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-sbrkr.o)
  .riscv.attributes
-                0x00000534       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
+                0x0000054f       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o)
  .riscv.attributes
-                0x00000568       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wbuf.o)
+                0x00000583       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putchar.o)
  .riscv.attributes
-                0x0000059c       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wsetup.o)
+                0x000005b7       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
  .riscv.attributes
-                0x000005d0       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcpy-asm.o)
+                0x000005eb       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wbuf.o)
  .riscv.attributes
-                0x00000602       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-strlen.o)
+                0x0000061f       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wsetup.o)
  .riscv.attributes
-                0x00000636       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
+                0x00000653       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcmp.o)
  .riscv.attributes
-                0x0000066a       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00000687       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcpy-asm.o)
  .riscv.attributes
-                0x0000069e       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
+                0x000006b9       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-strlen.o)
  .riscv.attributes
-                0x000006d2       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memchr.o)
+                0x000006ed       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
  .riscv.attributes
-                0x00000706       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fstatr.o)
+                0x00000721       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
  .riscv.attributes
-                0x0000073a       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-isattyr.o)
+                0x00000755       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
  .riscv.attributes
-                0x0000076e       0x2a /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+                0x00000789       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putc.o)
  .riscv.attributes
-                0x00000798       0x55 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+                0x000007bd       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memchr.o)
+ .riscv.attributes
+                0x000007f1       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fstatr.o)
+ .riscv.attributes
+                0x00000825       0x34 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-isattyr.o)
+ .riscv.attributes
+                0x00000859       0x2a /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+ .riscv.attributes
+                0x00000883       0x55 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .comment        0x00000000       0x31
- .comment       0x00000000       0x32 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+ .comment       0x00000000       0x32 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .comment       0x00000000       0x31 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
                                  0x32 (size before relaxing)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-exit.o)
@@ -1394,23 +1433,26 @@ OUTPUT(main.elf elf32-littleriscv)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fflush.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-sbrkr.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o)
+ .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putchar.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wbuf.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wsetup.o)
+ .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcmp.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-strlen.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-nano-vfprintf_i.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
+ .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putc.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memchr.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fstatr.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-isattyr.o)
  .comment       0x00000031       0x32 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
- .comment       0x00000031       0x32 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+ .comment       0x00000031       0x32 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .note.GNU-stack
                 0x00000000        0x0
  .note.GNU-stack
-                0x00000000        0x0 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000        0x0 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .note.GNU-stack
                 0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-atexit.o)
  .note.GNU-stack
@@ -1452,11 +1494,15 @@ OUTPUT(main.elf elf32-littleriscv)
  .note.GNU-stack
                 0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-printf.o)
  .note.GNU-stack
+                0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putchar.o)
+ .note.GNU-stack
                 0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-puts.o)
  .note.GNU-stack
                 0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wbuf.o)
  .note.GNU-stack
                 0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-wsetup.o)
+ .note.GNU-stack
+                0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memcmp.o)
  .note.GNU-stack
                 0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-strlen.o)
  .note.GNU-stack
@@ -1466,6 +1512,8 @@ OUTPUT(main.elf elf32-littleriscv)
  .note.GNU-stack
                 0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-makebuf.o)
  .note.GNU-stack
+                0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-putc.o)
+ .note.GNU-stack
                 0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-memchr.o)
  .note.GNU-stack
                 0x00000000        0x0 /software/riscv/riscv32-corev/riscv32-corev-elf/lib/libc_nano.a(libc_a-fstatr.o)
@@ -1474,201 +1522,209 @@ OUTPUT(main.elf elf32-littleriscv)
  .note.GNU-stack
                 0x00000000        0x0 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
  .note.GNU-stack
-                0x00000000        0x0 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+                0x00000000        0x0 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
-.debug_line     0x00000000     0x3e77
- .debug_line    0x00000000      0x140 /tmp/ccFZ9UGy.o
- .debug_line    0x00000140      0x115 /tmp/ccBdqmW6.o
- .debug_line    0x00000255     0x2e83 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .debug_line    0x000030d8       0x48 /tmp/cclBn76O.debug.temp.o
- .debug_line    0x00003120       0x89 /tmp/cc4qhxcO.debug.temp.o
- .debug_line    0x000031a9       0x56 /tmp/ccj8bxB2.debug.temp.o
- .debug_line    0x000031ff       0x56 /tmp/cc72jg4A.debug.temp.o
- .debug_line    0x00003255       0x56 /tmp/ccn3Tp2W.debug.temp.o
- .debug_line    0x000032ab       0x5f /tmp/ccv8fIYy.debug.temp.o
- .debug_line    0x0000330a       0x68 /tmp/ccoy7Pv1.debug.temp.o
- .debug_line    0x00003372       0x9a /tmp/ccKy6O3q.debug.temp.o
- .debug_line    0x0000340c       0x5a /tmp/ccsLx4RA.debug.temp.o
- .debug_line    0x00003466       0x56 /tmp/cc8M54dR.debug.temp.o
- .debug_line    0x000034bc       0x68 /tmp/cc5yYwXx.debug.temp.o
- .debug_line    0x00003524       0x4d /tmp/cc02Neqa.debug.temp.o
- .debug_line    0x00003571       0x3a /tmp/ccGUKOWZ.debug.temp.o
- .debug_line    0x000035ab       0xb0 /tmp/ccyKKBg3.debug.temp.o
- .debug_line    0x0000365b       0x5f /tmp/ccNROqHq.debug.temp.o
- .debug_line    0x000036ba       0x68 /tmp/ccr09uTi.debug.temp.o
- .debug_line    0x00003722       0x63 /tmp/ccDJivtr.debug.temp.o
- .debug_line    0x00003785       0xa1 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
- .debug_line    0x00003826      0x651 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+.debug_line     0x00000000     0x3f27
+ .debug_line    0x00000000      0x140 /tmp/cchj02cM.o
+ .debug_line    0x00000140      0x115 /tmp/cceN0cuV.o
+ .debug_line    0x00000255     0x2efc /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .debug_line    0x00003151       0x51 /tmp/ccTyAumK.debug.temp.o
+ .debug_line    0x000031a2       0x89 /tmp/ccWmDZ1q.debug.temp.o
+ .debug_line    0x0000322b       0x56 /tmp/ccsSC3S3.debug.temp.o
+ .debug_line    0x00003281       0x56 /tmp/cc0LAnQb.debug.temp.o
+ .debug_line    0x000032d7       0x56 /tmp/cc62cJF7.debug.temp.o
+ .debug_line    0x0000332d       0x5f /tmp/ccFUyxJ6.debug.temp.o
+ .debug_line    0x0000338c       0x68 /tmp/cc4hlvU5.debug.temp.o
+ .debug_line    0x000033f4       0x9a /tmp/ccE6PdLD.debug.temp.o
+ .debug_line    0x0000348e       0x5a /tmp/ccOt1uUE.debug.temp.o
+ .debug_line    0x000034e8       0x56 /tmp/ccziDqlU.debug.temp.o
+ .debug_line    0x0000353e       0x68 /tmp/ccZws9fO.debug.temp.o
+ .debug_line    0x000035a6       0x4d /tmp/ccogGQM0.debug.temp.o
+ .debug_line    0x000035f3       0x3a /tmp/ccHw83Q1.debug.temp.o
+ .debug_line    0x0000362d       0xb0 /tmp/cc0UadbH.debug.temp.o
+ .debug_line    0x000036dd       0x5f /tmp/cci5gzod.debug.temp.o
+ .debug_line    0x0000373c       0x68 /tmp/ccetVsDU.debug.temp.o
+ .debug_line    0x000037a4       0x63 /tmp/ccBMMD81.debug.temp.o
+ .debug_line    0x00003807      0x368 /tmp/ccurpHOA.o
+ .debug_line    0x00003b6f       0xa1 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+ .debug_line    0x00003c10      0x317 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_line_str
-                0x00000000      0xe89
+                0x00000000      0xe86
  .debug_line_str
-                0x00000000      0xe89 /tmp/ccFZ9UGy.o
+                0x00000000      0xe86 /tmp/cchj02cM.o
                                  0x92 (size before relaxing)
  .debug_line_str
-                0x00000e89       0x95 /tmp/ccBdqmW6.o
+                0x00000e86       0x95 /tmp/cceN0cuV.o
  .debug_line_str
-                0x00000e89      0x545 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000e86      0x540 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .debug_line_str
-                0x00000e89      0x14b /tmp/cclBn76O.debug.temp.o
+                0x00000e86      0x18f /tmp/ccTyAumK.debug.temp.o
  .debug_line_str
-                0x00000e89      0x2c9 /tmp/cc4qhxcO.debug.temp.o
+                0x00000e86      0x2c9 /tmp/ccWmDZ1q.debug.temp.o
  .debug_line_str
-                0x00000e89      0x177 /tmp/ccj8bxB2.debug.temp.o
+                0x00000e86      0x177 /tmp/ccsSC3S3.debug.temp.o
  .debug_line_str
-                0x00000e89      0x1ba /tmp/cc72jg4A.debug.temp.o
+                0x00000e86      0x1ba /tmp/cc0LAnQb.debug.temp.o
  .debug_line_str
-                0x00000e89      0x17e /tmp/ccn3Tp2W.debug.temp.o
+                0x00000e86      0x17e /tmp/cc62cJF7.debug.temp.o
  .debug_line_str
-                0x00000e89      0x1c1 /tmp/ccv8fIYy.debug.temp.o
+                0x00000e86      0x1c1 /tmp/ccFUyxJ6.debug.temp.o
  .debug_line_str
-                0x00000e89      0x21f /tmp/ccoy7Pv1.debug.temp.o
+                0x00000e86      0x21f /tmp/cc4hlvU5.debug.temp.o
  .debug_line_str
-                0x00000e89      0x3a4 /tmp/ccKy6O3q.debug.temp.o
+                0x00000e86      0x3a4 /tmp/ccE6PdLD.debug.temp.o
  .debug_line_str
-                0x00000e89      0x1cf /tmp/ccsLx4RA.debug.temp.o
+                0x00000e86      0x1cf /tmp/ccOt1uUE.debug.temp.o
  .debug_line_str
-                0x00000e89      0x196 /tmp/cc8M54dR.debug.temp.o
+                0x00000e86      0x196 /tmp/ccziDqlU.debug.temp.o
  .debug_line_str
-                0x00000e89      0x20b /tmp/cc5yYwXx.debug.temp.o
+                0x00000e86      0x20b /tmp/ccZws9fO.debug.temp.o
  .debug_line_str
-                0x00000e89      0x134 /tmp/cc02Neqa.debug.temp.o
+                0x00000e86      0x134 /tmp/ccogGQM0.debug.temp.o
  .debug_line_str
-                0x00000e89       0xc9 /tmp/ccGUKOWZ.debug.temp.o
+                0x00000e86       0xc9 /tmp/ccHw83Q1.debug.temp.o
  .debug_line_str
-                0x00000e89      0x331 /tmp/ccyKKBg3.debug.temp.o
+                0x00000e86      0x331 /tmp/cc0UadbH.debug.temp.o
  .debug_line_str
-                0x00000e89      0x1c2 /tmp/ccNROqHq.debug.temp.o
+                0x00000e86      0x1c2 /tmp/cci5gzod.debug.temp.o
  .debug_line_str
-                0x00000e89      0x22b /tmp/ccr09uTi.debug.temp.o
+                0x00000e86      0x22b /tmp/ccetVsDU.debug.temp.o
  .debug_line_str
-                0x00000e89      0x220 /tmp/ccDJivtr.debug.temp.o
+                0x00000e86      0x220 /tmp/ccBMMD81.debug.temp.o
  .debug_line_str
-                0x00000e89      0x106 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+                0x00000e86       0x99 /tmp/ccurpHOA.o
  .debug_line_str
-                0x00000e89      0x1da CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+                0x00000e86      0x106 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+ .debug_line_str
+                0x00000e86      0x225 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
-.debug_info     0x00000000     0xde27
- .debug_info    0x00000000       0x49 /tmp/ccFZ9UGy.o
- .debug_info    0x00000049       0x23 /tmp/ccBdqmW6.o
- .debug_info    0x0000006c     0x279c /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .debug_info    0x00002808     0x1363 /tmp/cclBn76O.debug.temp.o
-                0x00002808                dilithium.c.2d24888c
- .debug_info    0x00003b6b     0x1bb0 /tmp/cc4qhxcO.debug.temp.o
-                0x00003b6b                w25q.c.a2dff0dd
- .debug_info    0x0000571b      0xb01 /tmp/ccj8bxB2.debug.temp.o
-                0x0000571b                dma.c.c0cca2b9
- .debug_info    0x0000621c      0x36c /tmp/cc72jg4A.debug.temp.o
-                0x0000621c                fast_intr_ctrl.c.7d037d2d
- .debug_info    0x00006588      0x884 /tmp/ccn3Tp2W.debug.temp.o
-                0x00006588                gpio.c.64ed1e87
- .debug_info    0x00006e0c      0xb81 /tmp/ccv8fIYy.debug.temp.o
-                0x00006e0c                i2c.c.5ad6d072
- .debug_info    0x0000798d      0x4eb /tmp/ccoy7Pv1.debug.temp.o
-                0x0000798d                im2col.c.f2734e88
- .debug_info    0x00007e78      0x8e0 /tmp/ccKy6O3q.debug.temp.o
-                0x00007e78                rv_plic.c.ac6fce69
- .debug_info    0x00008758      0x238 /tmp/ccsLx4RA.debug.temp.o
-                0x00008758                soc_ctrl.c.90a415f0
- .debug_info    0x00008990      0xa6a /tmp/cc8M54dR.debug.temp.o
-                0x00008990                spi_host.c.5c9fd260
- .debug_info    0x000093fa      0x519 /tmp/cc5yYwXx.debug.temp.o
-                0x000093fa                uart.c.6fed57cf
- .debug_info    0x00009913      0x174 /tmp/cc02Neqa.debug.temp.o
-                0x00009913                handler.c.1cdb0002
- .debug_info    0x00009a87       0x32 /tmp/ccGUKOWZ.debug.temp.o
-                0x00009a87                init.c.13353d22
- .debug_info    0x00009ab9     0x123e /tmp/ccyKKBg3.debug.temp.o
-                0x00009ab9                syscalls.c.b6d2745e
- .debug_info    0x0000acf7      0x496 /tmp/ccNROqHq.debug.temp.o
-                0x0000acf7                dma_sdk.c.7df44329
- .debug_info    0x0000b18d     0x1563 /tmp/ccr09uTi.debug.temp.o
-                0x0000b18d                spi_sdk.c.e26edb40
- .debug_info    0x0000c6f0      0x68e /tmp/ccDJivtr.debug.temp.o
-                0x0000c6f0                heap.cpp.446b5e30
- .debug_info    0x0000cd7e       0xe6 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
- .debug_info    0x0000ce64      0xfc3 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+.debug_info     0x00000000     0xc7f1
+ .debug_info    0x00000000       0x49 /tmp/cchj02cM.o
+ .debug_info    0x00000049       0x23 /tmp/cceN0cuV.o
+ .debug_info    0x0000006c     0x289c /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .debug_info    0x00002908      0x766 /tmp/ccTyAumK.debug.temp.o
+                0x00002908                fips202.c.c9aa224c
+ .debug_info    0x0000306e     0x1bb0 /tmp/ccWmDZ1q.debug.temp.o
+                0x0000306e                w25q.c.a2dff0dd
+ .debug_info    0x00004c1e      0xb01 /tmp/ccsSC3S3.debug.temp.o
+                0x00004c1e                dma.c.c0cca2b9
+ .debug_info    0x0000571f      0x36c /tmp/cc0LAnQb.debug.temp.o
+                0x0000571f                fast_intr_ctrl.c.7d037d2d
+ .debug_info    0x00005a8b      0x884 /tmp/cc62cJF7.debug.temp.o
+                0x00005a8b                gpio.c.64ed1e87
+ .debug_info    0x0000630f      0xb81 /tmp/ccFUyxJ6.debug.temp.o
+                0x0000630f                i2c.c.5ad6d072
+ .debug_info    0x00006e90      0x4eb /tmp/cc4hlvU5.debug.temp.o
+                0x00006e90                im2col.c.f2734e88
+ .debug_info    0x0000737b      0x8e0 /tmp/ccE6PdLD.debug.temp.o
+                0x0000737b                rv_plic.c.ac6fce69
+ .debug_info    0x00007c5b      0x238 /tmp/ccOt1uUE.debug.temp.o
+                0x00007c5b                soc_ctrl.c.90a415f0
+ .debug_info    0x00007e93      0xa6a /tmp/ccziDqlU.debug.temp.o
+                0x00007e93                spi_host.c.5c9fd260
+ .debug_info    0x000088fd      0x519 /tmp/ccZws9fO.debug.temp.o
+                0x000088fd                uart.c.6fed57cf
+ .debug_info    0x00008e16      0x174 /tmp/ccogGQM0.debug.temp.o
+                0x00008e16                handler.c.1cdb0002
+ .debug_info    0x00008f8a       0x32 /tmp/ccHw83Q1.debug.temp.o
+                0x00008f8a                init.c.13353d22
+ .debug_info    0x00008fbc     0x123e /tmp/cc0UadbH.debug.temp.o
+                0x00008fbc                syscalls.c.b6d2745e
+ .debug_info    0x0000a1fa      0x496 /tmp/cci5gzod.debug.temp.o
+                0x0000a1fa                dma_sdk.c.7df44329
+ .debug_info    0x0000a690     0x1563 /tmp/ccetVsDU.debug.temp.o
+                0x0000a690                spi_sdk.c.e26edb40
+ .debug_info    0x0000bbf3      0x68e /tmp/ccBMMD81.debug.temp.o
+                0x0000bbf3                heap.cpp.446b5e30
+ .debug_info    0x0000c281       0x25 /tmp/ccurpHOA.o
+ .debug_info    0x0000c2a6       0xe6 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+ .debug_info    0x0000c38c      0x465 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
-.debug_abbrev   0x00000000     0x220b
- .debug_abbrev  0x00000000       0x28 /tmp/ccFZ9UGy.o
- .debug_abbrev  0x00000028       0x12 /tmp/ccBdqmW6.o
- .debug_abbrev  0x0000003a      0x1c4 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .debug_abbrev  0x000001fe      0x118 /tmp/cclBn76O.debug.temp.o
- .debug_abbrev  0x00000316      0x352 /tmp/cc4qhxcO.debug.temp.o
- .debug_abbrev  0x00000668      0x1c0 /tmp/ccj8bxB2.debug.temp.o
- .debug_abbrev  0x00000828      0x120 /tmp/cc72jg4A.debug.temp.o
- .debug_abbrev  0x00000948      0x1f5 /tmp/ccn3Tp2W.debug.temp.o
- .debug_abbrev  0x00000b3d      0x206 /tmp/ccv8fIYy.debug.temp.o
- .debug_abbrev  0x00000d43      0x1c5 /tmp/ccoy7Pv1.debug.temp.o
- .debug_abbrev  0x00000f08      0x287 /tmp/ccKy6O3q.debug.temp.o
- .debug_abbrev  0x0000118f       0xdc /tmp/ccsLx4RA.debug.temp.o
- .debug_abbrev  0x0000126b      0x208 /tmp/cc8M54dR.debug.temp.o
- .debug_abbrev  0x00001473      0x14c /tmp/cc5yYwXx.debug.temp.o
- .debug_abbrev  0x000015bf      0x115 /tmp/cc02Neqa.debug.temp.o
- .debug_abbrev  0x000016d4       0x2c /tmp/ccGUKOWZ.debug.temp.o
- .debug_abbrev  0x00001700      0x2dd /tmp/ccyKKBg3.debug.temp.o
- .debug_abbrev  0x000019dd      0x150 /tmp/ccNROqHq.debug.temp.o
- .debug_abbrev  0x00001b2d      0x258 /tmp/ccr09uTi.debug.temp.o
- .debug_abbrev  0x00001d85      0x1e7 /tmp/ccDJivtr.debug.temp.o
- .debug_abbrev  0x00001f6c       0x65 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
- .debug_abbrev  0x00001fd1      0x23a CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+.debug_abbrev   0x00000000     0x2251
+ .debug_abbrev  0x00000000       0x28 /tmp/cchj02cM.o
+ .debug_abbrev  0x00000028       0x12 /tmp/cceN0cuV.o
+ .debug_abbrev  0x0000003a      0x1dc /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .debug_abbrev  0x00000216      0x1bc /tmp/ccTyAumK.debug.temp.o
+ .debug_abbrev  0x000003d2      0x352 /tmp/ccWmDZ1q.debug.temp.o
+ .debug_abbrev  0x00000724      0x1c0 /tmp/ccsSC3S3.debug.temp.o
+ .debug_abbrev  0x000008e4      0x120 /tmp/cc0LAnQb.debug.temp.o
+ .debug_abbrev  0x00000a04      0x1f5 /tmp/cc62cJF7.debug.temp.o
+ .debug_abbrev  0x00000bf9      0x206 /tmp/ccFUyxJ6.debug.temp.o
+ .debug_abbrev  0x00000dff      0x1c5 /tmp/cc4hlvU5.debug.temp.o
+ .debug_abbrev  0x00000fc4      0x287 /tmp/ccE6PdLD.debug.temp.o
+ .debug_abbrev  0x0000124b       0xdc /tmp/ccOt1uUE.debug.temp.o
+ .debug_abbrev  0x00001327      0x208 /tmp/ccziDqlU.debug.temp.o
+ .debug_abbrev  0x0000152f      0x14c /tmp/ccZws9fO.debug.temp.o
+ .debug_abbrev  0x0000167b      0x115 /tmp/ccogGQM0.debug.temp.o
+ .debug_abbrev  0x00001790       0x2c /tmp/ccHw83Q1.debug.temp.o
+ .debug_abbrev  0x000017bc      0x2dd /tmp/cc0UadbH.debug.temp.o
+ .debug_abbrev  0x00001a99      0x150 /tmp/cci5gzod.debug.temp.o
+ .debug_abbrev  0x00001be9      0x258 /tmp/ccetVsDU.debug.temp.o
+ .debug_abbrev  0x00001e41      0x1e7 /tmp/ccBMMD81.debug.temp.o
+ .debug_abbrev  0x00002028       0x14 /tmp/ccurpHOA.o
+ .debug_abbrev  0x0000203c       0x65 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+ .debug_abbrev  0x000020a1      0x1b0 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
-.debug_aranges  0x00000000      0x300
+.debug_aranges  0x00000000      0x320
  .debug_aranges
-                0x00000000       0x20 /tmp/ccFZ9UGy.o
+                0x00000000       0x20 /tmp/cchj02cM.o
  .debug_aranges
-                0x00000020       0x28 /tmp/ccBdqmW6.o
+                0x00000020       0x28 /tmp/cceN0cuV.o
  .debug_aranges
-                0x00000048      0x278 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000048      0x278 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .debug_aranges
-                0x000002c0       0x20 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+                0x000002c0       0x20 /tmp/ccurpHOA.o
  .debug_aranges
-                0x000002e0       0x20 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+                0x000002e0       0x20 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+ .debug_aranges
+                0x00000300       0x20 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
-.debug_str      0x00000000     0x4b6f
- .debug_str     0x00000000     0x4b6f /tmp/ccFZ9UGy.o
+.debug_str      0x00000000     0x4ec5
+ .debug_str     0x00000000     0x4ec5 /tmp/cchj02cM.o
                                  0xb4 (size before relaxing)
- .debug_str     0x00004b6f       0xa4 /tmp/ccBdqmW6.o
- .debug_str     0x00004b6f      0x132 /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .debug_str     0x00004b6f      0x23d /tmp/cclBn76O.debug.temp.o
- .debug_str     0x00004b6f     0x13b7 /tmp/cc4qhxcO.debug.temp.o
- .debug_str     0x00004b6f      0xb32 /tmp/ccj8bxB2.debug.temp.o
- .debug_str     0x00004b6f      0x6bd /tmp/cc72jg4A.debug.temp.o
- .debug_str     0x00004b6f      0x895 /tmp/ccn3Tp2W.debug.temp.o
- .debug_str     0x00004b6f      0xac2 /tmp/ccv8fIYy.debug.temp.o
- .debug_str     0x00004b6f      0x511 /tmp/ccoy7Pv1.debug.temp.o
- .debug_str     0x00004b6f      0x84d /tmp/ccKy6O3q.debug.temp.o
- .debug_str     0x00004b6f      0x2ab /tmp/ccsLx4RA.debug.temp.o
- .debug_str     0x00004b6f      0x961 /tmp/cc8M54dR.debug.temp.o
- .debug_str     0x00004b6f      0x41f /tmp/cc5yYwXx.debug.temp.o
- .debug_str     0x00004b6f      0x297 /tmp/cc02Neqa.debug.temp.o
- .debug_str     0x00004b6f       0xc7 /tmp/ccGUKOWZ.debug.temp.o
- .debug_str     0x00004b6f      0xaf7 /tmp/ccyKKBg3.debug.temp.o
- .debug_str     0x00004b6f      0x465 /tmp/ccNROqHq.debug.temp.o
- .debug_str     0x00004b6f      0xfce /tmp/ccr09uTi.debug.temp.o
- .debug_str     0x00004b6f      0x351 /tmp/ccDJivtr.debug.temp.o
- .debug_str     0x00004b6f      0x192 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
- .debug_str     0x00004b6f      0x2b1 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+ .debug_str     0x00004ec5       0xa4 /tmp/cceN0cuV.o
+ .debug_str     0x00004ec5      0x14a /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .debug_str     0x00004ec5      0x591 /tmp/ccTyAumK.debug.temp.o
+ .debug_str     0x00004ec5     0x13b7 /tmp/ccWmDZ1q.debug.temp.o
+ .debug_str     0x00004ec5      0xb32 /tmp/ccsSC3S3.debug.temp.o
+ .debug_str     0x00004ec5      0x6bd /tmp/cc0LAnQb.debug.temp.o
+ .debug_str     0x00004ec5      0x895 /tmp/cc62cJF7.debug.temp.o
+ .debug_str     0x00004ec5      0xac2 /tmp/ccFUyxJ6.debug.temp.o
+ .debug_str     0x00004ec5      0x511 /tmp/cc4hlvU5.debug.temp.o
+ .debug_str     0x00004ec5      0x84d /tmp/ccE6PdLD.debug.temp.o
+ .debug_str     0x00004ec5      0x2ab /tmp/ccOt1uUE.debug.temp.o
+ .debug_str     0x00004ec5      0x961 /tmp/ccziDqlU.debug.temp.o
+ .debug_str     0x00004ec5      0x41f /tmp/ccZws9fO.debug.temp.o
+ .debug_str     0x00004ec5      0x297 /tmp/ccogGQM0.debug.temp.o
+ .debug_str     0x00004ec5       0xc7 /tmp/ccHw83Q1.debug.temp.o
+ .debug_str     0x00004ec5      0xaf7 /tmp/cc0UadbH.debug.temp.o
+ .debug_str     0x00004ec5      0x465 /tmp/cci5gzod.debug.temp.o
+ .debug_str     0x00004ec5      0xfce /tmp/ccetVsDU.debug.temp.o
+ .debug_str     0x00004ec5      0x351 /tmp/ccBMMD81.debug.temp.o
+ .debug_str     0x00004ec5       0xa8 /tmp/ccurpHOA.o
+ .debug_str     0x00004ec5      0x192 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+ .debug_str     0x00004ec5      0x1f8 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_rnglists
-                0x00000000      0x72c
+                0x00000000      0x705
  .debug_rnglists
-                0x00000000       0x1a /tmp/ccBdqmW6.o
+                0x00000000       0x1a /tmp/cceN0cuV.o
  .debug_rnglists
-                0x0000001a      0x67d /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x0000001a      0x6ad /tmp/ccVTr9ms.ltrans0.ltrans.o
  .debug_rnglists
-                0x00000697       0x95 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+                0x000006c7       0x3e CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
 .debug_loclists
-                0x00000000     0x19c7
+                0x00000000     0x1802
  .debug_loclists
-                0x00000000     0x1718 /tmp/ccCUw8RQ.ltrans0.ltrans.o
+                0x00000000     0x16e7 /tmp/ccVTr9ms.ltrans0.ltrans.o
  .debug_loclists
-                0x00001718       0x20 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+                0x000016e7       0x20 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
  .debug_loclists
-                0x00001738      0x28f CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+                0x00001707       0xfb CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
 
-.debug_frame    0x00000000     0x17b4
- .debug_frame   0x00000000     0x172c /tmp/ccCUw8RQ.ltrans0.ltrans.o
- .debug_frame   0x0000172c       0x20 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
- .debug_frame   0x0000174c       0x68 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/dilithium-ntt/main.c.obj
+.debug_frame    0x00000000     0x178c
+ .debug_frame   0x00000000     0x1724 /tmp/ccVTr9ms.ltrans0.ltrans.o
+ .debug_frame   0x00001724       0x20 /software/riscv/riscv32-corev/bin/../lib/gcc/riscv32-corev-elf/14.1.0/rv32im/ilp32/libgcc.a(_bswapsi2.o)
+ .debug_frame   0x00001744       0x48 CMakeFiles/main.elf.dir/home/thesis/giuseppe.maganuco/HORCRUX/sw/applications/tests/keccak-abs/main.c.obj
