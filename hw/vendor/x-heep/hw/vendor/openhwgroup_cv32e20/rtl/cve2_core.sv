@@ -13,6 +13,7 @@
  * Top level module of the CVE2 RISC-V core
  */
 module cve2_core import cve2_pkg::*; #(
+  parameter              COREV_X_IF        = 0,
   parameter bit          PMPEnable         = 1'b0,
   parameter int unsigned PMPGranularity    = 0,
   parameter int unsigned PMPNumRegions     = 4,
@@ -68,7 +69,6 @@ module cve2_core import cve2_pkg::*; #(
   // SEC_CM: EXCEPTION.CTRL_FLOW.LOCAL_ESC
   // SEC_CM: EXCEPTION.CTRL_FLOW.GLOBAL_ESC
   
-`ifdef CV_X_IF
   // XIF CPU host ports
   if_xif.cpu_compressed  xif_compressed_if,
   if_xif.cpu_issue       xif_issue_if,
@@ -76,7 +76,6 @@ module cve2_core import cve2_pkg::*; #(
   if_xif.cpu_mem         xif_mem_if,
   if_xif.cpu_mem_result  xif_mem_result_if,
   if_xif.cpu_result      xif_result_if,
-`endif 
 
   // RISC-V Formal Interface
   // Does not comply with the coding standards of _i/_o suffixes, but follows
@@ -166,13 +165,13 @@ module cve2_core import cve2_pkg::*; #(
   logic [4:0]  rf_raddr_b;
   logic [31:0] rf_rdata_b;
 
-`ifdef CV_X_IF
   // Dedicated rs for CV X IF
   logic [4:0]  rf_raddr_c_cv_x_if;
   logic [31:0] rf_rdata_c_cv_x_if;
   logic        rf_ren_c_cv_x_if;
-  logic        xif_offloading_o;
-`endif
+  logic        x_mem_instr_ex_cv_x_if;
+  logic [3:0]  x_mem_id_ex_cv_x_if;
+  logic        x_result_valid_assigned_cv_x_if;
 
   logic        rf_ren_a;
   logic        rf_ren_b;
@@ -371,6 +370,7 @@ module cve2_core import cve2_pkg::*; #(
   //////////////
 
   cve2_id_stage #(
+    .COREV_X_IF     (COREV_X_IF),
     .RV32E          (RV32E),
     .RV32M          (RV32M),
     .RV32B          (RV32B)
@@ -482,14 +482,40 @@ module cve2_core import cve2_pkg::*; #(
     .rf_rdata_a_i      (rf_rdata_a),
     .rf_raddr_b_o      (rf_raddr_b),
     .rf_rdata_b_i      (rf_rdata_b),
-    .rf_ren_a_o        (rf_ren_a),
-    .rf_ren_b_o        (rf_ren_b),
-`ifdef CV_X_IF
     .rf_raddr_c_o      (rf_raddr_c_cv_x_if),
     .rf_rdata_c_i      (rf_rdata_c_cv_x_if),
-    .xif_issue_if      (xif_issue_if),
-    .xif_offloading_o  (xif_offloading_o),
-`endif
+    .rf_ren_a_o        (rf_ren_a),
+    .rf_ren_b_o        (rf_ren_b),
+    .rf_ren_c_o        (rf_ren_c_cv_x_if),
+
+    // CORE-V XIF
+    .x_compressed_id_o         (xif_compressed_if.compressed_req.id),
+
+    .x_issue_valid_o           (xif_issue_if.issue_valid),
+    .x_issue_ready_i           (xif_issue_if.issue_ready),
+    .x_issue_req_o             (xif_issue_if.issue_req),
+    .x_issue_resp_i            (xif_issue_if.issue_resp),
+
+    .x_commit_valid_o          (xif_commit_if.commit_valid),
+    .x_commit_o                (xif_commit_if.commit),
+
+    .x_mem_valid_i             (xif_mem_if.mem_valid),
+    .x_mem_ready_o             (xif_mem_if.mem_ready),
+    .x_mem_req_i               (xif_mem_if.mem_req),
+    .x_mem_resp_o              (xif_mem_if.mem_resp),
+
+    .x_mem_result_valid_o      (xif_mem_result_if.mem_result_valid),
+    .x_mem_result_err_o        (xif_mem_result_if.mem_result.err),
+
+    .x_mem_instr_ex_o          (x_mem_instr_ex_cv_x_if),
+    .x_mem_id_ex_o             (x_mem_id_ex_cv_x_if),
+    .x_mem_instr_wb_i          (1'b0),
+
+    .x_result_valid_i          (xif_result_if.result_valid),
+    .x_result_ready_o          (xif_result_if.result_ready),
+    .x_result_i                (xif_result_if.result),
+    .x_result_valid_assigned_o (x_result_valid_assigned_cv_x_if),
+
     .rf_waddr_id_o     (rf_waddr_id),
     .rf_wdata_id_o     (rf_wdata_id),
     .rf_we_id_o        (rf_we_id),
@@ -666,6 +692,7 @@ module cve2_core import cve2_pkg::*; #(
   // RF (Register File) //
   ////////////////////////
   cve2_register_file_ff #(
+    .COREV_X_IF       (COREV_X_IF),
     .RV32E            (RV32E),
     .DataWidth        (32),
     .WordZeroVal      (32'h0)
@@ -679,10 +706,8 @@ module cve2_core import cve2_pkg::*; #(
     .rdata_a_o(rf_rdata_a),
     .raddr_b_i(rf_raddr_b),
     .rdata_b_o(rf_rdata_b),
-	`ifdef CV_X_IF
     .raddr_c_i(rf_raddr_c_cv_x_if),
     .rdata_c_o(rf_rdata_c_cv_x_if),
-	`endif
     .waddr_a_i(rf_waddr_wb),
     .wdata_a_i(rf_wdata_wb),
     .we_a_i   (rf_we_wb)
@@ -892,12 +917,9 @@ module cve2_core import cve2_pkg::*; #(
   logic [31:0] rvfi_rs2_data_q;
   logic [31:0] rvfi_rs3_data_d;
 
-  `ifdef CV_X_IF
   logic [4:0]  rvfi_rs3_cv_x_if_addr_d;
   logic [31:0] rvfi_rs3_cv_x_if_data_d;
 
-  `endif
-  
   logic [4:0]  rvfi_rd_addr_wb;
   logic [4:0]  rvfi_rd_addr_q;
   logic [4:0]  rvfi_rd_addr_d;
@@ -1281,6 +1303,7 @@ module cve2_core import cve2_pkg::*; #(
 
   // Source registers 1 and 2 are read in the first instruction cycle
   // Source register 3 is read in the second instruction cycle.
+  // for eXtension there's a dedicated rs3
   always_comb begin
     if (instr_first_cycle_id) begin
       rvfi_rs1_data_d = rf_ren_a ? multdiv_operand_a_ex : '0;
@@ -1289,10 +1312,8 @@ module cve2_core import cve2_pkg::*; #(
       rvfi_rs2_addr_d = rf_ren_b ? rf_raddr_b : '0;
       rvfi_rs3_data_d = '0;
       rvfi_rs3_addr_d = '0;
-`ifdef CV_X_IF
       rvfi_rs3_cv_x_if_data_d = rf_ren_c_cv_x_if ? rf_rdata_c_cv_x_if : '0;
       rvfi_rs3_cv_x_if_addr_d = rf_ren_c_cv_x_if ? rf_raddr_c_cv_x_if : '0;
-`endif
     end else begin
       rvfi_rs1_data_d = rvfi_rs1_data_q;
       rvfi_rs1_addr_d = rvfi_rs1_addr_q;

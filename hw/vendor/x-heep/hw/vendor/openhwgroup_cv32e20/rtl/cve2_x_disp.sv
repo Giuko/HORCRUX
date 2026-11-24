@@ -122,7 +122,7 @@ module cve2_x_disp
                                          & ~((x_rs_addr_i[1] | 5'b00001) == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
       assign x_issue_req_rs_valid_o[5] = (~scoreboard_q[x_rs_addr_i[2] | 5'b00001])
                                          & ~((x_rs_addr_i[2] | 5'b00001) == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
-      assign x_issue_req_ecs_valid = 1'b0;  // extension context status is not implemented in cve2
+      assign x_issue_req_ecs_valid = 1'b1;  // extension context status is not implemented in cve2
     end else begin
       assign x_issue_req_rs_valid_o[0] = (~scoreboard_q[x_rs_addr_i[0]])
                                          & ~(x_rs_addr_i[0] == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
@@ -130,7 +130,7 @@ module cve2_x_disp
                                          & ~(x_rs_addr_i[1] == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
       assign x_issue_req_rs_valid_o[2] = (~scoreboard_q[x_rs_addr_i[2]])
                                          & ~(x_rs_addr_i[2] == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
-      assign x_issue_req_ecs_valid = 1'b0;  // extension context status is not implemented in cve2
+      assign x_issue_req_ecs_valid = 1'b1;  // extension context status is not implemented in cve2
     end
   endgenerate
   // commit interface

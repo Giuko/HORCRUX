@@ -11,6 +11,7 @@
  * targeting FPGA synthesis or Verilator simulation.
  */
 module cve2_register_file_ff #(
+  parameter                       COREV_X_IF      = 0,
   parameter bit                   RV32E             = 0,
   parameter int unsigned          DataWidth         = 32,
   parameter logic [DataWidth-1:0] WordZeroVal       = '0
@@ -29,11 +30,9 @@ module cve2_register_file_ff #(
   input  logic [4:0]           raddr_b_i,
   output logic [DataWidth-1:0] rdata_b_o,
 
-  `ifdef CV_X_IF
   //Read port R3, dedicated for the external CV X IF
   input  logic [4:0]           raddr_c_i,
   output logic [DataWidth-1:0] rdata_c_o,
-  `endif
 
   // Write port W1
   input  logic [4:0]           waddr_a_i,
@@ -74,9 +73,13 @@ module cve2_register_file_ff #(
   assign rdata_a_o = rf_reg[raddr_a_i];
   assign rdata_b_o = rf_reg[raddr_b_i];
   
-  `ifdef CV_X_IF
-  assign rdata_c_o = rf_reg[raddr_c_i];
-  `endif
+  generate
+    if(COREV_X_IF != 0) begin
+      assign rdata_c_o = rf_reg[raddr_c_i];
+    end else begin 
+      assign rdata_c_o = '0;
+    end
+  endgenerate
 
   // Signal not used in FF register file
   logic unused_test_en;

@@ -166,7 +166,6 @@ module cve2_id_stage #(
   output logic        x_mem_instr_ex_o,
   output logic [ 3:0] x_mem_id_ex_o,
   input  logic        x_mem_instr_wb_i,
-  input  logic [31:0] result_fw_to_x_i,
 
   // Result Interface
   input  logic      x_result_valid_i,
@@ -261,17 +260,11 @@ module cve2_id_stage #(
   logic       x_branch_or_async_taken;
   logic       x_control_illegal_reset;
   logic [4:0] waddr_id;
-  logic [4:0] waddr_ex;
-  logic [4:0] waddr_wb;
   logic [2:0] regs_used;
   logic       x_stall;
   logic [2:0][4:0] x_rs_addr;
   logic x_mem_data_req;
   logic x_mem_valid;
-  logic [RF_READ_PORTS-1:0] x_ex_fwd;
-  logic [RF_READ_PORTS-1:0] x_wb_fwd;
-  logic x_ex_dep_stall;
-  logic x_wb_dep_stall;
 
   // ALU Control
   alu_op_e     alu_operator;
@@ -450,20 +443,14 @@ module cve2_id_stage #(
         .x_result_rd_i   (x_result_i.rd),
         .x_result_we_i   (x_result_i.we),
 
-        // scoreboard, dependency check, stall, forwarding
+        // scoreboard, dependency check, stall
         .waddr_id_i          (waddr_id),
-        .waddr_ex_i          (waddr_ex),
-        .waddr_wb_i          (waddr_wb),
-        .we_ex_i             (1'b0),                            // Forwarding not available
-        .we_wb_i             (1'b0),                            // Forwarding not available
         .mem_instr_waddr_ex_i(rf_waddr_id_o),                   // Current destination address
         .mem_instr_we_ex_i   (ex_valid_i && lsu_req_dec && !lsu_we),           // Only when is a load
         .regs_used_i         (regs_used),
         .branch_or_jump_i    (branch_in_dec | jump_in_dec),     // If there's a branch or a jump
         .instr_valid_i       (instr_valid_i),
         .x_rs_addr_i         (x_rs_addr),
-        .x_ex_fwd_o          (x_ex_fwd),
-        .x_wb_fwd_o          (x_wb_fwd),
 
         // memory request core-internal status signals
         .x_mem_data_req_o(x_mem_data_req),
@@ -494,12 +481,6 @@ module cve2_id_stage #(
 
       assign waddr_id                  = instr_rdata_i[11:7];
       
-      // Forwarding not available
-      assign waddr_ex                  = '0;
-      assign waddr_wb                  = '0;
-      
-      assign x_ex_dep_stall = '0; 
-      assign x_wb_dep_stall = '0; 
 
       // When instruction is illegal (offloaded to XIF coprocessor), assume all
       // three source registers are used so the scoreboard properly detects
@@ -521,11 +502,6 @@ module cve2_id_stage #(
               x_issue_req_o.rs[i+3*j] = regfile_data_rb_id[j];
             end else begin
               x_issue_req_o.rs[i+3*j] = regfile_data_rc_id[j];
-            end
-            if (x_ex_fwd[i+3*j]) begin
-              x_issue_req_o.rs[i+3*j] = result_fw_to_x_i;
-            end else if (x_wb_fwd[i+3*j]) begin
-              x_issue_req_o.rs[i+3*j] = regfile_wdata_wb_i;
             end
           end
         end
@@ -562,8 +538,6 @@ module cve2_id_stage #(
       assign x_mem_result_valid_o       = 'b0;
       assign x_mem_result_err_o         = 'b0;
       assign x_result_ready_o           = 'b0;
-      assign x_ex_dep_stall             = 'b0;
-      assign x_wb_dep_stall             = 'b0;
     end : gen_no_x_disp
   endgenerate
 
@@ -946,7 +920,7 @@ module cve2_id_stage #(
   // The coprocessor still hasn't accepted nor rejected the issue
   // Stall ID/EX stage for reason that relates to instruction in ID/EX, update assertion below if
   // modifying this.
-  assign stall_id = stall_mem | stall_multdiv | stall_jump | stall_branch | stall_alu | x_stall | x_wb_dep_stall | x_ex_dep_stall;
+  assign stall_id = stall_mem | stall_multdiv | stall_jump | stall_branch | stall_alu | x_stall;
 
   // Generally illegal instructions have no reason to stall, however they must still stall waiting
   // for outstanding memory requests so exceptions related to them take priority over the illegal
