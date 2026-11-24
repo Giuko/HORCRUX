@@ -28,75 +28,69 @@ module cve2_x_disp
   input logic rst_ni,
 
   // compressed interface
-  output logic [3:0] x_compressed_id_o,
+  output logic [3:0] x_compressed_id_o,                       // Compressed-instruction identifier used by the XIF compressed interface
   // issue interface
-  output logic       x_issue_valid_o,
-  input  logic       x_issue_ready_i,
-  input  logic       x_issue_resp_accept_i,
-  input  logic       x_issue_resp_writeback_i,
+  output logic       x_issue_valid_o,                         // Dispatcher presents a valid instruction to the X unit
+  input  logic       x_issue_ready_i,                         // External X unit is ready to accept an issue request
+  input  logic       x_issue_resp_accept_i,                   // X unit acceots the issued instruction
+  input  logic       x_issue_resp_writeback_i,                // X unit indicates that the issued instruction will later write back a register
 
-  input  logic [              2:0] x_issue_resp_dualread_i,
+  input  logic [              2:0] x_issue_resp_dualread_i,   // indication that an additional register read is required
   input  logic                     x_issue_resp_loadstore_i,  // unused
-  output logic [RF_READ_PORTS-1:0] x_issue_req_rs_valid_o,
-  output logic [              3:0] x_issue_req_id_o,
-  output logic [              1:0] x_issue_req_mode_o,
-  output logic                     x_issue_req_ecs_valid,
+  output logic [RF_READ_PORTS-1:0] x_issue_req_rs_valid_o,    // Indicates which requested source-register operands are valid and hazard-free
+  output logic [              3:0] x_issue_req_id_o,          // Identifier assigned to the issue request
+  output logic [              1:0] x_issue_req_mode_o,        // Privilege mode encoded for the XIF issue request
+  output logic                     x_issue_req_ecs_valid,     // Indicates that extension-context status information is valid
 
   // commit interface
-  output logic       x_commit_valid_o,
-  output logic [3:0] x_commit_id_o,
-  output logic       x_commit_commit_kill, // hardwired to 0
+  output logic       x_commit_valid_o,                        // Valid commit notification for the X unit
+  output logic [3:0] x_commit_id_o,                           // Identifier of the instruction being committed
+  output logic       x_commit_commit_kill,                    // hardwired to 0
 
   // memory (request/response) interface
-  input  logic       x_mem_valid_i,
-  output logic       x_mem_ready_o,
-  input  logic [1:0] x_mem_req_mode_i,      // unused
-  input  logic       x_mem_req_spec_i,      // unused
-  input  logic       x_mem_req_last_i,      // unused
-  output logic       x_mem_resp_exc_o,      // hardwired to 0
-  output logic [5:0] x_mem_resp_exccode_o,  // hardwired to 0
-  output logic       x_mem_resp_dbg_o,      // hardwired to 0
+  input  logic       x_mem_valid_i,                           // External X unit presents a memory request
+  output logic       x_mem_ready_o,                           // Dispatcher is ready to accept an X memory request
+  input  logic [1:0] x_mem_req_mode_i,                        // unused
+  input  logic       x_mem_req_spec_i,                        // unused
+  input  logic       x_mem_req_last_i,                        // unused
+  output logic       x_mem_resp_exc_o,                        // hardwired to 0
+  output logic [5:0] x_mem_resp_exccode_o,                    // hardwired to 0
+  output logic       x_mem_resp_dbg_o,                        // hardwired to 0
 
   // memory result interface
-  output logic x_mem_result_valid_o,
-  output logic x_mem_result_err_o,    // hardwired to 0
+  output logic x_mem_result_valid_o,                          // Indicates that the result of an X memory operation is valid
+  output logic x_mem_result_err_o,                            // hardwired to 0
 
   // result interface
-  input  logic       x_result_valid_i,
-  output logic       x_result_ready_o,  // hardwired to 1
-  input  logic [4:0] x_result_rd_i,
-  input  logic       x_result_we_i,
+  input  logic       x_result_valid_i,                        // External X unit presents a computational result
+  output logic       x_result_ready_o,                        // hardwired to 1
+  input  logic [4:0] x_result_rd_i,                           // Destination register of the external X result
+  input  logic       x_result_we_i,                           // Indicates that the external X result writes a register
 
   // scoreboard, dependency check, stall, forwarding
-  input  logic [              4:0]      waddr_id_i,
-  input  logic [              4:0]      waddr_ex_i,
-  input  logic [              4:0]      waddr_wb_i,
-  input  logic                          we_ex_i,
-  input  logic                          we_wb_i,
-  input  logic [              4:0]      mem_instr_waddr_ex_i,
-  input  logic                          mem_instr_we_ex_i,
-  input  logic [              2:0]      regs_used_i,
-  input  logic                          branch_or_jump_i,
-  input  logic                          instr_valid_i,
-  input  logic [              2:0][4:0] x_rs_addr_i,
-  output logic [RF_READ_PORTS-1:0]      x_ex_fwd_o,
-  output logic [RF_READ_PORTS-1:0]      x_wb_fwd_o,
+  input  logic [              4:0]      waddr_id_i,           // Destination register of the instruction currently in ID
+  input  logic [              4:0]      mem_instr_waddr_ex_i, // Destination register of an EX-stage memory instruction
+  input  logic                          mem_instr_we_ex_i,    // Indicates that the EX-stage memory instruction writes a register, normally a load
+  input  logic [              2:0]      regs_used_i,          // Indicates which source registers of the current X instruction are used
+  input  logic                          branch_or_jump_i,     // Indicates that the current instruction is a branch or jump
+  input  logic                          instr_valid_i,        // Current ID instruction is valid
+  input  logic [              2:0][4:0] x_rs_addr_i,          // Source-register addresses requested by the current X instruction
 
   // memory request core-internal status signals
-  output logic x_mem_data_req_o,
-  input  logic x_mem_instr_wb_i,
-  input  logic wb_ready_i,
+  output logic x_mem_data_req_o,                              // Indicates that an X memory request has been accepted and must enter the core LSU path
+  input  logic x_mem_instr_wb_i,                              // Indicates that the instruction currently completing in WB is an X memory instruction
+  input  logic wb_ready_i,                                    // WB/LSU stage is ready to complete the current result
 
   // additional status signals
-  output logic                    x_stall_o,
-  output logic                    x_illegal_insn_o,
-  input  logic                    x_illegal_insn_dec_i,
-  input  logic                    x_control_illegal_reset_i,
-  input  logic                    id_ready_i,
-  input  logic                    ex_valid_i,
-  input  logic                    ex_ready_i,
-  input  cve2_pkg::priv_lvl_e     current_priv_lvl_i,
-  input  logic                    data_req_dec_i
+  output logic                    x_stall_o,                  // Requests that the ID stage stall because of X
+  output logic                    x_illegal_insn_o,           // Indicates that the current instruction remains illegal after X issue handling
+  input  logic                    x_illegal_insn_dec_i,       // Decoder identifies the current instruction as illegal, possible X instruction
+  input  logic                    x_control_illegal_reset_i,  // Clears the dispatcher’s stored illegal-instruction state after controller handling
+  input  logic                    id_ready_i,                 // ID stage has completed or released the current instruction
+  input  logic                    ex_valid_i,                 // EX stage currently contains a valid instruction/result
+  input  logic                    ex_ready_i,                 // EX stage can accept a new instruction or X memory request
+  input  cve2_pkg::priv_lvl_e     current_priv_lvl_i,         // Current processor privilege level used to encode the XIF issue mode
+  input  logic                    data_req_dec_i              // Decoder identifies the current instruction as a data-memory operation
 );
 
   // scoreboard, id and satus signals
@@ -108,36 +102,35 @@ module cve2_x_disp
   logic outstanding_mem;
   logic x_if_not_ready;
   logic x_if_memory_instr;
-  logic illegal_forwarding_prevention;
   logic x_issue_illegal;
   logic x_illegal_insn_q, x_illegal_insn_n;
 
   // issue interface
-  assign x_issue_valid_o = x_illegal_insn_dec_i & ~branch_or_jump_i & ~instr_offloaded_q & instr_valid_i & ~illegal_forwarding_prevention;
+  assign x_issue_valid_o = x_illegal_insn_dec_i & ~branch_or_jump_i & ~instr_offloaded_q & instr_valid_i;
   assign x_issue_req_id_o = id_q;
   generate
     if (X_DUALREAD != 0) begin
-      assign x_issue_req_rs_valid_o[0] = (~scoreboard_q[x_rs_addr_i[0]] | x_ex_fwd_o[0] | x_wb_fwd_o[0])
-                                         & ~(x_rs_addr_i[0] == mem_instr_waddr_ex_i & mem_instr_we_ex_i) & ~(x_rs_addr_i[0] == waddr_wb_i & ~ex_valid_i);
-      assign x_issue_req_rs_valid_o[1] = (~scoreboard_q[x_rs_addr_i[1]] | x_ex_fwd_o[1] | x_wb_fwd_o[1])
-                                         & ~(x_rs_addr_i[1] == mem_instr_waddr_ex_i & mem_instr_we_ex_i) & ~(x_rs_addr_i[1] == waddr_wb_i & ~ex_valid_i);
-      assign x_issue_req_rs_valid_o[2] = (~scoreboard_q[x_rs_addr_i[2]] | x_ex_fwd_o[2] | x_wb_fwd_o[2])
-                                         & ~(x_rs_addr_i[2] == mem_instr_waddr_ex_i & mem_instr_we_ex_i) & ~(x_rs_addr_i[2] == waddr_wb_i & ~ex_valid_i);
-      assign x_issue_req_rs_valid_o[3] = (~scoreboard_q[x_rs_addr_i[0] | 5'b00001] | x_ex_fwd_o[3] | x_wb_fwd_o[3])
-                                         & ~((x_rs_addr_i[0] | 5'b00001) == mem_instr_waddr_ex_i & mem_instr_we_ex_i) & ~((x_rs_addr_i[0] | 5'b00001) == waddr_wb_i & ~ex_valid_i);
-      assign x_issue_req_rs_valid_o[4] = (~scoreboard_q[x_rs_addr_i[1] | 5'b00001] | x_ex_fwd_o[4] | x_wb_fwd_o[4])
-                                         & ~((x_rs_addr_i[1] | 5'b00001) == mem_instr_waddr_ex_i & mem_instr_we_ex_i) & ~((x_rs_addr_i[1] | 5'b00001) == waddr_wb_i & ~ex_valid_i);
-      assign x_issue_req_rs_valid_o[5] = (~scoreboard_q[x_rs_addr_i[2] | 5'b00001] | x_ex_fwd_o[5] | x_wb_fwd_o[5])
-                                         & ~((x_rs_addr_i[2] | 5'b00001) == mem_instr_waddr_ex_i & mem_instr_we_ex_i) & ~((x_rs_addr_i[2] | 5'b00001) == waddr_wb_i & ~ex_valid_i);
-      assign x_issue_req_ecs_valid = 1'b1;  // extension context status is not implemented in cve2
+      assign x_issue_req_rs_valid_o[0] = (~scoreboard_q[x_rs_addr_i[0]])
+                                         & ~(x_rs_addr_i[0] == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
+      assign x_issue_req_rs_valid_o[1] = (~scoreboard_q[x_rs_addr_i[1]])
+                                         & ~(x_rs_addr_i[1] == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
+      assign x_issue_req_rs_valid_o[2] = (~scoreboard_q[x_rs_addr_i[2]])
+                                         & ~(x_rs_addr_i[2] == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
+      assign x_issue_req_rs_valid_o[3] = (~scoreboard_q[x_rs_addr_i[0] | 5'b00001])
+                                         & ~((x_rs_addr_i[0] | 5'b00001) == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
+      assign x_issue_req_rs_valid_o[4] = (~scoreboard_q[x_rs_addr_i[1] | 5'b00001])
+                                         & ~((x_rs_addr_i[1] | 5'b00001) == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
+      assign x_issue_req_rs_valid_o[5] = (~scoreboard_q[x_rs_addr_i[2] | 5'b00001])
+                                         & ~((x_rs_addr_i[2] | 5'b00001) == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
+      assign x_issue_req_ecs_valid = 1'b0;  // extension context status is not implemented in cve2
     end else begin
-      assign x_issue_req_rs_valid_o[0] = (~scoreboard_q[x_rs_addr_i[0]] | x_ex_fwd_o[0] | x_wb_fwd_o[0])
-                                         & ~(x_rs_addr_i[0] == mem_instr_waddr_ex_i & mem_instr_we_ex_i) & ~(x_rs_addr_i[0] == waddr_wb_i & ~ex_valid_i);
-      assign x_issue_req_rs_valid_o[1] = (~scoreboard_q[x_rs_addr_i[1]] | x_ex_fwd_o[1] | x_wb_fwd_o[1])
-                                         & ~(x_rs_addr_i[1] == mem_instr_waddr_ex_i & mem_instr_we_ex_i) & ~(x_rs_addr_i[1] == waddr_wb_i & ~ex_valid_i);
-      assign x_issue_req_rs_valid_o[2] = (~scoreboard_q[x_rs_addr_i[2]] | x_ex_fwd_o[2] | x_wb_fwd_o[2])
-                                         & ~(x_rs_addr_i[2] == mem_instr_waddr_ex_i & mem_instr_we_ex_i) & ~(x_rs_addr_i[2] == waddr_wb_i & ~ex_valid_i);
-      assign x_issue_req_ecs_valid = 1'b1;  // extension context status is not implemented in cve2
+      assign x_issue_req_rs_valid_o[0] = (~scoreboard_q[x_rs_addr_i[0]])
+                                         & ~(x_rs_addr_i[0] == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
+      assign x_issue_req_rs_valid_o[1] = (~scoreboard_q[x_rs_addr_i[1]])
+                                         & ~(x_rs_addr_i[1] == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
+      assign x_issue_req_rs_valid_o[2] = (~scoreboard_q[x_rs_addr_i[2]])
+                                         & ~(x_rs_addr_i[2] == mem_instr_waddr_ex_i & mem_instr_we_ex_i);
+      assign x_issue_req_ecs_valid = 1'b0;  // extension context status is not implemented in cve2
     end
   endgenerate
   // commit interface
@@ -162,45 +155,35 @@ module cve2_x_disp
   assign x_mem_data_req_o = x_mem_valid_i & x_mem_ready_o;
 
   // core stall signal
-  assign x_stall_o = dep | outstanding_mem | x_if_not_ready | x_if_memory_instr | illegal_forwarding_prevention;
+  assign x_stall_o = dep | outstanding_mem | x_if_not_ready | x_if_memory_instr;
 
   assign outstanding_mem = data_req_dec_i & (mem_counter_q != '0);
   assign x_if_memory_instr = x_mem_data_req_o & ~(x_issue_valid_o & x_issue_ready_i);
   assign x_if_not_ready = x_issue_valid_o & ~x_issue_ready_i;
 
-  assign illegal_forwarding_prevention = x_result_valid_i & (|x_ex_fwd_o);
-
   // forwarding
+  // not available in cv32e20
+  // dependency
   generate
-    if (X_DUALREAD != 0) begin
-      assign x_ex_fwd_o[0] = x_rs_addr_i[0] == waddr_ex_i & we_ex_i & ex_valid_i;
-      assign x_ex_fwd_o[1] = x_rs_addr_i[1] == waddr_ex_i & we_ex_i & ex_valid_i;
-      assign x_ex_fwd_o[2] = x_rs_addr_i[2] == waddr_ex_i & we_ex_i & ex_valid_i;
-      assign x_ex_fwd_o[3] = (x_rs_addr_i[0] | 5'b00001) == waddr_ex_i & we_ex_i & ex_valid_i & x_issue_resp_dualread_i[0];
-      assign x_ex_fwd_o[4] = (x_rs_addr_i[1] | 5'b00001) == waddr_ex_i & we_ex_i & ex_valid_i & x_issue_resp_dualread_i[1];
-      assign x_ex_fwd_o[5] = (x_rs_addr_i[2] | 5'b00001) == waddr_ex_i & we_ex_i & ex_valid_i & x_issue_resp_dualread_i[2];
-      assign x_wb_fwd_o[0] = x_rs_addr_i[0] == waddr_wb_i & we_wb_i & ex_valid_i;
-      assign x_wb_fwd_o[1] = x_rs_addr_i[1] == waddr_wb_i & we_wb_i & ex_valid_i;
-      assign x_wb_fwd_o[2] = x_rs_addr_i[2] == waddr_wb_i & we_wb_i & ex_valid_i;
-      assign x_wb_fwd_o[3] = (x_rs_addr_i[0] | 5'b00001) == waddr_wb_i & we_wb_i & ex_valid_i & x_issue_resp_dualread_i[0];
-      assign x_wb_fwd_o[4] = (x_rs_addr_i[1] | 5'b00001) == waddr_wb_i & we_wb_i & ex_valid_i & x_issue_resp_dualread_i[1];
-      assign x_wb_fwd_o[5] = (x_rs_addr_i[2] | 5'b00001) == waddr_wb_i & we_wb_i & ex_valid_i & x_issue_resp_dualread_i[2];
-      assign dep = ~x_illegal_insn_n & ((regs_used_i[0] & scoreboard_q[x_rs_addr_i[0]] & (x_result_rd_i != x_rs_addr_i[0]))
-                                  |     (regs_used_i[1] & scoreboard_q[x_rs_addr_i[1]] & (x_result_rd_i != x_rs_addr_i[1]))
-                                  |     (regs_used_i[2] & scoreboard_q[x_rs_addr_i[2]] & (x_result_rd_i != x_rs_addr_i[2]))
-                                  |     (((regs_used_i[0] & x_issue_resp_dualread_i[0]) & scoreboard_q[x_rs_addr_i[0] | 5'b00001] & (x_result_rd_i != (x_rs_addr_i[0] | 5'b00001))) & x_issue_resp_dualread_i[0])
-                                  |     (((regs_used_i[1] & x_issue_resp_dualread_i[1]) & scoreboard_q[x_rs_addr_i[1] | 5'b00001] & (x_result_rd_i != (x_rs_addr_i[1] | 5'b00001))) & x_issue_resp_dualread_i[1])
-                                  |     (((regs_used_i[2] & x_issue_resp_dualread_i[2]) & scoreboard_q[x_rs_addr_i[2] | 5'b00001] & (x_result_rd_i != (x_rs_addr_i[2] | 5'b00001))) & x_issue_resp_dualread_i[2]));
+    if(X_DUALREAD != 0) begin
+      assign dep = ~x_illegal_insn_n & ((regs_used_i[0] & scoreboard_q[x_rs_addr_i[0]] & (x_result_rd_i != x_rs_addr_i[0])) |
+                                        (regs_used_i[1] & scoreboard_q[x_rs_addr_i[1]] & (x_result_rd_i != x_rs_addr_i[1])) |
+                                        (regs_used_i[2] & scoreboard_q[x_rs_addr_i[2]] & (x_result_rd_i != x_rs_addr_i[2])) |
+                                        (((regs_used_i[0] & x_issue_resp_dualread_i[0])       & 
+                                              scoreboard_q[x_rs_addr_i[0] | 5'b00001]         &
+                                              (x_result_rd_i != (x_rs_addr_i[0] | 5'b00001))) & x_issue_resp_dualread_i[0]) |
+                                        (((regs_used_i[1] & x_issue_resp_dualread_i[1])       & 
+                                              scoreboard_q[x_rs_addr_i[1] | 5'b00001]         &
+                                              (x_result_rd_i != (x_rs_addr_i[1] | 5'b00001))) & x_issue_resp_dualread_i[1]) |
+                                        (((regs_used_i[2] & x_issue_resp_dualread_i[2])       & 
+                                              scoreboard_q[x_rs_addr_i[2] | 5'b00001]         &
+                                              (x_result_rd_i != (x_rs_addr_i[2] | 5'b00001))) & x_issue_resp_dualread_i[2]));
+
+
     end else begin
-      assign x_ex_fwd_o[0] = x_rs_addr_i[0] == waddr_ex_i & we_ex_i & ex_valid_i;
-      assign x_ex_fwd_o[1] = x_rs_addr_i[1] == waddr_ex_i & we_ex_i & ex_valid_i;
-      assign x_ex_fwd_o[2] = x_rs_addr_i[2] == waddr_ex_i & we_ex_i & ex_valid_i;
-      assign x_wb_fwd_o[0] = x_rs_addr_i[0] == waddr_wb_i & we_wb_i & ex_valid_i;
-      assign x_wb_fwd_o[1] = x_rs_addr_i[1] == waddr_wb_i & we_wb_i & ex_valid_i;
-      assign x_wb_fwd_o[2] = x_rs_addr_i[2] == waddr_wb_i & we_wb_i & ex_valid_i;
-      assign dep = ~x_illegal_insn_n & ((regs_used_i[0] & scoreboard_q[x_rs_addr_i[0]] & (x_result_rd_i != x_rs_addr_i[0]))
-                                  |     (regs_used_i[1] & scoreboard_q[x_rs_addr_i[1]] & (x_result_rd_i != x_rs_addr_i[1]))
-                                  |     (regs_used_i[2] & scoreboard_q[x_rs_addr_i[2]] & (x_result_rd_i != x_rs_addr_i[2])));
+      assign dep = ~x_illegal_insn_n & ( (regs_used_i[0] & scoreboard_q[x_rs_addr_i[0]] & (x_result_rd_i != x_rs_addr_i[0])) |
+                    (regs_used_i[1] & scoreboard_q[x_rs_addr_i[1]] & (x_result_rd_i != x_rs_addr_i[1])) |
+                    (regs_used_i[2] & scoreboard_q[x_rs_addr_i[2]] & (x_result_rd_i != x_rs_addr_i[2])));
     end
   endgenerate
 
