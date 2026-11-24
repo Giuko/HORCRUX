@@ -17,7 +17,10 @@
 `include "prim_assert.sv"
 `include "dv_fcov_macros.svh"
 
-module cve2_id_stage #(
+module cve2_id_stage
+  import cve2_pkg::*;
+  import cve2_core_v_xif_pkg::*;
+#(
   parameter                   COREV_X_IF      = 0,
   parameter bit               RV32E           = 0,
   parameter cve2_pkg::rv32m_e RV32M           = cve2_pkg::RV32MFast,
@@ -263,8 +266,9 @@ module cve2_id_stage #(
   logic [2:0] regs_used;
   logic       x_stall;
   logic [2:0][4:0] x_rs_addr;
-  logic x_mem_data_req;
-  logic x_mem_valid;
+  logic       x_mem_data_req;
+  logic       x_mem_valid;
+  logic [1:0] x_mem_data_type_id;
 
   // ALU Control
   alu_op_e     alu_operator;
@@ -433,10 +437,6 @@ module cve2_id_stage #(
         .x_mem_result_valid_o(x_mem_result_valid_o),
         .x_mem_result_err_o  (x_mem_result_err_o),
 
-        // memory result interface
-        .x_mem_result_valid_o(x_mem_result_valid_o),
-        .x_mem_result_err_o  (x_mem_result_err_o),
-
         // result interface
         .x_result_valid_i(x_result_valid_i),
         .x_result_ready_o(x_result_ready_o),
@@ -473,7 +473,7 @@ module cve2_id_stage #(
       assign illegal_insn = x_illegal_insn;
     
       // x-dispatcher signal assignments
-      assign x_issue_req_o.instr       = instr;
+      assign x_issue_req_o.instr       = instr_rdata_i;
       assign x_issue_req_o.ecs         = '0;
       assign x_rs_addr[0]              = regfile_addr_ra_id;
       assign x_rs_addr[1]              = regfile_addr_rb_id;
@@ -493,19 +493,9 @@ module cve2_id_stage #(
 
 
       // xif integer souce operand selection
-      for (genvar j = 0; j < REGFILE_NUM_READ_PORTS; j++) begin : xif_operand_assignment_dualread
-        for (genvar i = 0; i < 3; i++) begin : xif_operand_assignment
-          always_comb begin
-            if (i == 0) begin
-              x_issue_req_o.rs[i+3*j] = regfile_data_ra_id[j];
-            end else if (i == 1) begin
-              x_issue_req_o.rs[i+3*j] = regfile_data_rb_id[j];
-            end else begin
-              x_issue_req_o.rs[i+3*j] = regfile_data_rc_id[j];
-            end
-          end
-        end
-      end
+      assign x_issue_req_o.rs[0] = rf_rdata_a_i;
+      assign x_issue_req_o.rs[1] = rf_rdata_b_i;
+      assign x_issue_req_o.rs[2] = rf_rdata_c_i;
 
       // LSU signal assignment/MUX
       always_comb begin

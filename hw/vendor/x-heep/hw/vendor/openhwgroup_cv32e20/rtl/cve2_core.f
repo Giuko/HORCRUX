@@ -1,4 +1,6 @@
 cve2_pkg.sv
+cve2_core_v_xif_pkg.sv
+cve2_if_xif.sv
 cve2_alu.sv
 cve2_compressed_decoder.sv
 cve2_controller.sv
@@ -6,6 +8,7 @@ cve2_counter.sv
 cve2_cs_registers.sv
 cve2_decoder.sv
 cve2_ex_block.sv
+cve2_x_disp.sv
 cve2_id_stage.sv
 cve2_if_stage.sv
 cve2_load_store_unit.sv

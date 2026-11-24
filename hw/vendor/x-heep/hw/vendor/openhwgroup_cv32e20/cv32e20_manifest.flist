@@ -1,4 +1,4 @@
-///////////////////////////////////////////////////////////////////////////////
+g//////////////////////////////////////////////////////////////////////////////
 //
 // Copyright 2022 OpenHW Group
 //
@@ -34,6 +34,8 @@
 +incdir+${DESIGN_RTL_DIR}/../vendor/lowrisc_ip/dv/sv/dv_utils
 
 ${DESIGN_RTL_DIR}/cve2_pkg.sv
+${DESIGN_RTL_DIR}/cve2_core_v_xif_pkg.sv
+${DESIGN_RTL_DIR}/cve2_if_xif.sv
 ${DESIGN_RTL_DIR}/cve2_tracer_pkg.sv
 ${DESIGN_RTL_DIR}/../vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv
 ${DESIGN_RTL_DIR}/../vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1p_pkg.sv
@@ -46,6 +48,7 @@ ${DESIGN_RTL_DIR}/cve2_counter.sv
 ${DESIGN_RTL_DIR}/cve2_decoder.sv
 ${DESIGN_RTL_DIR}/cve2_ex_block.sv
 ${DESIGN_RTL_DIR}/cve2_fetch_fifo.sv
+${DESIGN_RTL_DIR}/cve2_x_disp.sv
 ${DESIGN_RTL_DIR}/cve2_id_stage.sv
 ${DESIGN_RTL_DIR}/cve2_if_stage.sv
 ${DESIGN_RTL_DIR}/cve2_load_store_unit.sv

@@ -12,7 +12,7 @@ module cpu_subsystem
     parameter ZFINX = 0,  // Float-in-General Purpose registers
     parameter NUM_MHPMCOUNTERS = 1,
     parameter DM_HALTADDRESS = '0,
-    parameter X_EXT = 0,  // eXtension interface in cv32e40x
+    parameter X_EXT = 1,  // eXtension interface in cv32e40x
     parameter core_v_mini_mcu_pkg::cpu_type_e CPU_TYPE = core_v_mini_mcu_pkg::CpuType
 ) (
     // Clock and Reset
@@ -60,6 +60,7 @@ module cpu_subsystem
   if (CPU_TYPE == cv32e20) begin : gen_cv32e20
 
     cve2_top #(
+        .COREV_X_IF      (X_EXT),
 % if cve2_rv32e:
         .RV32E(${cve2_rv32e}),
 % endif
@@ -104,7 +105,6 @@ module cpu_subsystem
         .dm_exception_addr_i(32'h0),
         .dm_halt_addr_i(DM_HALTADDRESS),
         .crash_dump_o(),
-`ifdef CV_X_IF
 	// eXtension interface
         .xif_compressed_if,
         .xif_issue_if,
@@ -113,7 +113,6 @@ module cpu_subsystem
         .xif_mem_result_if,
         .xif_result_if,
         .fetch_enable_i(fetch_enable),
-`endif
         .core_sleep_o
     );
 
