@@ -395,6 +395,9 @@ module cve2_id_stage
   assign regfile_addr_ra_id = instr_rdata_i[19:15];
   assign regfile_addr_rb_id = instr_rdata_i[24:20];
   assign regfile_addr_rc_id = instr_rdata_i[31:27];
+
+  assign rf_raddr_c_o       = instr_rdata_i[31:27];
+  
   generate
     if (COREV_X_IF != 0) begin : gen_x_disp
       // eXtension dispatcher
