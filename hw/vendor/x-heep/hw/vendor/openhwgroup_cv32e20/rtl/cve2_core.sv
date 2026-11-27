@@ -627,6 +627,7 @@ module cve2_core import cve2_pkg::*; #(
   );
 
   cve2_wb #(
+    .COREV_X_IF     (COREV_X_IF)
   ) wb_i (
     .clk_i   (clk_i),
     .rst_ni  (rst_ni),
@@ -650,7 +651,13 @@ module cve2_core import cve2_pkg::*; #(
     .rf_we_wb_o   (rf_we_wb),
 
     .lsu_resp_valid_i(lsu_resp_valid),
-    .lsu_resp_err_i  (lsu_resp_err)
+    .lsu_resp_err_i  (lsu_resp_err),
+
+    // eXtension
+    .x_result_valid_i (xif_result_if.result_valid),
+    .x_result_we_i    (xif_result_if.result.we),
+    .x_result_rd_i    (xif_result_if.result.rd),
+    .x_result_data_i (xif_result_if.result.data)
   );
 
   ///////////////////////
